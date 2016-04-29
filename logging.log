@@ -2485,3 +2485,742 @@
 2016-04-28 21:17:52 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
 2016-04-28 21:17:52 INFO  SchemaExport:400 - HHH000227: Running hbm2ddl schema export
 2016-04-28 21:17:54 INFO  SchemaExport:463 - HHH000230: Schema export complete
+2016-04-29 00:26:20 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: project
+	...]
+2016-04-29 00:26:20 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-04-29 00:26:20 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-04-29 00:26:20 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-04-29 00:26:20 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-04-29 00:26:21 WARN  DriverManagerConnectionProviderImpl:72 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-04-29 00:26:21 INFO  DriverManagerConnectionProviderImpl:128 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/myunit]
+2016-04-29 00:26:21 INFO  DriverManagerConnectionProviderImpl:137 - HHH000046: Connection properties: {user=root, password=****}
+2016-04-29 00:26:21 INFO  DriverManagerConnectionProviderImpl:142 - HHH000006: Autocommit mode: false
+2016-04-29 00:26:21 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-04-29 00:31:01 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: project
+	...]
+2016-04-29 00:31:02 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-04-29 00:31:02 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-04-29 00:31:02 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-04-29 00:31:02 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-04-29 00:31:02 WARN  DriverManagerConnectionProviderImpl:72 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-04-29 00:31:02 INFO  DriverManagerConnectionProviderImpl:128 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/myunit]
+2016-04-29 00:31:03 INFO  DriverManagerConnectionProviderImpl:137 - HHH000046: Connection properties: {user=root, password=****}
+2016-04-29 00:31:03 INFO  DriverManagerConnectionProviderImpl:142 - HHH000006: Autocommit mode: false
+2016-04-29 00:31:03 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-04-29 00:31:04 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-04-29 00:31:04 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-04-29 00:31:06 INFO  SchemaExport:400 - HHH000227: Running hbm2ddl schema export
+2016-04-29 00:31:06 ERROR SchemaExport:483 - HHH000389: Unsuccessful: alter table Notebook drop foreign key FKmm03lrhum4w1bfdul2y3bxjjg
+2016-04-29 00:31:06 ERROR SchemaExport:484 - Table 'myunit.Notebook' doesn't exist
+2016-04-29 00:31:06 ERROR SchemaExport:483 - HHH000389: Unsuccessful: alter table Notebook drop foreign key FKgcd6wbbx4ciukn4mtj59e0krh
+2016-04-29 00:31:06 ERROR SchemaExport:484 - Table 'myunit.Notebook' doesn't exist
+2016-04-29 00:31:06 ERROR SchemaExport:483 - HHH000389: Unsuccessful: alter table Notebook drop foreign key FKpbclt4rbr0t9kneicki59j32e
+2016-04-29 00:31:06 ERROR SchemaExport:484 - Table 'myunit.Notebook' doesn't exist
+2016-04-29 00:31:06 ERROR SchemaExport:483 - HHH000389: Unsuccessful: alter table Notebook drop foreign key FKb79wyflw9uakp79fprqmuedxc
+2016-04-29 00:31:06 ERROR SchemaExport:484 - Table 'myunit.Notebook' doesn't exist
+2016-04-29 00:31:06 ERROR SchemaExport:483 - HHH000389: Unsuccessful: alter table Notebook drop foreign key FKcvjoth15x4rf21e4g759l299e
+2016-04-29 00:31:06 ERROR SchemaExport:484 - Table 'myunit.Notebook' doesn't exist
+2016-04-29 00:31:06 ERROR SchemaExport:483 - HHH000389: Unsuccessful: alter table Notebook drop foreign key FKeyhkkd5hm4ughqvht6vhpi9sk
+2016-04-29 00:31:06 ERROR SchemaExport:484 - Table 'myunit.Notebook' doesn't exist
+2016-04-29 00:31:25 INFO  SchemaExport:463 - HHH000230: Schema export complete
+2016-04-29 01:06:34 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@60f82f98: startup date [Fri Apr 29 01:06:34 EEST 2016]; root of context hierarchy
+2016-04-29 01:06:34 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-04-29 01:06:36 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-04-29 01:06:37 WARN  ClassPathXmlApplicationContext:546 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.aop.config.internalAutoProxyCreator': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: org/aspectj/lang/annotation/Around
+2016-04-29 01:09:59 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@60f82f98: startup date [Fri Apr 29 01:09:59 EEST 2016]; root of context hierarchy
+2016-04-29 01:10:00 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-04-29 01:10:01 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-04-29 01:10:02 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-04-29 01:10:03 WARN  ClassPathXmlApplicationContext:546 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [orm-spring-context.xml]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Conflicting persistence unit definitions for name 'project': file:/home/dexter/Java/IdeaProjects/Notebook/target/classes, file:/home/dexter/Java/IdeaProjects/Notebook/target/test-classes
+2016-04-29 01:11:28 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@60f82f98: startup date [Fri Apr 29 01:11:28 EEST 2016]; root of context hierarchy
+2016-04-29 01:11:28 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-04-29 01:11:30 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-04-29 01:11:31 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-04-29 01:11:31 WARN  ClassPathXmlApplicationContext:546 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [orm-spring-context.xml]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Conflicting persistence unit definitions for name 'project': file:/home/dexter/Java/IdeaProjects/Notebook/target/classes, file:/home/dexter/Java/IdeaProjects/Notebook/target/test-classes
+2016-04-29 01:13:19 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@60f82f98: startup date [Fri Apr 29 01:13:19 EEST 2016]; root of context hierarchy
+2016-04-29 01:13:19 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-04-29 01:13:21 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-04-29 01:13:22 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-04-29 01:13:22 WARN  ClassPathXmlApplicationContext:546 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [orm-spring-context.xml]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Conflicting persistence unit definitions for name 'project': file:/home/dexter/Java/IdeaProjects/Notebook/target/classes, file:/home/dexter/Java/IdeaProjects/Notebook/target/test-classes
+2016-04-29 01:17:49 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@60f82f98: startup date [Fri Apr 29 01:17:49 EEST 2016]; root of context hierarchy
+2016-04-29 01:17:49 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-04-29 01:17:51 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-04-29 01:17:52 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-04-29 01:17:52 WARN  ClassPathXmlApplicationContext:546 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [orm-spring-context.xml]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Conflicting persistence unit definitions for name 'project': file:/home/dexter/Java/IdeaProjects/Notebook/target/classes, file:/home/dexter/Java/IdeaProjects/Notebook/target/test-classes
+2016-04-29 01:20:02 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@60f82f98: startup date [Fri Apr 29 01:20:02 EEST 2016]; root of context hierarchy
+2016-04-29 01:20:02 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-04-29 01:20:04 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-04-29 01:20:05 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-04-29 01:20:05 WARN  ClassPathXmlApplicationContext:546 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [orm-spring-context.xml]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Conflicting persistence unit definitions for name 'project': file:/home/dexter/Java/IdeaProjects/Notebook/target/classes, file:/home/dexter/Java/IdeaProjects/Notebook/target/test-classes
+2016-04-29 01:25:52 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@60f82f98: startup date [Fri Apr 29 01:25:52 EEST 2016]; root of context hierarchy
+2016-04-29 01:25:52 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-04-29 01:25:53 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-04-29 01:25:54 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-04-29 01:25:54 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-04-29 01:25:54 WARN  ClassPathXmlApplicationContext:546 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [orm-spring-context.xml]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Conflicting persistence unit definitions for name 'project': file:/home/dexter/Java/IdeaProjects/Notebook/target/classes, file:/home/dexter/Java/IdeaProjects/Notebook/target/test-classes
+2016-04-29 01:34:13 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@60f82f98: startup date [Fri Apr 29 01:34:13 EEST 2016]; root of context hierarchy
+2016-04-29 01:34:13 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-04-29 01:34:15 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-04-29 01:34:16 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-04-29 01:34:17 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-04-29 01:34:18 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-04-29 01:34:18 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-04-29 01:34:19 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-04-29 01:34:19 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-04-29 01:34:19 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-04-29 01:34:19 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-04-29 01:34:22 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-04-29 01:34:22 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-04-29 01:34:26 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-04-29 01:34:26 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: HDD
+2016-04-29 01:34:26 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: HDD
+2016-04-29 01:34:27 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Model
+2016-04-29 01:34:27 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Model
+2016-04-29 01:34:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Notebook
+2016-04-29 01:34:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Notebook
+2016-04-29 01:34:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Processor
+2016-04-29 01:34:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Processor
+2016-04-29 01:34:29 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: RAM
+2016-04-29 01:34:29 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: RAM
+2016-04-29 01:34:29 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Screen
+2016-04-29 01:34:29 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Screen
+2016-04-29 01:34:30 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: VideoMemory
+2016-04-29 01:34:30 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: VideoMemory
+2016-04-29 01:36:03 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@60f82f98: startup date [Fri Apr 29 01:36:03 EEST 2016]; root of context hierarchy
+2016-04-29 01:36:03 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-04-29 01:36:05 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-04-29 01:36:05 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-04-29 01:36:06 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-04-29 01:36:06 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-04-29 01:36:06 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-04-29 01:36:06 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-04-29 01:36:06 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-04-29 01:36:07 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-04-29 01:36:07 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-04-29 01:36:10 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-04-29 01:36:10 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-04-29 01:36:11 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-04-29 01:39:28 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@35f983a6: startup date [Fri Apr 29 01:39:28 EEST 2016]; root of context hierarchy
+2016-04-29 01:39:28 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-04-29 01:39:30 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-04-29 01:39:31 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-04-29 01:39:31 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-04-29 01:39:31 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-04-29 01:39:31 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-04-29 01:39:32 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-04-29 01:39:32 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-04-29 01:39:32 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-04-29 01:39:32 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-04-29 01:39:33 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-04-29 01:39:33 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-04-29 01:39:35 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-04-29 01:41:04 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@35f983a6: startup date [Fri Apr 29 01:41:04 EEST 2016]; root of context hierarchy
+2016-04-29 01:41:04 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-04-29 01:41:05 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-04-29 01:41:06 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-04-29 01:41:06 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-04-29 01:41:06 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-04-29 01:41:06 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-04-29 01:41:07 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-04-29 01:41:07 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-04-29 01:41:07 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-04-29 01:41:07 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-04-29 01:41:08 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-04-29 01:41:08 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-04-29 01:41:10 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-04-29 01:45:42 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@35f983a6: startup date [Fri Apr 29 01:45:42 EEST 2016]; root of context hierarchy
+2016-04-29 01:45:43 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-04-29 01:45:44 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-04-29 01:45:45 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-04-29 01:45:45 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-04-29 01:45:45 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-04-29 01:45:45 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-04-29 01:45:46 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-04-29 01:45:46 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-04-29 01:45:46 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-04-29 01:45:46 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-04-29 01:45:47 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-04-29 01:45:47 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-04-29 01:45:49 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-04-29 01:45:53 INFO  TestProcessorDao:38 - ***All tables were removed
+2016-04-29 01:47:16 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@35f983a6: startup date [Fri Apr 29 01:47:16 EEST 2016]; root of context hierarchy
+2016-04-29 01:47:16 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-04-29 01:47:18 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-04-29 01:47:18 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-04-29 01:47:19 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-04-29 01:47:19 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-04-29 01:47:19 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-04-29 01:47:20 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-04-29 01:47:20 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-04-29 01:47:20 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-04-29 01:47:20 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-04-29 01:47:21 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-04-29 01:47:21 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-04-29 01:47:23 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-04-29 01:47:23 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: HDD
+2016-04-29 01:47:23 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: HDD
+2016-04-29 01:47:23 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Model
+2016-04-29 01:47:23 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Model
+2016-04-29 01:47:24 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Notebook
+2016-04-29 01:47:24 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Notebook
+2016-04-29 01:47:24 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Processor
+2016-04-29 01:47:24 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Processor
+2016-04-29 01:47:24 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: RAM
+2016-04-29 01:47:24 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: RAM
+2016-04-29 01:47:25 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Screen
+2016-04-29 01:47:25 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Screen
+2016-04-29 01:47:25 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: VideoMemory
+2016-04-29 01:47:25 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: VideoMemory
+2016-04-29 01:49:14 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@35f983a6: startup date [Fri Apr 29 01:49:14 EEST 2016]; root of context hierarchy
+2016-04-29 01:49:14 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-04-29 01:49:15 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-04-29 01:49:16 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-04-29 01:49:17 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-04-29 01:49:17 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-04-29 01:49:17 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-04-29 01:49:17 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-04-29 01:49:17 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-04-29 01:49:17 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-04-29 01:49:17 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-04-29 01:49:19 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-04-29 01:49:19 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-04-29 01:49:20 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-04-29 01:49:46 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@35f983a6: startup date [Fri Apr 29 01:49:46 EEST 2016]; root of context hierarchy
+2016-04-29 01:49:46 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-04-29 01:49:48 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-04-29 01:49:48 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-04-29 01:49:49 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-04-29 01:49:49 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-04-29 01:49:49 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-04-29 01:49:49 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-04-29 01:49:49 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-04-29 01:49:49 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-04-29 01:49:50 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-04-29 01:49:51 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-04-29 01:49:51 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-04-29 01:49:53 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-04-29 01:50:31 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@35f983a6: startup date [Fri Apr 29 01:50:31 EEST 2016]; root of context hierarchy
+2016-04-29 01:50:31 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-04-29 01:50:33 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-04-29 01:50:33 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-04-29 01:50:34 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-04-29 01:50:34 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-04-29 01:50:34 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-04-29 01:50:34 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-04-29 01:50:34 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-04-29 01:50:34 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-04-29 01:50:34 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-04-29 01:50:36 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-04-29 01:50:36 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-04-29 01:50:37 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-04-29 01:51:05 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@35f983a6: startup date [Fri Apr 29 01:51:05 EEST 2016]; root of context hierarchy
+2016-04-29 01:51:05 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-04-29 01:51:06 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-04-29 01:51:07 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-04-29 01:51:08 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-04-29 01:51:08 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-04-29 01:51:08 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-04-29 01:51:08 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-04-29 01:51:08 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-04-29 01:51:08 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-04-29 01:51:08 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-04-29 01:51:10 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-04-29 01:51:10 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-04-29 01:51:11 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-04-29 01:52:01 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@35f983a6: startup date [Fri Apr 29 01:52:01 EEST 2016]; root of context hierarchy
+2016-04-29 01:52:01 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-04-29 01:52:03 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-04-29 01:52:03 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-04-29 01:52:04 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-04-29 01:52:04 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-04-29 01:52:04 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-04-29 01:52:05 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-04-29 01:52:05 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-04-29 01:52:05 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-04-29 01:52:05 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-04-29 01:52:06 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-04-29 01:52:06 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-04-29 01:52:08 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-04-29 01:52:11 INFO  TestProcessorDao:38 - ***All tables were removed
+2016-04-29 01:54:05 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@22f71333: startup date [Fri Apr 29 01:54:05 EEST 2016]; root of context hierarchy
+2016-04-29 01:54:05 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-04-29 01:54:07 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-04-29 01:54:08 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-04-29 01:54:08 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-04-29 01:54:08 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-04-29 01:54:08 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-04-29 01:54:09 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-04-29 01:54:09 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-04-29 01:54:09 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-04-29 01:54:09 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-04-29 01:54:10 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-04-29 01:54:10 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-04-29 01:54:12 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-04-29 01:54:12 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: HDD
+2016-04-29 01:54:12 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: HDD
+2016-04-29 01:54:12 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Model
+2016-04-29 01:54:12 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Model
+2016-04-29 01:54:13 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Notebook
+2016-04-29 01:54:13 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Notebook
+2016-04-29 01:54:13 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Processor
+2016-04-29 01:54:13 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Processor
+2016-04-29 01:54:14 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: RAM
+2016-04-29 01:54:14 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: RAM
+2016-04-29 01:54:14 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Screen
+2016-04-29 01:54:14 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Screen
+2016-04-29 01:54:14 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: VideoMemory
+2016-04-29 01:54:14 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: VideoMemory
+2016-04-29 01:54:24 INFO  TestProcessorDao:39 - ***All tables were removed
+2016-04-29 01:56:07 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@22f71333: startup date [Fri Apr 29 01:56:07 EEST 2016]; root of context hierarchy
+2016-04-29 01:56:07 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-04-29 01:56:08 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-04-29 01:56:09 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-04-29 01:56:09 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-04-29 01:56:09 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-04-29 01:56:09 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-04-29 01:56:10 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-04-29 01:56:10 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-04-29 01:56:10 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-04-29 01:56:10 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-04-29 01:56:11 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-04-29 01:56:11 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-04-29 01:56:13 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-04-29 01:56:13 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: HDD
+2016-04-29 01:56:13 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: HDD
+2016-04-29 01:56:14 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Model
+2016-04-29 01:56:14 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Model
+2016-04-29 01:56:14 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Notebook
+2016-04-29 01:56:14 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Notebook
+2016-04-29 01:56:14 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Processor
+2016-04-29 01:56:14 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Processor
+2016-04-29 01:56:15 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: RAM
+2016-04-29 01:56:15 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: RAM
+2016-04-29 01:56:15 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Screen
+2016-04-29 01:56:15 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Screen
+2016-04-29 01:56:16 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: VideoMemory
+2016-04-29 01:56:16 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: VideoMemory
+2016-04-29 01:56:24 INFO  TestProcessorDao:33 - ***Processor was persisted
+2016-04-29 01:56:24 INFO  TestProcessorDao:47 - ***In testPersistProcessorNegativeDuplicate
+2016-04-29 01:56:25 INFO  TestProcessorDao:40 - ***All tables were removed
+2016-04-29 01:58:00 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6bf256fa: startup date [Fri Apr 29 01:58:00 EEST 2016]; root of context hierarchy
+2016-04-29 01:58:00 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-04-29 01:58:01 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-04-29 01:58:02 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-04-29 01:58:03 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-04-29 01:58:03 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-04-29 01:58:03 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-04-29 01:58:03 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-04-29 01:58:03 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-04-29 01:58:03 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-04-29 01:58:03 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-04-29 01:58:04 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-04-29 01:58:05 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-04-29 01:58:06 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-04-29 01:58:06 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: HDD
+2016-04-29 01:58:06 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: HDD
+2016-04-29 01:58:07 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Model
+2016-04-29 01:58:07 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Model
+2016-04-29 01:58:07 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Notebook
+2016-04-29 01:58:07 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Notebook
+2016-04-29 01:58:08 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Processor
+2016-04-29 01:58:08 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Processor
+2016-04-29 01:58:08 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: RAM
+2016-04-29 01:58:08 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: RAM
+2016-04-29 01:58:08 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Screen
+2016-04-29 01:58:08 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Screen
+2016-04-29 01:58:09 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: VideoMemory
+2016-04-29 01:58:09 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: VideoMemory
+2016-04-29 01:58:16 INFO  TestProcessorDao:32 - ***Processor was persisted
+2016-04-29 01:58:16 INFO  TestProcessorDao:46 - ***In testPersistProcessorNegativeDuplicate
+2016-04-29 01:58:17 INFO  TestProcessorDao:39 - ***All tables were removed
+2016-04-29 02:00:25 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6bf256fa: startup date [Fri Apr 29 02:00:25 EEST 2016]; root of context hierarchy
+2016-04-29 02:00:25 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-04-29 02:00:26 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-04-29 02:00:27 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-04-29 02:00:28 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-04-29 02:00:28 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-04-29 02:00:28 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-04-29 02:00:28 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-04-29 02:00:28 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-04-29 02:00:28 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-04-29 02:00:28 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-04-29 02:00:29 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-04-29 02:00:29 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-04-29 02:00:31 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-04-29 02:00:32 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: HDD
+2016-04-29 02:00:32 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: HDD
+2016-04-29 02:00:32 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Model
+2016-04-29 02:00:32 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Model
+2016-04-29 02:00:33 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Notebook
+2016-04-29 02:00:33 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Notebook
+2016-04-29 02:00:33 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Processor
+2016-04-29 02:00:33 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Processor
+2016-04-29 02:00:33 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: RAM
+2016-04-29 02:00:33 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: RAM
+2016-04-29 02:00:34 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Screen
+2016-04-29 02:00:34 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Screen
+2016-04-29 02:00:34 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: VideoMemory
+2016-04-29 02:00:34 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: VideoMemory
+2016-04-29 02:00:42 INFO  TestProcessorDao:33 - ***Processor was persisted
+2016-04-29 02:00:42 INFO  TestProcessorDao:54 - ***In testFindProcessor
+2016-04-29 02:00:43 INFO  TestProcessorDao:40 - ***All tables were removed
+2016-04-29 02:03:48 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6bf256fa: startup date [Fri Apr 29 02:03:48 EEST 2016]; root of context hierarchy
+2016-04-29 02:03:48 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-04-29 02:03:50 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-04-29 02:03:51 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-04-29 02:03:51 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-04-29 02:03:51 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-04-29 02:03:51 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-04-29 02:03:52 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-04-29 02:03:52 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-04-29 02:03:52 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-04-29 02:03:52 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-04-29 02:03:53 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-04-29 02:03:53 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-04-29 02:03:55 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-04-29 02:03:55 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: HDD
+2016-04-29 02:03:55 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: HDD
+2016-04-29 02:03:55 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Model
+2016-04-29 02:03:55 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Model
+2016-04-29 02:03:55 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Notebook
+2016-04-29 02:03:55 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Notebook
+2016-04-29 02:03:56 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Processor
+2016-04-29 02:03:56 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Processor
+2016-04-29 02:03:56 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: RAM
+2016-04-29 02:03:56 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: RAM
+2016-04-29 02:03:57 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Screen
+2016-04-29 02:03:57 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Screen
+2016-04-29 02:03:57 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: VideoMemory
+2016-04-29 02:03:57 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: VideoMemory
+2016-04-29 02:04:05 INFO  TestProcessorDao:34 - ***Processor was persisted
+2016-04-29 02:04:05 INFO  TestProcessorDao:62 - ***In testFindProcessor
+2016-04-29 02:04:06 INFO  TestProcessorDao:41 - ***All tables were removed
+2016-04-29 02:04:14 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6bf256fa: startup date [Fri Apr 29 02:04:14 EEST 2016]; root of context hierarchy
+2016-04-29 02:04:14 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-04-29 02:04:16 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-04-29 02:04:16 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-04-29 02:04:17 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-04-29 02:04:17 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-04-29 02:04:17 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-04-29 02:04:17 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-04-29 02:04:17 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-04-29 02:04:17 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-04-29 02:04:17 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-04-29 02:04:18 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-04-29 02:04:19 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-04-29 02:04:20 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-04-29 02:04:20 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: HDD
+2016-04-29 02:04:20 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: HDD
+2016-04-29 02:04:21 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Model
+2016-04-29 02:04:21 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Model
+2016-04-29 02:04:21 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Notebook
+2016-04-29 02:04:21 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Notebook
+2016-04-29 02:04:22 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Processor
+2016-04-29 02:04:22 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Processor
+2016-04-29 02:04:22 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: RAM
+2016-04-29 02:04:22 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: RAM
+2016-04-29 02:04:23 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Screen
+2016-04-29 02:04:23 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Screen
+2016-04-29 02:04:23 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: VideoMemory
+2016-04-29 02:04:23 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: VideoMemory
+2016-04-29 02:04:31 INFO  TestProcessorDao:34 - ***Processor was persisted
+2016-04-29 02:04:31 INFO  TestProcessorDao:70 - ***In testRemoveProcessor
+2016-04-29 02:04:33 INFO  TestProcessorDao:41 - ***All tables were removed
+2016-04-29 02:05:27 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6bf256fa: startup date [Fri Apr 29 02:05:27 EEST 2016]; root of context hierarchy
+2016-04-29 02:05:27 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-04-29 02:05:28 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-04-29 02:05:29 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-04-29 02:05:29 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-04-29 02:05:30 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-04-29 02:05:30 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-04-29 02:05:30 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-04-29 02:05:30 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-04-29 02:05:30 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-04-29 02:05:30 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-04-29 02:05:31 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-04-29 02:05:31 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-04-29 02:05:33 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-04-29 02:05:33 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: HDD
+2016-04-29 02:05:33 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: HDD
+2016-04-29 02:05:34 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Model
+2016-04-29 02:05:34 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Model
+2016-04-29 02:05:34 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Notebook
+2016-04-29 02:05:34 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Notebook
+2016-04-29 02:05:35 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Processor
+2016-04-29 02:05:35 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Processor
+2016-04-29 02:05:35 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: RAM
+2016-04-29 02:05:35 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: RAM
+2016-04-29 02:05:36 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Screen
+2016-04-29 02:05:36 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Screen
+2016-04-29 02:05:36 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: VideoMemory
+2016-04-29 02:05:36 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: VideoMemory
+2016-04-29 02:05:45 INFO  TestProcessorDao:34 - ***Processor was persisted
+2016-04-29 02:05:45 INFO  TestProcessorDao:78 - ***In testRemoveProcessor
+2016-04-29 02:05:46 INFO  TestProcessorDao:41 - ***All tables were removed
+2016-04-29 02:07:22 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6bf256fa: startup date [Fri Apr 29 02:07:22 EEST 2016]; root of context hierarchy
+2016-04-29 02:07:22 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-04-29 02:07:23 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-04-29 02:07:24 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-04-29 02:07:24 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-04-29 02:07:25 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-04-29 02:07:25 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-04-29 02:07:25 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-04-29 02:07:25 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-04-29 02:07:25 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-04-29 02:07:25 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-04-29 02:07:26 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-04-29 02:07:26 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-04-29 02:07:28 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-04-29 02:07:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: HDD
+2016-04-29 02:07:28 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: HDD
+2016-04-29 02:07:29 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Model
+2016-04-29 02:07:29 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Model
+2016-04-29 02:07:29 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Notebook
+2016-04-29 02:07:29 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Notebook
+2016-04-29 02:07:29 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Processor
+2016-04-29 02:07:29 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Processor
+2016-04-29 02:07:30 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: RAM
+2016-04-29 02:07:30 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: RAM
+2016-04-29 02:07:30 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Screen
+2016-04-29 02:07:30 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Screen
+2016-04-29 02:07:31 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: VideoMemory
+2016-04-29 02:07:31 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: VideoMemory
+2016-04-29 02:07:40 INFO  TestProcessorDao:34 - ***Processor was persisted
+2016-04-29 02:07:40 INFO  TestProcessorDao:79 - ***In testRemoveProcessorNegative
+2016-04-29 02:07:41 INFO  TestProcessorDao:41 - ***All tables were removed
+2016-04-29 02:08:38 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6bf256fa: startup date [Fri Apr 29 02:08:38 EEST 2016]; root of context hierarchy
+2016-04-29 02:08:39 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-04-29 02:08:40 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-04-29 02:08:41 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-04-29 02:08:41 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-04-29 02:08:41 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-04-29 02:08:41 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-04-29 02:08:42 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-04-29 02:08:42 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-04-29 02:08:42 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-04-29 02:08:42 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-04-29 02:08:43 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-04-29 02:08:43 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-04-29 02:08:45 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-04-29 02:08:45 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: HDD
+2016-04-29 02:08:45 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: HDD
+2016-04-29 02:08:45 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Model
+2016-04-29 02:08:45 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Model
+2016-04-29 02:08:46 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Notebook
+2016-04-29 02:08:46 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Notebook
+2016-04-29 02:08:46 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Processor
+2016-04-29 02:08:46 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Processor
+2016-04-29 02:08:46 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: RAM
+2016-04-29 02:08:46 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: RAM
+2016-04-29 02:08:47 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Screen
+2016-04-29 02:08:47 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Screen
+2016-04-29 02:08:47 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: VideoMemory
+2016-04-29 02:08:47 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: VideoMemory
+2016-04-29 02:08:56 INFO  TestProcessorDao:34 - ***Processor was persisted
+2016-04-29 02:08:56 INFO  TestProcessorDao:79 - ***In testRemoveProcessorNegative
+2016-04-29 02:08:58 INFO  TestProcessorDao:41 - ***All tables were removed
+2016-04-29 02:12:48 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6bf256fa: startup date [Fri Apr 29 02:12:48 EEST 2016]; root of context hierarchy
+2016-04-29 02:12:48 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-04-29 02:12:50 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-04-29 02:12:50 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-04-29 02:12:51 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-04-29 02:12:51 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-04-29 02:12:51 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-04-29 02:12:51 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-04-29 02:12:51 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-04-29 02:12:51 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-04-29 02:12:51 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-04-29 02:12:53 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-04-29 02:12:53 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-04-29 02:12:54 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-04-29 02:12:54 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: HDD
+2016-04-29 02:12:54 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: HDD
+2016-04-29 02:12:55 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Model
+2016-04-29 02:12:55 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Model
+2016-04-29 02:12:55 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Notebook
+2016-04-29 02:12:55 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Notebook
+2016-04-29 02:12:56 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Processor
+2016-04-29 02:12:56 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Processor
+2016-04-29 02:12:56 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: RAM
+2016-04-29 02:12:56 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: RAM
+2016-04-29 02:12:56 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Screen
+2016-04-29 02:12:56 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Screen
+2016-04-29 02:12:57 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: VideoMemory
+2016-04-29 02:12:57 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: VideoMemory
+2016-04-29 02:13:06 INFO  TestProcessorDao:34 - ***Processor was persisted
+2016-04-29 02:13:07 INFO  TestProcessorDao:41 - ***All tables were removed
+2016-04-29 02:14:35 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6bf256fa: startup date [Fri Apr 29 02:14:35 EEST 2016]; root of context hierarchy
+2016-04-29 02:14:35 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-04-29 02:14:37 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-04-29 02:14:37 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-04-29 02:14:38 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-04-29 02:14:38 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-04-29 02:14:38 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-04-29 02:14:38 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-04-29 02:14:38 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-04-29 02:14:38 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-04-29 02:14:38 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-04-29 02:14:39 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-04-29 02:14:40 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-04-29 02:14:41 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-04-29 02:14:41 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: HDD
+2016-04-29 02:14:41 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: HDD
+2016-04-29 02:14:42 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Model
+2016-04-29 02:14:42 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Model
+2016-04-29 02:14:42 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Notebook
+2016-04-29 02:14:42 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Notebook
+2016-04-29 02:14:43 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Processor
+2016-04-29 02:14:43 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Processor
+2016-04-29 02:14:43 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: RAM
+2016-04-29 02:14:43 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: RAM
+2016-04-29 02:14:44 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Screen
+2016-04-29 02:14:44 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Screen
+2016-04-29 02:14:44 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: VideoMemory
+2016-04-29 02:14:44 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: VideoMemory
+2016-04-29 02:14:52 INFO  TestProcessorDao:34 - ***Processor was persisted
+2016-04-29 02:14:54 INFO  TestProcessorDao:41 - ***All tables were removed
+2016-04-29 02:16:18 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6bf256fa: startup date [Fri Apr 29 02:16:18 EEST 2016]; root of context hierarchy
+2016-04-29 02:16:18 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-04-29 02:16:20 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-04-29 02:16:20 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-04-29 02:16:21 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-04-29 02:16:21 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-04-29 02:16:21 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-04-29 02:16:21 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-04-29 02:16:21 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-04-29 02:16:21 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-04-29 02:16:22 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-04-29 02:16:23 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-04-29 02:16:23 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-04-29 02:16:24 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-04-29 02:16:25 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: HDD
+2016-04-29 02:16:25 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: HDD
+2016-04-29 02:16:25 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Model
+2016-04-29 02:16:25 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Model
+2016-04-29 02:16:25 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Notebook
+2016-04-29 02:16:25 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Notebook
+2016-04-29 02:16:26 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Processor
+2016-04-29 02:16:26 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Processor
+2016-04-29 02:16:26 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: RAM
+2016-04-29 02:16:26 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: RAM
+2016-04-29 02:16:27 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Screen
+2016-04-29 02:16:27 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Screen
+2016-04-29 02:16:27 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: VideoMemory
+2016-04-29 02:16:27 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: VideoMemory
+2016-04-29 02:16:36 INFO  TestProcessorDao:34 - ***Processor was persisted
+2016-04-29 02:16:36 INFO  TestProcessorDao:96 - ***In testUpdateProcessorNegative
+2016-04-29 02:16:37 INFO  TestProcessorDao:41 - ***All tables were removed
+2016-04-29 02:17:02 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6bf256fa: startup date [Fri Apr 29 02:17:02 EEST 2016]; root of context hierarchy
+2016-04-29 02:17:02 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-04-29 02:17:03 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-04-29 02:17:04 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-04-29 02:17:04 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-04-29 02:17:05 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-04-29 02:17:05 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-04-29 02:17:05 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-04-29 02:17:05 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-04-29 02:17:05 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-04-29 02:17:05 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-04-29 02:17:06 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-04-29 02:17:06 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-04-29 02:17:08 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-04-29 02:17:08 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: HDD
+2016-04-29 02:17:08 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: HDD
+2016-04-29 02:17:09 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Model
+2016-04-29 02:17:09 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Model
+2016-04-29 02:17:09 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Notebook
+2016-04-29 02:17:09 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Notebook
+2016-04-29 02:17:10 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Processor
+2016-04-29 02:17:10 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Processor
+2016-04-29 02:17:10 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: RAM
+2016-04-29 02:17:10 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: RAM
+2016-04-29 02:17:10 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Screen
+2016-04-29 02:17:10 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Screen
+2016-04-29 02:17:11 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: VideoMemory
+2016-04-29 02:17:11 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: VideoMemory
+2016-04-29 02:17:19 INFO  TestProcessorDao:34 - ***Processor was persisted
+2016-04-29 02:17:19 INFO  TestProcessorDao:96 - ***In testUpdateProcessorNegative
+2016-04-29 02:17:21 INFO  TestProcessorDao:41 - ***All tables were removed
+2016-04-29 02:18:37 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6bf256fa: startup date [Fri Apr 29 02:18:37 EEST 2016]; root of context hierarchy
+2016-04-29 02:18:37 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-context.xml]
+2016-04-29 02:18:38 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [orm-spring-context.xml]
+2016-04-29 02:18:39 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-04-29 02:18:39 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-04-29 02:18:40 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-04-29 02:18:40 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-04-29 02:18:40 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-04-29 02:18:40 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-04-29 02:18:40 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-04-29 02:18:40 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-04-29 02:18:42 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-04-29 02:18:42 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-04-29 02:18:43 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-04-29 02:18:44 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: HDD
+2016-04-29 02:18:44 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: HDD
+2016-04-29 02:18:44 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Model
+2016-04-29 02:18:44 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Model
+2016-04-29 02:18:44 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Notebook
+2016-04-29 02:18:44 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Notebook
+2016-04-29 02:18:45 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Processor
+2016-04-29 02:18:45 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Processor
+2016-04-29 02:18:45 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: RAM
+2016-04-29 02:18:45 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: RAM
+2016-04-29 02:18:46 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Screen
+2016-04-29 02:18:46 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: Screen
+2016-04-29 02:18:46 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: VideoMemory
+2016-04-29 02:18:46 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:338 - HHH000262: Table not found: VideoMemory
+2016-04-29 02:18:54 INFO  TestProcessorDao:34 - ***Processor was persisted
+2016-04-29 02:18:54 INFO  TestProcessorDao:96 - ***In testUpdateProcessorNegative
+2016-04-29 02:18:56 INFO  TestProcessorDao:41 - ***All tables were removed

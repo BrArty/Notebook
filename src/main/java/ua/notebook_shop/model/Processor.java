@@ -5,10 +5,13 @@ import javax.persistence.*;
 @Entity
 @Table
 public class Processor extends IdGenerate{
+
     @OneToOne(mappedBy = "processor")
     private Notebook notebook;
+
     @Column(name = "proc_model", nullable = false)
     private String model;
+
     @Column(name = "frequency_Gb", nullable = false)
     private String frequency;
 

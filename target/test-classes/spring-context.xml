@@ -11,7 +11,7 @@
 
     <tx:annotation-driven/>
     <!--FOR ASPECT ANNOTATIONS-->
-    <aop:aspectj-autoproxy />
+    <!--<aop:aspectj-autoproxy />-->
     <context:annotation-config/>
     <context:component-scan base-package="ua.notebook_shop"/>
     <!-- get properties from app.properties-->
