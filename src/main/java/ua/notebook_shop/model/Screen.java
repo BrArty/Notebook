@@ -1,13 +1,16 @@
 package ua.notebook_shop.model;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table
-public class Screen extends IdGenerate{
-    @OneToOne(mappedBy = "screen")
-    private Notebook notebook;
-    @Column(nullable = false)
+public class Screen extends IdGenerate {
+
+    @OneToMany(mappedBy = "screen", cascade = {CascadeType.PERSIST}, fetch = FetchType.LAZY)
+    private List<Notebook> notebook = new ArrayList<>();
+    @Column(nullable = false, unique = true)
     private double size;
 
     public Screen() {
@@ -17,12 +20,12 @@ public class Screen extends IdGenerate{
         this.size = size;
     }
 
-    public Notebook getNotebook() {
-        return notebook;
+    public void setNotebook(List<Notebook> notebook) {
+        this.notebook = notebook;
     }
 
-    public void setNotebook(Notebook notebook) {
-        this.notebook = notebook;
+    public List<Notebook> getNotebook() {
+        return notebook;
     }
 
     public double getSize() {
@@ -36,9 +39,7 @@ public class Screen extends IdGenerate{
     @Override
     public String toString() {
         return "Screen{" +
-                "id=" + id +
-                ", notebook=" + notebook +
-                ", size=" + size +
+                "size=" + size +
                 '}';
     }
 }

@@ -1,12 +1,15 @@
 package ua.notebook_shop.model;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table
-public class VideoMemory extends IdGenerate{
-    @OneToOne(mappedBy = "video")
-    private Notebook notebook;
+public class VideoMemory extends IdGenerate {
+
+    @OneToMany(mappedBy = "video", cascade = {CascadeType.PERSIST}, fetch = FetchType.LAZY)
+    private List<Notebook> notebook = new ArrayList<>();
     @Column(nullable = false)
     private String manufacturer;
     @Column(nullable = false)
@@ -40,20 +43,18 @@ public class VideoMemory extends IdGenerate{
         this.memoryInGb = memoryInGb;
     }
 
-    public Notebook getNotebook() {
-        return notebook;
+    public void setNotebook(List<Notebook> notebook) {
+        this.notebook = notebook;
     }
 
-    public void setNotebook(Notebook notebook) {
-        this.notebook = notebook;
+    public List<Notebook> getNotebook() {
+        return notebook;
     }
 
     @Override
     public String toString() {
         return "VideoMemory{" +
-                "id=" + id +
-                ", notebook=" + notebook +
-                ", manufacturer='" + manufacturer + '\'' +
+                "manufacturer='" + manufacturer + '\'' +
                 ", memoryInGb=" + memoryInGb +
                 '}';
     }

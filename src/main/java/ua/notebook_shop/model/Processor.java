@@ -1,17 +1,17 @@
 package ua.notebook_shop.model;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table
-public class Processor extends IdGenerate{
+public class Processor extends IdGenerate {
 
-    @OneToOne(mappedBy = "processor")
-    private Notebook notebook;
-
+    @OneToMany(mappedBy = "processor", cascade = {CascadeType.PERSIST}, fetch = FetchType.LAZY)
+    private List<Notebook> notebook = new ArrayList<>();
     @Column(name = "proc_model", nullable = false)
     private String model;
-
     @Column(name = "frequency_Gb", nullable = false)
     private String frequency;
 
@@ -31,12 +31,12 @@ public class Processor extends IdGenerate{
         this.frequency = frequency;
     }
 
-    public Notebook getNotebook() {
-        return notebook;
+    public void setNotebook(List<Notebook> notebook) {
+        this.notebook = notebook;
     }
 
-    public void setNotebook(Notebook notebook) {
-        this.notebook = notebook;
+    public List<Notebook> getNotebook() {
+        return notebook;
     }
 
     public String getModel() {
@@ -50,8 +50,7 @@ public class Processor extends IdGenerate{
     @Override
     public String toString() {
         return "Processor{" +
-                "id=" + id +
-                ", notebook=" + notebook +
+                "model='" + model + '\'' +
                 ", frequency='" + frequency + '\'' +
                 '}';
     }

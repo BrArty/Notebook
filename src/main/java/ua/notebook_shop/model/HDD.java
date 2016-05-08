@@ -1,12 +1,15 @@
 package ua.notebook_shop.model;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table
-public class HDD extends IdGenerate{
-    @OneToOne(mappedBy = "hdd")
-    private Notebook notebook;
+public class HDD extends IdGenerate {
+
+    @OneToMany(mappedBy = "hdd", cascade = {CascadeType.PERSIST}, fetch = FetchType.LAZY)
+    private List<Notebook> notebook = new ArrayList<>();
     @Column(name = "memory_Gb", nullable = false)
     private int memoryInGb;
 
@@ -25,20 +28,18 @@ public class HDD extends IdGenerate{
         this.memoryInGb = memoryInGb;
     }
 
-    public Notebook getNotebook() {
-        return notebook;
+    public void setNotebook(List<Notebook> notebook) {
+        this.notebook = notebook;
     }
 
-    public void setNotebook(Notebook notebook) {
-        this.notebook = notebook;
+    public List<Notebook> getNotebook() {
+        return notebook;
     }
 
     @Override
     public String toString() {
         return "HDD{" +
-                "id=" + id +
-                ", notebook=" + notebook +
-                ", memoryInGb=" + memoryInGb +
+                "memoryInGb=" + memoryInGb +
                 '}';
     }
 }

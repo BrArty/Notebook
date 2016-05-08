@@ -4,25 +4,26 @@ import javax.persistence.*;
 
 @Entity
 @Table
-public class Notebook extends IdGenerate{
-    @OneToOne
+public class Notebook extends IdGenerate {
+
+    @ManyToOne
     @JoinColumn(referencedColumnName = "id")
     private Model model;
-    @OneToOne
+    @ManyToOne
     @JoinColumn(referencedColumnName = "id")
-    private Screen screen;
-    @OneToOne
-    @JoinColumn(referencedColumnName = "id")
-     HDD hdd;
-    @OneToOne
+    private HDD hdd;
+    @ManyToOne
     @JoinColumn(referencedColumnName = "id")
     private Processor processor;
-    @OneToOne
+    @ManyToOne
     @JoinColumn(referencedColumnName = "id")
-    private RAM ram;
-    @OneToOne
+    private Screen screen;
+    @ManyToOne
     @JoinColumn(referencedColumnName = "id")
     private VideoMemory video;
+    @ManyToOne
+    @JoinColumn(referencedColumnName = "id")
+    private RAM ram;
     @Column
     private String notebook_name;
 
@@ -33,79 +34,67 @@ public class Notebook extends IdGenerate{
         this.notebook_name = notebook_name;
     }
 
+    public void setModel(Model model) {
+        this.model = model;
+    }
+
     public Model getModel() {
         return model;
-    }
-
-    public Notebook setModel(Model model) {
-        this.model = model;
-        return this;
-    }
-
-    public Screen getScreen() {
-        return screen;
-    }
-
-    public Notebook setScreen(Screen screen) {
-        this.screen = screen;
-        return this;
     }
 
     public String getNotebook_name() {
         return notebook_name;
     }
 
-    public Notebook setNotebook_name(String notebook_name) {
-        this.notebook_name = notebook_name;
-        return this;
+    public void setScreen(Screen screen) {
+        this.screen = screen;
+    }
+
+    public Screen getScreen() {
+        return screen;
+    }
+
+    public void setHdd(HDD hdd) {
+        this.hdd = hdd;
     }
 
     public HDD getHdd() {
         return hdd;
     }
 
-    public Notebook setHdd(HDD hdd) {
-        this.hdd = hdd;
-        return this;
+    public void setProcessor(Processor processor) {
+        this.processor = processor;
     }
 
     public Processor getProcessor() {
         return processor;
     }
 
-    public Notebook setProcessor(Processor processor) {
-        this.processor = processor;
-        return this;
+    public void setRam(RAM ram) {
+        this.ram = ram;
     }
 
     public RAM getRam() {
         return ram;
     }
 
-    public Notebook setRam(RAM ram) {
-        this.ram = ram;
-        return this;
+    public void setVideo(VideoMemory video) {
+        this.video = video;
     }
 
     public VideoMemory getVideo() {
         return video;
     }
 
-    public Notebook setVideo(VideoMemory video) {
-        this.video = video;
-        return this;
-    }
-
     @Override
     public String toString() {
         return "Notebook{" +
-                "id=" + id +
-                ", model=" + model +
-                ", screen=" + screen +
+                "model=" + model +
                 ", hdd=" + hdd +
                 ", processor=" + processor +
-                ", ram=" + ram +
+                ", screen=" + screen +
                 ", video=" + video +
+                ", ram=" + ram +
                 ", notebook_name='" + notebook_name + '\'' +
                 '}';
     }
