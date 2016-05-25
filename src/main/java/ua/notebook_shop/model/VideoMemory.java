@@ -13,7 +13,7 @@ public class VideoMemory extends IdGenerate {
     @Column(nullable = false)
     private String manufacturer;
     @Column(nullable = false)
-    private int memoryInGb;
+    private String memoryInGb;
 
     public VideoMemory() {
     }
@@ -22,7 +22,7 @@ public class VideoMemory extends IdGenerate {
         this.manufacturer = manufacturer;
     }
 
-    public VideoMemory(String manufacturer, int memoryInGb) {
+    public VideoMemory(String manufacturer, String memoryInGb) {
         this.manufacturer = manufacturer;
         this.memoryInGb = memoryInGb;
     }
@@ -35,11 +35,11 @@ public class VideoMemory extends IdGenerate {
         this.manufacturer = manufacturer;
     }
 
-    public int getMemoryInGb() {
+    public String getMemoryInGb() {
         return memoryInGb;
     }
 
-    public void setMemoryInGb(int memoryInGb) {
+    public void setMemoryInGb(String memoryInGb) {
         this.memoryInGb = memoryInGb;
     }
 

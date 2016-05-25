@@ -6,17 +6,17 @@ import java.util.List;
 
 @Entity
 @Table
-public class RAM extends IdGenerate {
+public class Ram extends IdGenerate {
 
     @OneToMany(mappedBy = "ram", cascade = {CascadeType.PERSIST}, fetch = FetchType.LAZY)
     private List<Notebook> notebook = new ArrayList<>();
     @Column(name = "memory_Gb")
-    private int memoryInGb;
+    private String memoryInGb;
 
-    public RAM() {
+    public Ram() {
     }
 
-    public RAM(int memoryInGb) {
+    public Ram(String memoryInGb) {
         this.memoryInGb = memoryInGb;
     }
 
@@ -28,17 +28,17 @@ public class RAM extends IdGenerate {
         return notebook;
     }
 
-    public int getMemoryInGb() {
+    public String getMemoryInGb() {
         return memoryInGb;
     }
 
-    public void setMemoryInGb(int memoryInGb) {
+    public void setMemoryInGb(String memoryInGb) {
         this.memoryInGb = memoryInGb;
     }
 
     @Override
     public String toString() {
-        return "RAM{" +
+        return "Ram{" +
                 "memoryInGb=" + memoryInGb +
                 '}';
     }

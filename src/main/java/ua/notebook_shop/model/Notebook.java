@@ -5,13 +5,12 @@ import javax.persistence.*;
 @Entity
 @Table
 public class Notebook extends IdGenerate {
-
     @ManyToOne
     @JoinColumn(referencedColumnName = "id")
     private Model model;
     @ManyToOne
     @JoinColumn(referencedColumnName = "id")
-    private HDD hdd;
+    private Hdd hdd;
     @ManyToOne
     @JoinColumn(referencedColumnName = "id")
     private Processor processor;
@@ -23,7 +22,7 @@ public class Notebook extends IdGenerate {
     private VideoMemory video;
     @ManyToOne
     @JoinColumn(referencedColumnName = "id")
-    private RAM ram;
+    private Ram ram;
     @Column
     private String notebook_name;
 
@@ -54,11 +53,11 @@ public class Notebook extends IdGenerate {
         return screen;
     }
 
-    public void setHdd(HDD hdd) {
+    public void setHdd(Hdd hdd) {
         this.hdd = hdd;
     }
 
-    public HDD getHdd() {
+    public Hdd getHdd() {
         return hdd;
     }
 
@@ -70,11 +69,11 @@ public class Notebook extends IdGenerate {
         return processor;
     }
 
-    public void setRam(RAM ram) {
+    public void setRam(Ram ram) {
         this.ram = ram;
     }
 
-    public RAM getRam() {
+    public Ram getRam() {
         return ram;
     }
 

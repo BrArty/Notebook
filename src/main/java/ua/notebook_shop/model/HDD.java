@@ -6,25 +6,25 @@ import java.util.List;
 
 @Entity
 @Table
-public class HDD extends IdGenerate {
+public class Hdd extends IdGenerate {
 
     @OneToMany(mappedBy = "hdd", cascade = {CascadeType.PERSIST}, fetch = FetchType.LAZY)
     private List<Notebook> notebook = new ArrayList<>();
     @Column(name = "memory_Gb", nullable = false)
-    private int memoryInGb;
+    private String memoryInGb;
 
-    public HDD() {
+    public Hdd() {
     }
 
-    public HDD(int memoryInGb) {
+    public Hdd(String memoryInGb) {
         this.memoryInGb = memoryInGb;
     }
 
-    public int getMemoryInGb() {
+    public String getMemoryInGb() {
         return memoryInGb;
     }
 
-    public void setMemoryInGb(int memoryInGb) {
+    public void setMemoryInGb(String memoryInGb) {
         this.memoryInGb = memoryInGb;
     }
 
@@ -38,7 +38,7 @@ public class HDD extends IdGenerate {
 
     @Override
     public String toString() {
-        return "HDD{" +
+        return "Hdd{" +
                 "memoryInGb=" + memoryInGb +
                 '}';
     }
