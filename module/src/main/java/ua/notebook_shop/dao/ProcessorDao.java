@@ -6,6 +6,7 @@ import ua.notebook_shop.model.Processor;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import java.util.List;
 
 @Component
 @Transactional
@@ -17,7 +18,7 @@ public class ProcessorDao {
     public ProcessorDao() {
     }
 
-    public void persistProcessor(Processor processor) {
+    public void saveProcessor(Processor processor) {
         manager.persist(processor);
     }
 
@@ -29,6 +30,10 @@ public class ProcessorDao {
         Processor processor = manager.find(Processor.class, idProcessor);
         manager.remove(processor);
         return processor;
+    }
+
+    public List getAll() {
+        return manager.createQuery("SELECT m FROM Processor m").getResultList();
     }
 
     public void updateProcessor(Processor processor) {

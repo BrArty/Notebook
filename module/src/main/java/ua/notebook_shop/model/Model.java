@@ -29,18 +29,17 @@ public class Model extends IdGenerate {
         return notebook;
     }
 
-    public String getModel_name() {
+    public String getModel() {
         return model;
     }
 
-    public void setModel_name(String model_name) {
-        this.model = model_name;
+    public void setModel(String model) {
+        this.model = model;
     }
 
     @Override
     public String toString() {
-        return "Model{" +
-                "model='" + model + '\'' +
-                '}';
+        return "Model: " +
+                "model: " + model;
     }
 }

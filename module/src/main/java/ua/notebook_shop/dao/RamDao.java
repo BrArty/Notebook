@@ -6,6 +6,7 @@ import ua.notebook_shop.model.Ram;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import java.util.List;
 
 @Component
 @Transactional
@@ -17,7 +18,7 @@ public class RamDao {
     public RamDao() {
     }
 
-    public void persistRam(Ram ram) {
+    public void saveRam(Ram ram) {
         manager.persist(ram);
     }
 
@@ -29,6 +30,10 @@ public class RamDao {
         Ram ram = manager.find(Ram.class, idRam);
         manager.remove(ram);
         return ram;
+    }
+
+    public List getAll() {
+        return manager.createQuery("SELECT m FROM Ram m").getResultList();
     }
 
     public void updateRam(Ram ram) {

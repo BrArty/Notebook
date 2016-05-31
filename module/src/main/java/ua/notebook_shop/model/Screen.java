@@ -38,8 +38,7 @@ public class Screen extends IdGenerate {
 
     @Override
     public String toString() {
-        return "Screen{" +
-                "size=" + size +
-                '}';
+        return "Screen: " +
+                "size: " + size;
     }
 }

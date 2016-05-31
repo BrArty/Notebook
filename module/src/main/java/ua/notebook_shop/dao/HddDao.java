@@ -6,6 +6,7 @@ import ua.notebook_shop.model.Hdd;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import java.util.List;
 
 @Component
 @Transactional
@@ -17,7 +18,7 @@ public class HddDao {
     public HddDao() {
     }
 
-    public void persistHDD(Hdd hdd) {
+    public void saveHDD(Hdd hdd) {
         manager.persist(hdd);
     }
 
@@ -29,6 +30,10 @@ public class HddDao {
         Hdd hdd = manager.find(Hdd.class, idHDD);
         manager.remove(hdd);
         return hdd;
+    }
+
+    public List getAll() {
+        return manager.createQuery("SELECT m FROM Hdd m").getResultList();
     }
 
     public void updateHDD(Hdd hdd) {

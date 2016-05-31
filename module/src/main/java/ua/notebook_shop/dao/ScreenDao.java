@@ -6,6 +6,7 @@ import ua.notebook_shop.model.Screen;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import java.util.List;
 
 @Component
 @Transactional
@@ -17,7 +18,7 @@ public class ScreenDao {
     public ScreenDao() {
     }
 
-    public void persistScreen(Screen screen) {
+    public void saveScreen(Screen screen) {
         manager.persist(screen);
     }
 
@@ -29,6 +30,10 @@ public class ScreenDao {
         Screen screen = manager.find(Screen.class, idScreen);
         manager.remove(screen);
         return screen;
+    }
+
+    public List getAll() {
+        return manager.createQuery("SELECT m FROM Screen m").getResultList();
     }
 
     public void updateScreen(Screen screen) {

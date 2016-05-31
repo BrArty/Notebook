@@ -13,12 +13,34 @@
 <body>
 <table>
     <tr>
-        <td><span>Notebook model: </span></td>
-        <td><c:out value="${notebook}"/></td>
+        <td><span><strong>Notebook model: </strong></span></td>
+    </tr>
+    <tr>
+        <td><c:out value="${notebook.model}"/></td>
+    </tr>
+    <tr>
+        <td><c:out value="${notebook.processor}"/></td>
+    </tr>
+    <tr>
+        <td><c:out value="${notebook.hdd}"/></td>
+    </tr>
+    <tr>
+        <td><c:out value="${notebook.ram}"/></td>
+    </tr>
+    <tr>
+        <td><c:out value="${notebook.screen}"/></td>
+    </tr>
+    <tr>
+        <td><c:out value="${notebook.video}"/></td>
     </tr>
 
+
 </table>
-<input type="submit" value="Edit profile"/>
+<c:url var="editUrl" value="/edit"/>
+<form:form method="get" action="${editUrl}">
+    <input type="submit" value="Edit notebook"/>
+</form:form>
+
 
 </body>
 </html>

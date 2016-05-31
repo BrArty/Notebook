@@ -29,55 +29,35 @@ public class NotebookService {
 
     public void addNotebook(Notebook notebook) {
         Notebook notebookFromDB = notebookDao.findNotebook(notebook.getId());
-        if (notebookFromDB == null) notebookDao.persistNotebook(notebook);
+        if (notebookFromDB == null) notebookDao.saveNotebook(notebook);
         else notebookDao.updateNotebook(notebook);
+    }
+
+    public void addElements(int noteId, Model model, Hdd hdd, Processor processor, Ram ram, Screen screen, VideoMemory videoMemory) {
+        notebookDao.chooseElements(noteId, model, hdd, processor, ram, screen, videoMemory);
     }
 
     public Model getModel(int idModel) {
         return modelDao.findModel(idModel);
     }
 
-    public void addModel(Model model) {
-        modelDao.updateModel(model);
-    }
-
     public Hdd getHdd(int idHdd) {
         return hddDao.findHDD(idHdd);
-    }
-
-    public void addHdd(Hdd hdd) {
-        hddDao.persistHDD(hdd);
     }
 
     public Processor getProcessor(int idProcessor) {
         return processorDao.findProcessor(idProcessor);
     }
 
-    public void addProcessor(Processor processor) {
-        processorDao.persistProcessor(processor);
-    }
-
     public Ram getRam(int idRam) {
         return ramDao.findRam(idRam);
-    }
-
-    public void addRam(Ram ram) {
-        ramDao.persistRam(ram);
     }
 
     public Screen getScreen(int idScreen) {
         return screenDao.findScreen(idScreen);
     }
 
-    public void addScreen(Screen screen) {
-        screenDao.persistScreen(screen);
-    }
-
     public VideoMemory getVideo(int idVideo) {
         return videoMemoryDao.findVideo(idVideo);
-    }
-
-    public void addVideo(VideoMemory video) {
-        videoMemoryDao.persistVideo(video);
     }
 }

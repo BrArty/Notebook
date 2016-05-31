@@ -38,8 +38,7 @@ public class Hdd extends IdGenerate {
 
     @Override
     public String toString() {
-        return "Hdd{" +
-                "memoryInGb=" + memoryInGb +
-                '}';
+        return "Hdd: " +
+                "memoryInGb: " + memoryInGb;
     }
 }

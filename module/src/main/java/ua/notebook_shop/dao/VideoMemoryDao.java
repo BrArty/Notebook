@@ -6,6 +6,7 @@ import ua.notebook_shop.model.VideoMemory;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import java.util.List;
 
 @Component
 @Transactional
@@ -17,7 +18,7 @@ public class VideoMemoryDao {
     public VideoMemoryDao() {
     }
 
-    public void persistVideo(VideoMemory video) {
+    public void saveVideo(VideoMemory video) {
         manager.persist(video);
     }
 
@@ -29,6 +30,10 @@ public class VideoMemoryDao {
         VideoMemory video = manager.find(VideoMemory.class, idVideo);
         manager.remove(video);
         return video;
+    }
+
+    public List getAll() {
+        return manager.createQuery("SELECT m FROM Videomemory m").getResultList();
     }
 
     public void updateVideo(VideoMemory video) {

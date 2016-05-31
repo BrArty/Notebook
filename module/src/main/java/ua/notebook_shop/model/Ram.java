@@ -38,8 +38,7 @@ public class Ram extends IdGenerate {
 
     @Override
     public String toString() {
-        return "Ram{" +
-                "memoryInGb=" + memoryInGb +
-                '}';
+        return "Ram: " +
+                "memoryInGb: " + memoryInGb;
     }
 }

@@ -49,9 +49,8 @@ public class Processor extends IdGenerate {
 
     @Override
     public String toString() {
-        return "Processor{" +
-                "model='" + model + '\'' +
-                ", frequency='" + frequency + '\'' +
-                '}';
+        return "Processor: " +
+                "model: " + model +
+                ", frequency: " + frequency;
     }
 }

@@ -1,13 +1,12 @@
 package ua.notebook_shop.dao;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 import ua.notebook_shop.model.Model;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import java.util.List;
 
 @Component
 @Transactional
@@ -19,8 +18,9 @@ public class ModelDao {
     public ModelDao() {
     }
 
-    public void persistModel(Model model) {
+    public Model saveModel(Model model) {
         manager.persist(model);
+        return model;
     }
 
     public Model findModel(int idModel) {
@@ -33,13 +33,17 @@ public class ModelDao {
         return model;
     }
 
+    public List getAll() {
+        return manager.createQuery("SELECT m FROM Model m").getResultList();
+    }
+
     public void updateModel(Model model) {
 
         Model modelFromDB = manager.find(Model.class, model.getId());
 
         if (modelFromDB == null) return;
 
-        modelFromDB.setModel_name(model.getModel_name());
+        modelFromDB.setModel(model.getModel());
 
         manager.merge(modelFromDB);
 
