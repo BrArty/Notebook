@@ -1,15 +1,23 @@
 package ua.notebook_shop.controller;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import ua.notebook_shop.dao.ModelDao;
+import ua.notebook_shop.model.Notebook;
+import ua.notebook_shop.model.Screen;
 import ua.notebook_shop.service.NotebookService;
 
 @Controller
-@RequestMapping(value = "/")
 public class MainController {
+
+    private final Logger LOG = Logger.getLogger(MainController.class);
+
 
     @Autowired
     NotebookService notebookService;
@@ -17,24 +25,35 @@ public class MainController {
     @Autowired
     ModelDao modelDao;
 
-    @RequestMapping(value = "/first", method = RequestMethod.GET)
-    public String firstPage(@RequestParam(value = "id", required = false, defaultValue = "1") int id, Model model) {
-        model.addAttribute("notebook", notebookService.getNotebook(id));
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String firstGet(Model model) {
+        LOG.info("***In firstGet method");
+        model.addAttribute("notebook", new Notebook());
         return "index";
     }
 
-    @RequestMapping(value = "/edit", method = RequestMethod.GET)
-    public String create(Model model) {
-        model.addAttribute("modelName", new ua.notebook_shop.model.Model());
-        return "/edit";
+    @RequestMapping(value = "/info", method = RequestMethod.POST)
+    public String infoPost(@ModelAttribute(value = "notebook") Notebook notebook, Model model) {
+        LOG.info("***In infoPost method");
+        Notebook newNotebook = notebookService.getNotebook(notebook.getId());
+        model.addAttribute("newNotebook", newNotebook);
+        return "info";
     }
 
-    @RequestMapping(value = "/edit", method = RequestMethod.POST)
-    public String createNotebook(@ModelAttribute(value = "modelName") ua.notebook_shop.model.Model modelName, Model model) {
-        ua.notebook_shop.model.Model model1 = new ua.notebook_shop.model.Model(modelName.getModel());
-        model.addAttribute("modelName", modelDao.saveModel(model1));
+    @RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
+    public String editGet(@PathVariable int id, Model model) {
+        LOG.info("***In editGet method");
+        model.addAttribute("notebook", notebookService.getNotebook(id));
         return "edit";
     }
 
+    @RequestMapping(value = "/edit", method = RequestMethod.POST)
+    public String editPost(@ModelAttribute(value = "notebook") Notebook notebook) {
+        LOG.info("***In editPost method");
+        Notebook someNote = notebookService.getNotebook(notebook.getId());
+        notebookService.setScreen(notebook.getScreen(), someNote.getId());
+        LOG.info("***After editPost method");
+        return "edit";
+    }
 
 }

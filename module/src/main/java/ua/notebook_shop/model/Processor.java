@@ -18,11 +18,6 @@ public class Processor extends IdGenerate {
     public Processor() {
     }
 
-    public Processor(String frequency, String model) {
-        this.model = model;
-        this.frequency = frequency;
-    }
-
     public String getFrequency() {
         return frequency;
     }

@@ -16,10 +16,6 @@ public class Hdd extends IdGenerate {
     public Hdd() {
     }
 
-    public Hdd(String memoryInGb) {
-        this.memoryInGb = memoryInGb;
-    }
-
     public String getMemoryInGb() {
         return memoryInGb;
     }

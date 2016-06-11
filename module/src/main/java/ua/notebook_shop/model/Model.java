@@ -17,10 +17,6 @@ public class Model extends IdGenerate {
     public Model() {
     }
 
-    public Model(String model_name) {
-        this.model = model_name;
-    }
-
     public void setNotebook(List<Notebook> notebook) {
         this.notebook = notebook;
     }

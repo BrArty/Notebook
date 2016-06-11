@@ -16,10 +16,6 @@ public class Screen extends IdGenerate {
     public Screen() {
     }
 
-    public Screen(double size) {
-        this.size = size;
-    }
-
     public void setNotebook(List<Notebook> notebook) {
         this.notebook = notebook;
     }

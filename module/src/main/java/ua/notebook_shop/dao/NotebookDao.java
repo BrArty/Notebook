@@ -16,7 +16,6 @@ public class NotebookDao {
     private EntityManager manager;
 
     public NotebookDao() {
-
     }
 
     public void saveNotebook(Notebook notebook) {
@@ -27,12 +26,65 @@ public class NotebookDao {
         return manager.find(Notebook.class, idNotebook);
     }
 
-    public void chooseElements(int notebookId, Model model, Hdd hdd, Processor processor, Ram ram, Screen screen, VideoMemory videoMemory) {
-        manager.createQuery("UPDATE Notebook SET model = :model, processor = :processor, " +
-                "ram = :ram, screen = :screen, videoMemory = :video, hdd = :hdd WHERE id = :id", Notebook.class)
-                .setParameter("model", model).setParameter("processor", processor)
-                .setParameter("ram", ram).setParameter("screen", screen).setParameter("video", videoMemory)
-                .setParameter("hdd", hdd).setParameter("id", notebookId).executeUpdate();
+    public void setModel(Model model) {
+        Model modelFromDb = manager.find(Model.class, model.getId());
+        if (modelFromDb == null) return;
+        Notebook notebook = (Notebook) manager.createQuery("SELECT n FROM Notebook n WHERE model = :model")
+                .setParameter("model", model);
+        notebook.setModel(modelFromDb);
+    }
+
+    public void setProcessor(Processor processor) {
+        Processor processorFromDb = manager.find(Processor.class, processor.getId());
+        if (processorFromDb == null) return;
+        Notebook notebook = (Notebook) manager.createQuery("SELECT n FROM Notebook n WHERE processor = :processor")
+                .setParameter("processor", processor);
+        notebook.setProcessor(processorFromDb);
+    }
+
+    public void setRam(Ram ram) {
+        Ram ramFromDb = manager.find(Ram.class, ram.getId());
+        if (ramFromDb == null) return;
+        Notebook notebook = (Notebook) manager.createQuery("SELECT n FROM Notebook n WHERE ram = :ram")
+                .setParameter("ram", ram);
+        notebook.setRam(ramFromDb);
+    }
+
+    public Screen setScreen(Screen screen) {
+        Screen screenFromDb = manager.find(Screen.class, screen.getId());
+        if (screenFromDb == null) return null;
+        Notebook notebook = (Notebook) manager.createQuery("SELECT n FROM Notebook n WHERE screen = :screen")
+                .setParameter("screen", screen);
+        notebook.setScreen(screenFromDb);
+        return screenFromDb;
+    }
+
+    public Screen getScreen() {
+        return (Screen) manager.createQuery("SELECT Screen FROM Notebook").getSingleResult();
+    }
+
+    public Screen setScreen(int screenId) {
+        Screen screenFromDb = manager.find(Screen.class, screenId);
+        if (screenFromDb == null) return null;
+        Screen screen = (Screen) manager.createQuery("SELECT s FROM Screen s WHERE id = :screenId")
+                .setParameter("screenId", screenId);
+        return screen;
+    }
+
+    public void setVideo(VideoMemory video) {
+        VideoMemory videoFromDb = manager.find(VideoMemory.class, video.getId());
+        if (videoFromDb == null) return;
+        Notebook notebook = (Notebook) manager.createQuery("SELECT n FROM Notebook n WHERE Video = :video")
+                .setParameter("video", video);
+        notebook.setVideo(videoFromDb);
+    }
+
+    public void setHdd(Hdd hdd) {
+        Hdd hddFromDb = manager.find(Hdd.class, hdd.getId());
+        if (hddFromDb == null) return;
+        Notebook notebook = (Notebook) manager.createQuery("SELECT n FROM Notebook n WHERE hdd = :hdd")
+                .setParameter("hdd", hdd);
+        notebook.setHdd(hddFromDb);
     }
 
     public Notebook removeNotebook(int idNotebook) {

@@ -29,12 +29,9 @@ public class Notebook extends IdGenerate {
     public Notebook() {
     }
 
-    public Notebook(String notebook_name) {
-        this.notebook_name = notebook_name;
-    }
-
-    public void setModel(Model model) {
+    public Model setModel(Model model) {
         this.model = model;
+        return model;
     }
 
     public Model getModel() {
@@ -53,32 +50,36 @@ public class Notebook extends IdGenerate {
         return screen;
     }
 
-    public void setHdd(Hdd hdd) {
+    public Hdd setHdd(Hdd hdd) {
         this.hdd = hdd;
+        return hdd;
     }
 
     public Hdd getHdd() {
         return hdd;
     }
 
-    public void setProcessor(Processor processor) {
+    public Processor setProcessor(Processor processor) {
         this.processor = processor;
+        return processor;
     }
 
     public Processor getProcessor() {
         return processor;
     }
 
-    public void setRam(Ram ram) {
+    public Ram setRam(Ram ram) {
         this.ram = ram;
+        return ram;
     }
 
     public Ram getRam() {
         return ram;
     }
 
-    public void setVideo(VideoMemory video) {
+    public VideoMemory setVideo(VideoMemory video) {
         this.video = video;
+        return video;
     }
 
     public VideoMemory getVideo() {

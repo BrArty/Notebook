@@ -16,10 +16,6 @@ public class Ram extends IdGenerate {
     public Ram() {
     }
 
-    public Ram(String memoryInGb) {
-        this.memoryInGb = memoryInGb;
-    }
-
     public void setNotebook(List<Notebook> notebook) {
         this.notebook = notebook;
     }

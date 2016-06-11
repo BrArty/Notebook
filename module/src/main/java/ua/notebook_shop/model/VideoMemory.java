@@ -18,15 +18,6 @@ public class VideoMemory extends IdGenerate {
     public VideoMemory() {
     }
 
-    public VideoMemory(String manufacturer) {
-        this.manufacturer = manufacturer;
-    }
-
-    public VideoMemory(String manufacturer, String memoryInGb) {
-        this.manufacturer = manufacturer;
-        this.memoryInGb = memoryInGb;
-    }
-
     public String getManufacturer() {
         return manufacturer;
     }

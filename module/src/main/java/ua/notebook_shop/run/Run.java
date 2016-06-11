@@ -13,7 +13,7 @@ import org.springframework.context.annotation.ImportResource;
 @SpringBootApplication
 @EnableAutoConfiguration(exclude = {DataSourceAutoConfiguration.class, DevToolsDataSourceAutoConfiguration.class, DataSourceProperties.class})
 @Configuration
-@ComponentScan
+@ComponentScan("ua.notebook_shop")
 @ImportResource({"WEB-INF/spring-servlet.xml"})
 public class Run {
 

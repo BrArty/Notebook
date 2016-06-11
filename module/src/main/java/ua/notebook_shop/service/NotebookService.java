@@ -5,6 +5,8 @@ import org.springframework.stereotype.Service;
 import ua.notebook_shop.dao.*;
 import ua.notebook_shop.model.*;
 
+import java.util.List;
+
 @Service
 public class NotebookService {
 
@@ -33,31 +35,44 @@ public class NotebookService {
         else notebookDao.updateNotebook(notebook);
     }
 
-    public void addElements(int noteId, Model model, Hdd hdd, Processor processor, Ram ram, Screen screen, VideoMemory videoMemory) {
-        notebookDao.chooseElements(noteId, model, hdd, processor, ram, screen, videoMemory);
+    public Model getModel(int notebookId) {
+        Notebook notebook = notebookDao.findNotebook(notebookId);
+        return notebook.getModel();
     }
 
-    public Model getModel(int idModel) {
-        return modelDao.findModel(idModel);
+    public Notebook setScreen(Screen screen, int notebookId) {
+        Notebook notebook = notebookDao.findNotebook(notebookId);
+        notebook.setScreen(screen);
+        notebookDao.updateNotebook(notebook);
+        return notebook;
     }
 
-    public Hdd getHdd(int idHdd) {
-        return hddDao.findHDD(idHdd);
+    public Hdd getHdd(int notebookId) {
+        Notebook notebook = notebookDao.findNotebook(notebookId);
+        return notebook.getHdd();
     }
 
-    public Processor getProcessor(int idProcessor) {
-        return processorDao.findProcessor(idProcessor);
+    public Processor getProcessor(int notebookId) {
+        Notebook notebook = notebookDao.findNotebook(notebookId);
+        return notebook.getProcessor();
     }
 
-    public Ram getRam(int idRam) {
-        return ramDao.findRam(idRam);
+    public Ram getRam(int notebookId) {
+        Notebook notebook = notebookDao.findNotebook(notebookId);
+        return notebook.getRam();
     }
 
-    public Screen getScreen(int idScreen) {
-        return screenDao.findScreen(idScreen);
+    public Screen getScreen(int notebookId) {
+        Notebook notebook = notebookDao.findNotebook(notebookId);
+        return notebook.getScreen();
     }
 
-    public VideoMemory getVideo(int idVideo) {
-        return videoMemoryDao.findVideo(idVideo);
+    public VideoMemory getVideo(int notebookId) {
+        Notebook notebook = notebookDao.findNotebook(notebookId);
+        return notebook.getVideo();
+    }
+
+    public List getAllScreens() {
+        return screenDao.getAll();
     }
 }
