@@ -9,10 +9,12 @@ import org.springframework.boot.devtools.autoconfigure.DevToolsDataSourceAutoCon
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.ImportResource;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 @SpringBootApplication
 @EnableAutoConfiguration(exclude = {DataSourceAutoConfiguration.class, DevToolsDataSourceAutoConfiguration.class, DataSourceProperties.class})
 @Configuration
+@EnableWebMvc
 @ComponentScan("ua.notebook_shop")
 @ImportResource({"WEB-INF/spring-servlet.xml"})
 public class Run {

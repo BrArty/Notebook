@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import ua.notebook_shop.dao.ModelDao;
 import ua.notebook_shop.model.Notebook;
-import ua.notebook_shop.model.Screen;
 import ua.notebook_shop.service.NotebookService;
 
 @Controller
