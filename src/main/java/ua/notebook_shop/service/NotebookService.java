@@ -72,6 +72,11 @@ public class NotebookService {
         return notebook.getVideo();
     }
 
+    @Deprecated
+    public Notebook updateNotebook(Notebook notebook) {
+        return notebookDao.updateNotebook(notebook);
+    }
+
     public List getAllScreens() {
         return screenDao.getAll();
     }

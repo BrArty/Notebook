@@ -6,15 +6,14 @@ import java.util.List;
 
 @Entity
 @Table
-public class Model extends IdGenerate {
+public class Screen extends IdGenerate {
 
-    @OneToMany(mappedBy = "model", cascade = {CascadeType.PERSIST}, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "screen", cascade = {CascadeType.PERSIST}, fetch = FetchType.LAZY)
     private List<Notebook> notebook = new ArrayList<>();
+    @Column(nullable = false, unique = true)
+    private double size;
 
-    @Column(nullable = false)
-    private String model;
-
-    public Model() {
+    public Screen() {
     }
 
     public void setNotebook(List<Notebook> notebook) {
@@ -25,17 +24,16 @@ public class Model extends IdGenerate {
         return notebook;
     }
 
-    public String getModel() {
-        return model;
+    public double getSize() {
+        return size;
     }
 
-    public void setModel(String model) {
-        this.model = model;
+    public void setSize(double size) {
+        this.size = size;
     }
 
     @Override
     public String toString() {
-        return "Model: " +
-                "model: " + model;
+        return "size: " + size;
     }
 }

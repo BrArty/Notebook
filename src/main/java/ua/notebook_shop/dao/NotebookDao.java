@@ -29,7 +29,7 @@ public class NotebookDao {
     public void setModel(Model model) {
         Model modelFromDb = manager.find(Model.class, model.getId());
         if (modelFromDb == null) return;
-        Notebook notebook = (Notebook) manager.createQuery("SELECT n FROM Notebook n WHERE model = :model")
+        Notebook notebook = (Notebook) manager.createQuery("SELECT n FROM Notebook n WHERE Model = :model")
                 .setParameter("model", model);
         notebook.setModel(modelFromDb);
     }
@@ -37,7 +37,7 @@ public class NotebookDao {
     public void setProcessor(Processor processor) {
         Processor processorFromDb = manager.find(Processor.class, processor.getId());
         if (processorFromDb == null) return;
-        Notebook notebook = (Notebook) manager.createQuery("SELECT n FROM Notebook n WHERE processor = :processor")
+        Notebook notebook = (Notebook) manager.createQuery("SELECT n FROM Notebook n WHERE Processor = :processor")
                 .setParameter("processor", processor);
         notebook.setProcessor(processorFromDb);
     }
@@ -45,7 +45,7 @@ public class NotebookDao {
     public void setRam(Ram ram) {
         Ram ramFromDb = manager.find(Ram.class, ram.getId());
         if (ramFromDb == null) return;
-        Notebook notebook = (Notebook) manager.createQuery("SELECT n FROM Notebook n WHERE ram = :ram")
+        Notebook notebook = (Notebook) manager.createQuery("SELECT n FROM Notebook n WHERE Ram = :ram")
                 .setParameter("ram", ram);
         notebook.setRam(ramFromDb);
     }
@@ -53,28 +53,23 @@ public class NotebookDao {
     public Screen setScreen(Screen screen) {
         Screen screenFromDb = manager.find(Screen.class, screen.getId());
         if (screenFromDb == null) return null;
-        Notebook notebook = (Notebook) manager.createQuery("SELECT n FROM Notebook n WHERE screen = :screen")
+        Notebook notebook = (Notebook) manager.createQuery("SELECT n FROM Notebook n WHERE Screen = :screen")
                 .setParameter("screen", screen);
         notebook.setScreen(screenFromDb);
         return screenFromDb;
     }
 
-    public Screen getScreen() {
-        return (Screen) manager.createQuery("SELECT Screen FROM Notebook").getSingleResult();
-    }
-
     public Screen setScreen(int screenId) {
         Screen screenFromDb = manager.find(Screen.class, screenId);
         if (screenFromDb == null) return null;
-        Screen screen = (Screen) manager.createQuery("SELECT s FROM Screen s WHERE id = :screenId")
+        return (Screen) manager.createQuery("SELECT s FROM Screen s WHERE Screen.id = :screenId")
                 .setParameter("screenId", screenId);
-        return screen;
     }
 
     public void setVideo(VideoMemory video) {
         VideoMemory videoFromDb = manager.find(VideoMemory.class, video.getId());
         if (videoFromDb == null) return;
-        Notebook notebook = (Notebook) manager.createQuery("SELECT n FROM Notebook n WHERE Video = :video")
+        Notebook notebook = (Notebook) manager.createQuery("SELECT n FROM Notebook n WHERE VideoMemory = :video")
                 .setParameter("video", video);
         notebook.setVideo(videoFromDb);
     }
@@ -82,9 +77,45 @@ public class NotebookDao {
     public void setHdd(Hdd hdd) {
         Hdd hddFromDb = manager.find(Hdd.class, hdd.getId());
         if (hddFromDb == null) return;
-        Notebook notebook = (Notebook) manager.createQuery("SELECT n FROM Notebook n WHERE hdd = :hdd")
+        Notebook notebook = (Notebook) manager.createQuery("SELECT n FROM Notebook n WHERE Hdd = :hdd")
                 .setParameter("hdd", hdd);
         notebook.setHdd(hddFromDb);
+    }
+
+    public Hdd getHdd(int notebookId) {
+        Notebook notebook = manager.find(Notebook.class, notebookId);
+        Hdd hdd = notebook.getHdd();
+        return manager.find(Hdd.class, hdd.getId());
+    }
+
+    public Model getModel(int notebookId) {
+        Notebook notebook = manager.find(Notebook.class, notebookId);
+        Model model = notebook.getModel();
+        return manager.find(Model.class, model.getId());
+    }
+
+    public Processor getProcessor(int notebookId) {
+        Notebook notebook = manager.find(Notebook.class, notebookId);
+        Processor processor = notebook.getProcessor();
+        return manager.find(Processor.class, processor.getId());
+    }
+
+    public Ram getRam(int notebookId) {
+        Notebook notebook = manager.find(Notebook.class, notebookId);
+        Ram ram = notebook.getRam();
+        return manager.find(Ram.class, ram.getId());
+    }
+
+    public VideoMemory getVideo(int notebookId) {
+        Notebook notebook = manager.find(Notebook.class, notebookId);
+        VideoMemory videoMemory = notebook.getVideo();
+        return manager.find(VideoMemory.class, videoMemory.getId());
+    }
+
+    public Screen getScreen(int notebookId) {
+        Notebook notebook = manager.find(Notebook.class, notebookId);
+        Screen screen = notebook.getScreen();
+        return manager.find(Screen.class, screen.getId());
     }
 
     public Notebook removeNotebook(int idNotebook) {
@@ -97,11 +128,11 @@ public class NotebookDao {
         return manager.createQuery("SELECT m FROM Notebook m").getResultList();
     }
 
-    public void updateNotebook(Notebook notebook) {
+    public Notebook updateNotebook(Notebook notebook) {
 
         Notebook notebookFromDB = manager.find(Notebook.class, notebook.getId());
 
-        if (notebookFromDB == null) return;
+        if (notebookFromDB == null) return null;
 
         notebookFromDB.setVideo(notebook.getVideo());
         notebookFromDB.setRam(notebook.getRam());
@@ -111,5 +142,6 @@ public class NotebookDao {
         notebookFromDB.setProcessor(notebook.getProcessor());
 
         manager.merge(notebookFromDB);
+        return notebookFromDB;
     }
 }

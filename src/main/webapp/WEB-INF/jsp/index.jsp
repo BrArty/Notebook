@@ -9,21 +9,24 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Notebook</title>
 </head>
-<body>
+<body bgcolor="#f0f8ff">
 
-<form:form method="post" modelAttribute="notebook" action="/info">
-
-    <tr>
-        <td><form:label path="id">Enter notebook id:</form:label></td>
-        <td><form:input path="id" disabled="false"/></td>
-    </tr>
-
-    <input type="submit" value="Show notebook">
-
+<form:form method="post" modelAttribute="notebook" action="/">
+    <table>
+        <tr>
+            <td><form:label path="id">Enter notebook id:</form:label></td>
+            <td><form:input path="id" disabled="false"/></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Info"/></td>
+        </tr>
+    </table>
 </form:form>
-<c:url var="toEdit" value="/edit/${notebook.id}"/>
-<form:form method="get" action="${toEdit}">
-    <input type="submit" value="Edit"/>
-</form:form>
+
+<form>
+    <input type="button" value="Create new notebook" onclick='location.href="/create"'/>
+</form>
+
+
 </body>
 </html>

@@ -44,8 +44,7 @@ public class VideoMemory extends IdGenerate {
 
     @Override
     public String toString() {
-        return "VideoMemory: " +
-                "manufacturer: " + manufacturer +
-                ", memoryInGb: " + memoryInGb;
+        return "manufacturer: " + manufacturer +
+                ", memory, Gb: " + memoryInGb;
     }
 }

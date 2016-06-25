@@ -6,9 +6,9 @@ import javax.persistence.*;
 public class IdGenerate {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int id;
+    private int id;
 
-    public IdGenerate() {
+    IdGenerate() {
     }
 
     public int getId() {

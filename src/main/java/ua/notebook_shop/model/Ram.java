@@ -6,22 +6,14 @@ import java.util.List;
 
 @Entity
 @Table
-public class Hdd extends IdGenerate {
+public class Ram extends IdGenerate {
 
-    @OneToMany(mappedBy = "hdd", cascade = {CascadeType.PERSIST}, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "ram", cascade = {CascadeType.PERSIST}, fetch = FetchType.LAZY)
     private List<Notebook> notebook = new ArrayList<>();
-    @Column(name = "memory_Gb", nullable = false)
+    @Column(name = "memory_Gb")
     private String memoryInGb;
 
-    public Hdd() {
-    }
-
-    public String getMemoryInGb() {
-        return memoryInGb;
-    }
-
-    public void setMemoryInGb(String memoryInGb) {
-        this.memoryInGb = memoryInGb;
+    public Ram() {
     }
 
     public void setNotebook(List<Notebook> notebook) {
@@ -32,9 +24,16 @@ public class Hdd extends IdGenerate {
         return notebook;
     }
 
+    public String getMemoryInGb() {
+        return memoryInGb;
+    }
+
+    public void setMemoryInGb(String memoryInGb) {
+        this.memoryInGb = memoryInGb;
+    }
+
     @Override
     public String toString() {
-        return "Hdd: " +
-                "memoryInGb: " + memoryInGb;
+        return "memory, Gb: " + memoryInGb;
     }
 }

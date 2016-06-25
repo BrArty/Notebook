@@ -89,12 +89,12 @@ public class Notebook extends IdGenerate {
     @Override
     public String toString() {
         return "Notebook: " +
-                "model: " + model +
-                ", hdd: " + hdd +
-                ", processor: " + processor +
-                ", screen: " + screen +
-                ", video: " + video +
-                ", ram: " + ram +
+                 model +
+                ", " + hdd +
+                ", " + processor +
+                ", " + screen +
+                ", " + video +
+                ", " + ram +
                 ", notebook_name: " + notebook_name;
     }
 }
