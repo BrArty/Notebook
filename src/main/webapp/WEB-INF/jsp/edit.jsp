@@ -23,6 +23,61 @@
                 <form:option value="2" label="17.0"/>
             </form:select></td>
         </tr>
+        <tr>
+            <td>
+                Set hdd:
+            </td>
+            <td><form:select path="hdd.id">
+                <form:option value="0" label="Select"/>
+                <form:option value="1" label="1"/>
+                <form:option value="2" label="2"/>
+            </form:select></td>
+        </tr>
+        <tr>
+            <td>
+                Set model:
+            </td>
+            <td><form:select path="model.id">
+                <form:option value="0" label="Select"/>
+                <c:forEach items="${list}" var="model">
+                <form:option value="${model.id}" label="${model}"/>
+            </c:forEach>
+            </form:select></td>
+        </tr>
+        <tr>
+            <td>
+                Set processor:
+            </td>
+            <td><form:select path="processor.id">
+                <form:option value="0" label="Select"/>
+                <form:option value="1" label="1"/>
+                <form:option value="2" label="2"/>
+                <form:option value="3" label="3"/>
+                <form:option value="4" label="4"/>
+            </form:select></td>
+        </tr>
+        <tr>
+            <td>
+                Set ram:
+            </td>
+            <td><form:select path="ram.id">
+                <form:option value="0" label="Select"/>
+                <form:option value="1" label="1"/>
+                <form:option value="2" label="2"/>
+            </form:select></td>
+        </tr>
+        <tr>
+            <td>
+                Set video memory:
+            </td>
+            <td><form:select path="video.id">
+                <form:option value="0" label="Select"/>
+                <form:option value="1" label="1"/>
+                <form:option value="2" label="2"/>
+                <form:option value="3" label="3"/>
+                <form:option value="4" label="4"/>
+            </form:select></td>
+        </tr>
     </table>
 
     <input type="submit" value="Confirm"/>
@@ -30,7 +85,7 @@
 </form:form>
 
 <form:form>
-    <input type="button" value="Info" onclick='location.href="/info?id=${id}"'/>
+    <input type="button" value="Info" onclick='location.href="/info?id=${notebook.id}"'/>
 </form:form>
 
 </body>

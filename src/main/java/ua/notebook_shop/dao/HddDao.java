@@ -2,6 +2,7 @@ package ua.notebook_shop.dao;
 
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
+import ua.notebook_shop.exceptions.AlreadyExistsException;
 import ua.notebook_shop.model.Hdd;
 
 import javax.persistence.EntityManager;
@@ -18,8 +19,10 @@ public class HddDao {
     public HddDao() {
     }
 
-    public void saveHDD(Hdd hdd) {
-        manager.persist(hdd);
+    public void saveHDD(Hdd hdd) throws AlreadyExistsException {
+        if (manager.find(Hdd.class, hdd.getId()) == null) {
+            manager.persist(hdd);
+        } else throw new AlreadyExistsException("This hdd is already exists");
     }
 
     public Hdd findHDD(int idHDD) {

@@ -2,6 +2,7 @@ package ua.notebook_shop.dao;
 
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
+import ua.notebook_shop.exceptions.AlreadyExistsException;
 import ua.notebook_shop.model.Ram;
 
 import javax.persistence.EntityManager;
@@ -18,8 +19,10 @@ public class RamDao {
     public RamDao() {
     }
 
-    public void saveRam(Ram ram) {
-        manager.persist(ram);
+    public void saveRam(Ram ram) throws AlreadyExistsException {
+        if (manager.find(Ram.class, ram.getId()) == null) {
+            manager.persist(ram);
+        } else throw new AlreadyExistsException("This ram is already exists");
     }
 
     public Ram findRam(int idRam) {
@@ -33,7 +36,7 @@ public class RamDao {
     }
 
     public List getAll() {
-        return manager.createQuery("SELECT m FROM Ram m").getResultList();
+        return manager.createQuery("SELECT r FROM Ram r").getResultList();
     }
 
     public void updateRam(Ram ram) {

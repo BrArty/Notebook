@@ -12,7 +12,7 @@
 <body bgcolor="#f0f8ff">
 
 <form:form method="post" modelAttribute="notebook" action="/">
-    <table>
+    <table align="center">
         <tr>
             <td><form:label path="id">Enter notebook id:</form:label></td>
             <td><form:input path="id" disabled="false"/></td>
@@ -20,12 +20,15 @@
         <tr>
             <td><input type="submit" value="Info"/></td>
         </tr>
+        <tr>
+            <td>
+                <form>
+                    <input type="button" value="Create new notebook" onclick='location.href="/create_notebook"'/>
+                </form>
+            </td>
+        </tr>
     </table>
 </form:form>
-
-<form>
-    <input type="button" value="Create new notebook" onclick='location.href="/create"'/>
-</form>
 
 
 </body>

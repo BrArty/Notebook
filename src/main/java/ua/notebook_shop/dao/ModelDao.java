@@ -2,6 +2,7 @@ package ua.notebook_shop.dao;
 
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
+import ua.notebook_shop.exceptions.AlreadyExistsException;
 import ua.notebook_shop.model.Model;
 
 import javax.persistence.EntityManager;
@@ -18,9 +19,10 @@ public class ModelDao {
     public ModelDao() {
     }
 
-    public Model saveModel(Model model) {
-        manager.persist(model);
-        return model;
+    public void saveModel(Model model) throws AlreadyExistsException {
+        if (manager.find(Model.class, model.getId()) == null) {
+            manager.persist(model);
+        } else throw new AlreadyExistsException("This model is already exists");
     }
 
     public Model findModel(int idModel) {

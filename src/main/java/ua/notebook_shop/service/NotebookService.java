@@ -2,28 +2,14 @@ package ua.notebook_shop.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import ua.notebook_shop.dao.*;
+import ua.notebook_shop.dao.NotebookDao;
 import ua.notebook_shop.model.*;
-
-import java.util.List;
 
 @Service
 public class NotebookService {
 
     @Autowired
     NotebookDao notebookDao;
-    @Autowired
-    HddDao hddDao;
-    @Autowired
-    ModelDao modelDao;
-    @Autowired
-    ProcessorDao processorDao;
-    @Autowired
-    RamDao ramDao;
-    @Autowired
-    ScreenDao screenDao;
-    @Autowired
-    VideoMemoryDao videoMemoryDao;
 
     public Notebook getNotebook(int idNotebook) {
         return notebookDao.findNotebook(idNotebook);
@@ -35,31 +21,21 @@ public class NotebookService {
         else notebookDao.updateNotebook(notebook);
     }
 
+    public void setModel(Model model, int notebookId) {
+        Notebook notebook = notebookDao.findNotebook(notebookId);
+        notebook.setModel(model);
+        notebookDao.updateNotebook(notebook);
+    }
+
     public Model getModel(int notebookId) {
         Notebook notebook = notebookDao.findNotebook(notebookId);
         return notebook.getModel();
     }
 
-    public Notebook setScreen(Screen screen, int notebookId) {
+    public void setScreen(Screen screen, int notebookId) {
         Notebook notebook = notebookDao.findNotebook(notebookId);
         notebook.setScreen(screen);
         notebookDao.updateNotebook(notebook);
-        return notebook;
-    }
-
-    public Hdd getHdd(int notebookId) {
-        Notebook notebook = notebookDao.findNotebook(notebookId);
-        return notebook.getHdd();
-    }
-
-    public Processor getProcessor(int notebookId) {
-        Notebook notebook = notebookDao.findNotebook(notebookId);
-        return notebook.getProcessor();
-    }
-
-    public Ram getRam(int notebookId) {
-        Notebook notebook = notebookDao.findNotebook(notebookId);
-        return notebook.getRam();
     }
 
     public Screen getScreen(int notebookId) {
@@ -67,17 +43,47 @@ public class NotebookService {
         return notebook.getScreen();
     }
 
+    public Hdd getHdd(int notebookId) {
+        Notebook notebook = notebookDao.findNotebook(notebookId);
+        return notebook.getHdd();
+    }
+
+    public void setHdd(Hdd hdd, int notebookId) {
+        Notebook notebook = notebookDao.findNotebook(notebookId);
+        notebook.setHdd(hdd);
+        notebookDao.updateNotebook(notebook);
+    }
+
+    public Processor getProcessor(int notebookId) {
+        Notebook notebook = notebookDao.findNotebook(notebookId);
+        return notebook.getProcessor();
+    }
+
+    public void setProcessor(Processor processor, int notebookId) {
+        Notebook notebook = notebookDao.findNotebook(notebookId);
+        notebook.setProcessor(processor);
+        notebookDao.updateNotebook(notebook);
+    }
+
+    public Ram getRam(int notebookId) {
+        Notebook notebook = notebookDao.findNotebook(notebookId);
+        return notebook.getRam();
+    }
+
+    public void setRam(Ram ram, int notebookId) {
+        Notebook notebook = notebookDao.findNotebook(notebookId);
+        notebook.setRam(ram);
+        notebookDao.updateNotebook(notebook);
+    }
+
     public VideoMemory getVideo(int notebookId) {
         Notebook notebook = notebookDao.findNotebook(notebookId);
         return notebook.getVideo();
     }
 
-    @Deprecated
-    public Notebook updateNotebook(Notebook notebook) {
-        return notebookDao.updateNotebook(notebook);
-    }
-
-    public List getAllScreens() {
-        return screenDao.getAll();
+    public void setVideo(VideoMemory videoMemory, int notebookId) {
+        Notebook notebook = notebookDao.findNotebook(notebookId);
+        notebook.setVideo(videoMemory);
+        notebookDao.updateNotebook(notebook);
     }
 }

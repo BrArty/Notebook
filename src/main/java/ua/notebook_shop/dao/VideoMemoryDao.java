@@ -2,6 +2,7 @@ package ua.notebook_shop.dao;
 
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
+import ua.notebook_shop.exceptions.AlreadyExistsException;
 import ua.notebook_shop.model.VideoMemory;
 
 import javax.persistence.EntityManager;
@@ -18,8 +19,10 @@ public class VideoMemoryDao {
     public VideoMemoryDao() {
     }
 
-    public void saveVideo(VideoMemory video) {
-        manager.persist(video);
+    public void saveVideo(VideoMemory video) throws AlreadyExistsException {
+        if (manager.find(VideoMemory.class, video.getId()) == null) {
+            manager.persist(video);
+        } else throw new AlreadyExistsException("This video is already exists");
     }
 
     public VideoMemory findVideo(int idVideo) {
@@ -33,7 +36,7 @@ public class VideoMemoryDao {
     }
 
     public List getAll() {
-        return manager.createQuery("SELECT m FROM Videomemory m").getResultList();
+        return manager.createQuery("SELECT v FROM Videomemory v").getResultList();
     }
 
     public void updateVideo(VideoMemory video) {

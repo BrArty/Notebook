@@ -9,8 +9,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import ua.notebook_shop.model.Notebook;
-import ua.notebook_shop.model.Screen;
+import ua.notebook_shop.service.ElementService;
 import ua.notebook_shop.service.NotebookService;
+
+import java.util.List;
 
 @Controller
 public class MainController {
@@ -19,6 +21,9 @@ public class MainController {
 
     @Autowired
     NotebookService notebookService;
+
+    @Autowired
+    ElementService elementService;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String firstGet(Model model) {
@@ -49,27 +54,44 @@ public class MainController {
         LOG.info("***In editGet method");
         Notebook notebook = notebookService.getNotebook(id);
         model.addAttribute("notebook", notebook);
-        model.addAttribute("id", notebook.getId());
+        List list = elementService.getAllElements(ua.notebook_shop.model.Model.class);
+        model.addAttribute("list", list);
         LOG.info("After editGet method***");
         return "edit";
     }
 
     @RequestMapping(value = "/edit", method = RequestMethod.POST)
-    public String editPost(@RequestParam int id, @ModelAttribute("notebook") Notebook notebook,
-                           Model model) {
+    public String editPost(@RequestParam int id, @ModelAttribute("notebook") Notebook notebook, Model model) {
         LOG.info("***In editPost method");
-        model.addAttribute("notebook", notebookService.setScreen(notebook.getScreen(), id));
-        model.addAttribute("id", notebook.getId());
+        notebookService.setScreen(notebook.getScreen(), id);
+        notebookService.setHdd(notebook.getHdd(), id);
+        notebookService.setModel(notebook.getModel(), id);
+        notebookService.setProcessor(notebook.getProcessor(), id);
+        notebookService.setRam(notebook.getRam(), id);
+        notebookService.setVideo(notebook.getVideo(), id);
+        model.addAttribute("notebook", notebook);
+        List list = elementService.getAllElements(ua.notebook_shop.model.Model.class);
+        model.addAttribute("list", list);
         LOG.info("After editPost method***");
         return "edit";
     }
 
-    @RequestMapping(value = "/create", method = RequestMethod.GET)
+    @RequestMapping(value = "/create_notebook", method = RequestMethod.GET)
     public String createGet(Model model) {
         LOG.info("***In createGet method");
-
+        model.addAttribute("newNotebook", new Notebook());
+        LOG.info("After createGet method***");
         return "create";
     }
 
-
+    @RequestMapping(value = "/create_notebook", method = RequestMethod.POST)
+    public String createPost(@ModelAttribute(value = "newNotebook") Notebook notebook, Model model) {
+        LOG.info("***In createPost method");
+        Notebook newNote = new Notebook(notebook.getNotebook_name(), notebook.getModel(),
+                notebook.getHdd(),notebook.getProcessor(),
+                notebook.getScreen(),notebook.getVideo(),notebook.getRam());
+        notebookService.addNotebook(newNote);
+        LOG.info("After createPost method***");
+        return "create";
+    }
 }

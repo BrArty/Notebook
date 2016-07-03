@@ -2,6 +2,7 @@ package ua.notebook_shop.dao;
 
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
+import ua.notebook_shop.exceptions.AlreadyExistsException;
 import ua.notebook_shop.model.Processor;
 
 import javax.persistence.EntityManager;
@@ -18,8 +19,10 @@ public class ProcessorDao {
     public ProcessorDao() {
     }
 
-    public void saveProcessor(Processor processor) {
-        manager.persist(processor);
+    public void saveProcessor(Processor processor) throws AlreadyExistsException {
+        if (manager.find(Processor.class, processor.getId()) == null) {
+            manager.persist(processor);
+        } else throw new AlreadyExistsException("This processor is already exists");
     }
 
     public Processor findProcessor(int idProcessor) {
@@ -33,7 +36,7 @@ public class ProcessorDao {
     }
 
     public List getAll() {
-        return manager.createQuery("SELECT m FROM Processor m").getResultList();
+        return manager.createQuery("SELECT p FROM Processor p").getResultList();
     }
 
     public void updateProcessor(Processor processor) {

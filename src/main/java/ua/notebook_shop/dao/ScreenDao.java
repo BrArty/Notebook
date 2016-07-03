@@ -2,6 +2,7 @@ package ua.notebook_shop.dao;
 
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
+import ua.notebook_shop.exceptions.AlreadyExistsException;
 import ua.notebook_shop.model.Screen;
 
 import javax.persistence.EntityManager;
@@ -18,8 +19,10 @@ public class ScreenDao {
     public ScreenDao() {
     }
 
-    public void saveScreen(Screen screen) {
-        manager.persist(screen);
+    public void saveScreen(Screen screen) throws AlreadyExistsException{
+        if (manager.find(Screen.class, screen.getId()) == null) {
+            manager.persist(screen);
+        } else throw new AlreadyExistsException("This screen is already exists");
     }
 
     public Screen findScreen(int idScreen) {
@@ -33,7 +36,7 @@ public class ScreenDao {
     }
 
     public List getAll() {
-        return manager.createQuery("SELECT m FROM Screen m").getResultList();
+        return manager.createQuery("SELECT s FROM Screen s").getResultList();
     }
 
     public void updateScreen(Screen screen) {
