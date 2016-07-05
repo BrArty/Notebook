@@ -22,9 +22,9 @@
         </tr>
         <tr>
             <td>
-                <form>
+                <form:form>
                     <input type="button" value="Create new notebook" onclick='location.href="/create_notebook"'/>
-                </form>
+                </form:form>
             </td>
         </tr>
     </table>

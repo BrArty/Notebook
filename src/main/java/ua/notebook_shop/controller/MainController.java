@@ -73,7 +73,23 @@ public class MainController {
         List list = elementService.getAllElements(ua.notebook_shop.model.Model.class);
         model.addAttribute("list", list);
         LOG.info("After editPost method***");
-        return "edit";
+        return "info";
+    }
+
+    @RequestMapping(value = "/delete", method = RequestMethod.POST)
+    public String editDelete(@RequestParam int id, Model model) {
+        LOG.info("***In editDelete method");
+        final int DEFAULT_ID = 1;
+        Notebook notebook = notebookService.getNotebook(id);
+        LOG.info("before delete");
+        try {
+            notebookService.deleteNotebook(notebook);
+            LOG.info("after delete");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        model.addAttribute("id", DEFAULT_ID);
+        return "redirect:/edit";
     }
 
     @RequestMapping(value = "/create_notebook", method = RequestMethod.GET)

@@ -8,11 +8,8 @@
     <title>Edit page</title>
 </head>
 <body bgcolor="#f0f8ff">
-
 <form:form modelAttribute="notebook" action="/edit?id=${notebook.id}" method="post">
-    <table border="1">
-    </table>
-    <table>
+    <table align="center">
         <tr>
             <td>
                 Set screen size:
@@ -40,8 +37,8 @@
             <td><form:select path="model.id">
                 <form:option value="0" label="Select"/>
                 <c:forEach items="${list}" var="model">
-                <form:option value="${model.id}" label="${model}"/>
-            </c:forEach>
+                    <form:option value="${model.id}" label="${model}"/>
+                </c:forEach>
             </form:select></td>
         </tr>
         <tr>
@@ -78,15 +75,25 @@
                 <form:option value="4" label="4"/>
             </form:select></td>
         </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Confirm"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form:form>
+                    <input type="button" value="Info" onclick='location.href="/info?id=${notebook.id}"'/>
+                </form:form>
+            </td>
+        </tr>
+        <tr>
+            <form:form method="post" action="/delete?id=${notebook.id}">
+                <td><input type="submit" value="Delete"/></td>
+                <td><c:out value="${message}"/></td>
+            </form:form>
+        </tr>
     </table>
-
-    <input type="submit" value="Confirm"/>
-
 </form:form>
-
-<form:form>
-    <input type="button" value="Info" onclick='location.href="/info?id=${notebook.id}"'/>
-</form:form>
-
 </body>
 </html>

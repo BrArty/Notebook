@@ -10,7 +10,7 @@
 </head>
 <body bgcolor="#f0f8ff">
 
-<table border="1">
+<table align="center">
     <tr>
         <td>Notebook's id</td>
         <td>${notebook.id}</td>
@@ -39,15 +39,16 @@
         <td>Video memory</td>
         <td>${notebook.video}</td>
     </tr>
-
+    <form:form>
+        <tr>
+            <td><input type="button" value="Edit" onclick='location.href="/edit?id=${notebook.id}"'/></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="Back" onclick='location.href="/"'/></td>
+        </tr>
+    </form:form>
 </table>
-<form:form>
-    <input type="button" value="Edit" onclick='location.href="/edit?id=${notebook.id}"'/>
-</form:form>
 
-<form:form method="get" action="/">
-    <input type="submit" value="Back"/>
-</form:form>
 
 </body>
 </html>

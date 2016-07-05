@@ -26,6 +26,11 @@ public class NotebookDao {
         return manager.find(Notebook.class, idNotebook);
     }
 
+    public void deleteNotebook(int idNotebook) {
+        Notebook notebook = manager.find(Notebook.class, idNotebook);
+        manager.createQuery("DELETE FROM Notebook WHERE id = :id").setParameter("id", notebook.getId()).executeUpdate();
+    }
+
     public void setModel(Model model) {
         Model modelFromDb = manager.find(Model.class, model.getId());
         if (modelFromDb == null) return;

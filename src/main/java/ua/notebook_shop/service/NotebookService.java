@@ -1,5 +1,6 @@
 package ua.notebook_shop.service;
 
+import org.aspectj.weaver.ast.Not;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ua.notebook_shop.dao.NotebookDao;
@@ -19,6 +20,10 @@ public class NotebookService {
         Notebook notebookFromDB = notebookDao.findNotebook(notebook.getId());
         if (notebookFromDB == null) notebookDao.saveNotebook(notebook);
         else notebookDao.updateNotebook(notebook);
+    }
+
+    public void deleteNotebook(Notebook notebook) {
+        notebookDao.deleteNotebook(notebook.getId());
     }
 
     public void setModel(Model model, int notebookId) {
