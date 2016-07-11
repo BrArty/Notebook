@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import ua.notebook_shop.model.Notebook;
+import ua.notebook_shop.model.*;
 import ua.notebook_shop.service.ElementService;
 import ua.notebook_shop.service.NotebookService;
 
@@ -77,9 +77,8 @@ public class MainController {
     }
 
     @RequestMapping(value = "/delete", method = RequestMethod.POST)
-    public String editDelete(@RequestParam int id, Model model) {
+    public String editDelete(@RequestParam int id) {
         LOG.info("***In editDelete method");
-        final int DEFAULT_ID = 1;
         Notebook notebook = notebookService.getNotebook(id);
         LOG.info("before delete");
         try {
@@ -88,8 +87,7 @@ public class MainController {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        model.addAttribute("id", DEFAULT_ID);
-        return "redirect:/edit";
+        return "redirect:/";
     }
 
     @RequestMapping(value = "/create_notebook", method = RequestMethod.GET)
@@ -104,10 +102,73 @@ public class MainController {
     public String createPost(@ModelAttribute(value = "newNotebook") Notebook notebook, Model model) {
         LOG.info("***In createPost method");
         Notebook newNote = new Notebook(notebook.getNotebook_name(), notebook.getModel(),
-                notebook.getHdd(),notebook.getProcessor(),
-                notebook.getScreen(),notebook.getVideo(),notebook.getRam());
+                notebook.getHdd(), notebook.getProcessor(),
+                notebook.getScreen(), notebook.getVideo(), notebook.getRam());
         notebookService.addNotebook(newNote);
         LOG.info("After createPost method***");
         return "create";
+    }
+
+    @RequestMapping(value = "/element_create", method = RequestMethod.GET)
+    public String createElementGet(@RequestParam String element, Model model) {
+        LOG.info("***In createElementGet method");
+        switch (element) {
+            case "Screen":
+                model.addAttribute("screen", new Screen());
+//                model.addAttribute("element", "Screen");
+                break;
+            case "Model":
+//                model.addAttribute("element", new ua.notebook_shop.model.Model());
+                model.addAttribute("element", "Model");
+                break;
+            case "Hdd":
+//                model.addAttribute("element", new Hdd());
+                model.addAttribute("element", "Hdd");
+                break;
+            case "Processor":
+//                model.addAttribute("element", new Processor());
+                model.addAttribute("element", "Processor");
+                break;
+            case "Ram":
+//                model.addAttribute("element", new Ram());
+                model.addAttribute("element", "Ram");
+                break;
+            case "VideoMemory":
+//                model.addAttribute("element", new VideoMemory());
+                model.addAttribute("element", "VideoMemory");
+                break;
+        }
+        LOG.info("After createElementGet method***");
+        return "element";
+    }
+
+    @RequestMapping(value = "/element_create", method = RequestMethod.POST)
+    public String createElementPost(@RequestParam String element,
+                                    @ModelAttribute(value = "screen") Element element_type,
+                                    Model model) {
+        LOG.info("***In createElementPost method");
+        switch (element) {
+            case "Screen":
+                element_type = new Screen();
+                elementService.addElement(element_type);
+                break;
+            case "Model":
+                model.addAttribute("element", Model.class);
+                break;
+            case "Hdd":
+                model.addAttribute("element", Hdd.class);
+                break;
+            case "Processor":
+                model.addAttribute("element", Processor.class);
+                break;
+            case "Ram":
+                model.addAttribute("element", Ram.class);
+                break;
+            case "VideoMemory":
+                model.addAttribute("element", VideoMemory.class);
+                break;
+        }
+        LOG.info("After createElementPost method***");
+        return "element";
     }
 }

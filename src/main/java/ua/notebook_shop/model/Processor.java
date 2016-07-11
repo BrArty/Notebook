@@ -6,7 +6,7 @@ import java.util.List;
 
 @Entity
 @Table
-public class Processor extends IdGenerate {
+public class Processor extends IdGenerate implements Element {
 
     @OneToMany(mappedBy = "processor", cascade = {CascadeType.PERSIST}, fetch = FetchType.LAZY)
     private List<Notebook> notebook = new ArrayList<>();

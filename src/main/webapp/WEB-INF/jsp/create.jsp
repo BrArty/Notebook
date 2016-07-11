@@ -23,6 +23,10 @@
                 <form:option value="1" label="15.6"/>
                 <form:option value="2" label="17.0"/>
             </form:select></td>
+            <form:form>
+                <td><input type="button" value="New screen" onclick='location.href="/element_create?element=Screen"'/>
+                </td>
+            </form:form>
         </tr>
         <tr>
             <td><form:label path="hdd.id">Hdd:</form:label></td>
@@ -31,6 +35,9 @@
                 <form:option value="1" label="500"/>
                 <form:option value="2" label="750"/>
             </form:select></td>
+            <form:form>
+                <td><input type="button" value="New hdd" onclick='location.href="/element_create?element=Hdd"'/></td>
+            </form:form>
         </tr>
         <tr>
             <td><form:label path="model.id">Model:</form:label></td>
@@ -41,6 +48,10 @@
                 <form:option value="3" label="Inspiron 3543"/>
                 <form:option value="4" label="K55VM"/>
             </form:select></td>
+            <form:form>
+                <td><input type="button" value="New model" onclick='location.href="/element_create?element=Model"'/>
+                </td>
+            </form:form>
         </tr>
         <tr>
             <td><form:label path="processor.id">Processor:</form:label></td>
@@ -51,6 +62,10 @@
                 <form:option value="3" label="Intel Pentium 3805U"/>
                 <form:option value="4" label="Intel Celeron N3050"/>
             </form:select></td>
+            <form:form>
+                <td><input type="button" value="New processor"
+                           onclick='location.href="/element_create?element=Processor"'/></td>
+            </form:form>
         </tr>
         <tr>
             <td><form:label path="ram.id">Ram:</form:label></td>
@@ -59,6 +74,9 @@
                 <form:option value="1" label="2"/>
                 <form:option value="2" label="4"/>
             </form:select></td>
+            <form:form>
+                <td><input type="button" value="New ram" onclick='location.href="/element_create?element=Ram"'/></td>
+            </form:form>
         </tr>
         <tr>
             <td><form:label path="video.id">Video:</form:label></td>
@@ -69,6 +87,10 @@
                 <form:option value="3" label="nVidia GeForce 820M"/>
                 <form:option value="4" label="NVIDIA GeForce GT 630M"/>
             </form:select></td>
+            <form:form>
+                <td><input type="button" value="New video" onclick='location.href="/element_create?element=VideoMemory"'/>
+                </td>
+            </form:form>
         </tr>
         <tr>
             <td>

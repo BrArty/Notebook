@@ -6,7 +6,7 @@ import java.util.List;
 
 @Entity
 @Table
-public class VideoMemory extends IdGenerate {
+public class VideoMemory extends IdGenerate implements Element {
 
     @OneToMany(mappedBy = "video", cascade = {CascadeType.PERSIST}, fetch = FetchType.LAZY)
     private List<Notebook> notebook = new ArrayList<>();

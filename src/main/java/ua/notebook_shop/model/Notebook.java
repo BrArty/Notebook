@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table
-public class Notebook extends IdGenerate {
+public class Notebook extends IdGenerate{
     @ManyToOne
     @JoinColumn(referencedColumnName = "id")
     private Model model;

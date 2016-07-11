@@ -8,8 +8,6 @@ import ua.notebook_shop.model.*;
 
 import java.util.List;
 
-import static javafx.scene.input.KeyCode.T;
-
 @Service
 public class ElementService {
     @Autowired
@@ -25,49 +23,21 @@ public class ElementService {
     @Autowired
     VideoMemoryDao videoMemoryDao;
 
-    public void addHdd(Hdd hdd) {
+    public void addElement(Element element) {
         try {
-            hddDao.saveHDD(hdd);
-        } catch (AlreadyExistsException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void addModel(Model model) {
-        try {
-            modelDao.saveModel(model);
-        } catch (AlreadyExistsException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void addProcessor(Processor processor) {
-        try {
-            processorDao.saveProcessor(processor);
-        } catch (AlreadyExistsException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void addRam(Ram ram) {
-        try {
-            ramDao.saveRam(ram);
-        } catch (AlreadyExistsException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void addScreen(Screen screen) {
-        try {
-            screenDao.saveScreen(screen);
-        } catch (AlreadyExistsException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void addVideo(VideoMemory videoMemory) {
-        try {
-            videoMemoryDao.saveVideo(videoMemory);
+            if ( element instanceof Hdd) {
+                hddDao.saveHDD((Hdd) element);
+            } else if (element instanceof Model) {
+                modelDao.saveModel((Model) element);
+            } else if (element instanceof Processor) {
+                processorDao.saveProcessor((Processor) element);
+            } else if (element instanceof Ram) {
+                ramDao.saveRam((Ram) element);
+            } else if (element instanceof Screen) {
+                screenDao.saveScreen((Screen) element);
+            } else if (element instanceof VideoMemory) {
+                videoMemoryDao.saveVideo((VideoMemory) element);
+            } else throw new ClassCastException("Cannot cast this class " + this.getClass());
         } catch (AlreadyExistsException e) {
             e.printStackTrace();
         }

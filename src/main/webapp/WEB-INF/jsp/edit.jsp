@@ -8,6 +8,7 @@
     <title>Edit page</title>
 </head>
 <body bgcolor="#f0f8ff">
+<c:out value="${message}"/>
 <form:form modelAttribute="notebook" action="/edit?id=${notebook.id}" method="post">
     <table align="center">
         <tr>
@@ -87,11 +88,12 @@
                 </form:form>
             </td>
         </tr>
+    </table>
+</form:form>
+<form:form method="post" action="/delete?id=${notebook.id}">
+    <table align="center">
         <tr>
-            <form:form method="post" action="/delete?id=${notebook.id}">
-                <td><input type="submit" value="Delete"/></td>
-                <td><c:out value="${message}"/></td>
-            </form:form>
+            <td><input type="submit" value="Delete" onclick="confirm('Delete this notebook?')"/></td>
         </tr>
     </table>
 </form:form>

@@ -14,8 +14,10 @@
 <form:form method="post" modelAttribute="notebook" action="/">
     <table align="center">
         <tr>
-            <td><form:label path="id">Enter notebook id:</form:label></td>
-            <td><form:input path="id" disabled="false"/></td>
+            <td>
+                <label for="input">Notebook's id: </label>
+                <input type="text" id="input" name="id"/>
+            </td>
         </tr>
         <tr>
             <td><input type="submit" value="Info"/></td>
