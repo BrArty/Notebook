@@ -6,7 +6,7 @@ import java.util.List;
 
 @Entity
 @Table
-public class VideoMemory extends IdGenerate implements Element {
+public class VideoMemory extends Element{
 
     @OneToMany(mappedBy = "video", cascade = {CascadeType.PERSIST}, fetch = FetchType.LAZY)
     private List<Notebook> notebook = new ArrayList<>();
@@ -16,6 +16,11 @@ public class VideoMemory extends IdGenerate implements Element {
     private String memoryInGb;
 
     public VideoMemory() {
+    }
+
+    public VideoMemory(String manufacturer, String memoryInGb) {
+        this.manufacturer = manufacturer;
+        this.memoryInGb = memoryInGb;
     }
 
     public String getManufacturer() {

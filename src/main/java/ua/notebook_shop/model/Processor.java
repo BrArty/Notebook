@@ -1,12 +1,14 @@
 package ua.notebook_shop.model;
 
+import org.apache.tomcat.jni.Proc;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 @Table
-public class Processor extends IdGenerate implements Element {
+public class Processor extends Element{
 
     @OneToMany(mappedBy = "processor", cascade = {CascadeType.PERSIST}, fetch = FetchType.LAZY)
     private List<Notebook> notebook = new ArrayList<>();
@@ -16,6 +18,11 @@ public class Processor extends IdGenerate implements Element {
     private String frequency;
 
     public Processor() {
+    }
+
+    public Processor(String model, String frequency) {
+        this.model = model;
+        this.frequency = frequency;
     }
 
     public String getFrequency() {

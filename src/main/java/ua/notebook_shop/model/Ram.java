@@ -6,7 +6,7 @@ import java.util.List;
 
 @Entity
 @Table
-public class Ram extends IdGenerate implements Element {
+public class Ram extends Element{
 
     @OneToMany(mappedBy = "ram", cascade = {CascadeType.PERSIST}, fetch = FetchType.LAZY)
     private List<Notebook> notebook = new ArrayList<>();
@@ -14,6 +14,10 @@ public class Ram extends IdGenerate implements Element {
     private String memoryInGb;
 
     public Ram() {
+    }
+
+    public Ram(String memoryInGb) {
+        this.memoryInGb = memoryInGb;
     }
 
     public void setNotebook(List<Notebook> notebook) {

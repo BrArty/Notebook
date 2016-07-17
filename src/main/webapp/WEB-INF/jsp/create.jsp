@@ -20,11 +20,12 @@
             <td><form:label path="screen.id">Screen:</form:label></td>
             <td><form:select path="screen.id">
                 <form:option value="0" label="Select"/>
-                <form:option value="1" label="15.6"/>
-                <form:option value="2" label="17.0"/>
+                <c:forEach items="${screens}" var="screen">
+                    <form:option value="${screen.id}" label="${screen}"/>
+                </c:forEach>
             </form:select></td>
             <form:form>
-                <td><input type="button" value="New screen" onclick='location.href="/element_create?element=Screen"'/>
+                <td><input type="button" value="New screen" onclick='location.href="/element_create/Screen"'/>
                 </td>
             </form:form>
         </tr>
@@ -32,24 +33,24 @@
             <td><form:label path="hdd.id">Hdd:</form:label></td>
             <td><form:select path="hdd.id">
                 <form:option value="0" label="Select"/>
-                <form:option value="1" label="500"/>
-                <form:option value="2" label="750"/>
+                <c:forEach items="${hdds}" var="hdd">
+                    <form:option value="${hdd.id}" label="${hdd}"/>
+                </c:forEach>
             </form:select></td>
             <form:form>
-                <td><input type="button" value="New hdd" onclick='location.href="/element_create?element=Hdd"'/></td>
+                <td><input type="button" value="New hdd" onclick='location.href="/element_create/Hdd"'/></td>
             </form:form>
         </tr>
         <tr>
             <td><form:label path="model.id">Model:</form:label></td>
             <td><form:select path="model.id">
                 <form:option value="0" label="Select"/>
-                <form:option value="1" label="X540SA"/>
-                <form:option value="2" label="Idea-Pad 100-15"/>
-                <form:option value="3" label="Inspiron 3543"/>
-                <form:option value="4" label="K55VM"/>
+                <c:forEach items="${models}" var="model">
+                    <form:option value="${model.id}" label="${model}"/>
+                </c:forEach>
             </form:select></td>
             <form:form>
-                <td><input type="button" value="New model" onclick='location.href="/element_create?element=Model"'/>
+                <td><input type="button" value="New model" onclick='location.href="/element_create/Model"'/>
                 </td>
             </form:form>
         </tr>
@@ -57,38 +58,37 @@
             <td><form:label path="processor.id">Processor:</form:label></td>
             <td><form:select path="processor.id">
                 <form:option value="0" label="Select"/>
-                <form:option value="1" label="Intel Pentium 3825U"/>
-                <form:option value="2" label="Intel Core i5-3210M"/>
-                <form:option value="3" label="Intel Pentium 3805U"/>
-                <form:option value="4" label="Intel Celeron N3050"/>
+                <c:forEach items="${proces}" var="processor">
+                    <form:option value="${processor.id}" label="${processor}"/>
+                </c:forEach>
             </form:select></td>
             <form:form>
                 <td><input type="button" value="New processor"
-                           onclick='location.href="/element_create?element=Processor"'/></td>
+                           onclick='location.href="/element_create/Processor"'/></td>
             </form:form>
         </tr>
         <tr>
             <td><form:label path="ram.id">Ram:</form:label></td>
             <td><form:select path="ram.id">
                 <form:option value="0" label="Select"/>
-                <form:option value="1" label="2"/>
-                <form:option value="2" label="4"/>
+                <c:forEach items="${rams}" var="ram">
+                    <form:option value="${ram.id}" label="${ram}"/>
+                </c:forEach>
             </form:select></td>
             <form:form>
-                <td><input type="button" value="New ram" onclick='location.href="/element_create?element=Ram"'/></td>
+                <td><input type="button" value="New ram" onclick='location.href="/element_create/Ram"'/></td>
             </form:form>
         </tr>
         <tr>
             <td><form:label path="video.id">Video:</form:label></td>
             <td><form:select path="video.id">
                 <form:option value="0" label="Select"/>
-                <form:option value="1" label="Intel HD Graphics"/>
-                <form:option value="2" label="nVidia GeForce GT 920M"/>
-                <form:option value="3" label="nVidia GeForce 820M"/>
-                <form:option value="4" label="NVIDIA GeForce GT 630M"/>
+                <c:forEach items="${videos}" var="video">
+                    <form:option value="${video.id}" label="${video}"/>
+                </c:forEach>
             </form:select></td>
             <form:form>
-                <td><input type="button" value="New video" onclick='location.href="/element_create?element=VideoMemory"'/>
+                <td><input type="button" value="New video" onclick='location.href="/element_create/Video"'/>
                 </td>
             </form:form>
         </tr>

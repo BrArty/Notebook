@@ -11,6 +11,9 @@ public class NotebookService {
     @Autowired
     NotebookDao notebookDao;
 
+    public NotebookService() {
+    }
+
     public Notebook getNotebook(int idNotebook) {
         return notebookDao.findNotebook(idNotebook);
     }

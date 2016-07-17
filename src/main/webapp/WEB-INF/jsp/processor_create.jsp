@@ -9,12 +9,23 @@
     <title>Element creation</title>
 </head>
 <body bgcolor="#f0f8ff">
-<form:form method="post" action="/element_create?element=Screen" modelAttribute="screen">
+<form:form method="post" action="/element_create/Processor" modelAttribute="processor">
     <table align="center">
         <tr>
-            <td><label for="type">Type here: </label>
-                <input id="type" name="size"/></td>
+            <td><label for="type1">Model: </label>
+                <input id="type1" name="model"/></td>
+        </tr>
+        <tr>
+            <td><label for="type2">Frequency: </label>
+                <input id="type2" name="frequency"/></td>
             <td><input type="submit" value="Test"/></td>
+        </tr>
+        <tr>
+            <td>
+                <form:form>
+                    <input type="button" value="Back" onclick='location.href="/"'/>
+                </form:form>
+            </td>
         </tr>
     </table>
 </form:form>

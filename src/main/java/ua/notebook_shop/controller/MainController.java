@@ -54,8 +54,18 @@ public class MainController {
         LOG.info("***In editGet method");
         Notebook notebook = notebookService.getNotebook(id);
         model.addAttribute("notebook", notebook);
-        List list = elementService.getAllElements(ua.notebook_shop.model.Model.class);
-        model.addAttribute("list", list);
+        List models = elementService.getAllElements(ua.notebook_shop.model.Model.class);
+        model.addAttribute("models", models);
+        List hdds = elementService.getAllElements(ua.notebook_shop.model.Hdd.class);
+        model.addAttribute("hdds", hdds);
+        List proces = elementService.getAllElements(ua.notebook_shop.model.Processor.class);
+        model.addAttribute("proces", proces);
+        List rams = elementService.getAllElements(ua.notebook_shop.model.Ram.class);
+        model.addAttribute("rams", rams);
+        List screens = elementService.getAllElements(ua.notebook_shop.model.Screen.class);
+        model.addAttribute("screens", screens);
+        List videos = elementService.getAllElements(ua.notebook_shop.model.VideoMemory.class);
+        model.addAttribute("videos", videos);
         LOG.info("After editGet method***");
         return "edit";
     }
@@ -94,12 +104,24 @@ public class MainController {
     public String createGet(Model model) {
         LOG.info("***In createGet method");
         model.addAttribute("newNotebook", new Notebook());
+        List models = elementService.getAllElements(ua.notebook_shop.model.Model.class);
+        model.addAttribute("models", models);
+        List hdds = elementService.getAllElements(ua.notebook_shop.model.Hdd.class);
+        model.addAttribute("hdds", hdds);
+        List proces = elementService.getAllElements(ua.notebook_shop.model.Processor.class);
+        model.addAttribute("proces", proces);
+        List rams = elementService.getAllElements(ua.notebook_shop.model.Ram.class);
+        model.addAttribute("rams", rams);
+        List screens = elementService.getAllElements(ua.notebook_shop.model.Screen.class);
+        model.addAttribute("screens", screens);
+        List videos = elementService.getAllElements(ua.notebook_shop.model.VideoMemory.class);
+        model.addAttribute("videos", videos);
         LOG.info("After createGet method***");
         return "create";
     }
 
     @RequestMapping(value = "/create_notebook", method = RequestMethod.POST)
-    public String createPost(@ModelAttribute(value = "newNotebook") Notebook notebook, Model model) {
+    public String createPost(@ModelAttribute(value = "newNotebook") Notebook notebook) {
         LOG.info("***In createPost method");
         Notebook newNote = new Notebook(notebook.getNotebook_name(), notebook.getModel(),
                 notebook.getHdd(), notebook.getProcessor(),
@@ -109,66 +131,122 @@ public class MainController {
         return "create";
     }
 
-    @RequestMapping(value = "/element_create", method = RequestMethod.GET)
-    public String createElementGet(@RequestParam String element, Model model) {
-        LOG.info("***In createElementGet method");
-        switch (element) {
-            case "Screen":
-                model.addAttribute("screen", new Screen());
-//                model.addAttribute("element", "Screen");
-                break;
-            case "Model":
-//                model.addAttribute("element", new ua.notebook_shop.model.Model());
-                model.addAttribute("element", "Model");
-                break;
-            case "Hdd":
-//                model.addAttribute("element", new Hdd());
-                model.addAttribute("element", "Hdd");
-                break;
-            case "Processor":
-//                model.addAttribute("element", new Processor());
-                model.addAttribute("element", "Processor");
-                break;
-            case "Ram":
-//                model.addAttribute("element", new Ram());
-                model.addAttribute("element", "Ram");
-                break;
-            case "VideoMemory":
-//                model.addAttribute("element", new VideoMemory());
-                model.addAttribute("element", "VideoMemory");
-                break;
-        }
-        LOG.info("After createElementGet method***");
-        return "element";
+    @RequestMapping(value = "/element_create/Screen", method = RequestMethod.GET)
+    public String createScreenGet(Model model) {
+        LOG.info("***In createScreenGet method");
+        model.addAttribute("screen", new Screen());
+        LOG.info("After createScreenGet method***");
+        return "screen_create";
     }
 
-    @RequestMapping(value = "/element_create", method = RequestMethod.POST)
-    public String createElementPost(@RequestParam String element,
-                                    @ModelAttribute(value = "screen") Element element_type,
-                                    Model model) {
-        LOG.info("***In createElementPost method");
-        switch (element) {
-            case "Screen":
-                element_type = new Screen();
-                elementService.addElement(element_type);
-                break;
-            case "Model":
-                model.addAttribute("element", Model.class);
-                break;
-            case "Hdd":
-                model.addAttribute("element", Hdd.class);
-                break;
-            case "Processor":
-                model.addAttribute("element", Processor.class);
-                break;
-            case "Ram":
-                model.addAttribute("element", Ram.class);
-                break;
-            case "VideoMemory":
-                model.addAttribute("element", VideoMemory.class);
-                break;
-        }
-        LOG.info("After createElementPost method***");
-        return "element";
+    @RequestMapping(value = "/element_create/Screen", method = RequestMethod.POST)
+    public String createScreenPost(@ModelAttribute(value = "screen") Screen screen,
+                                   Model model) {
+        LOG.info("***In createScreenPost method");
+        Screen newScreen = new Screen(screen.getSize());
+        elementService.addElement(newScreen);
+        model.addAttribute("screen", screen);
+        LOG.info("After createScreenPost method***");
+        return "screen_create";
+    }
+
+    @RequestMapping(value = "/element_create/Model", method = RequestMethod.GET)
+    public String createModelGet(Model model) {
+        LOG.info("***In createModelGet method");
+        Element element_type = new ua.notebook_shop.model.Model();
+        model.addAttribute("model", element_type);
+        LOG.info("After createModelGet method***");
+        return "model_create";
+    }
+
+    @RequestMapping(value = "/element_create/Model", method = RequestMethod.POST)
+    public String createModelPost(@ModelAttribute(value = "model") ua.notebook_shop.model.Model model_note,
+                                  Model model) {
+        LOG.info("***In createModelPost method");
+        ua.notebook_shop.model.Model newModel = new ua.notebook_shop.model.Model(model_note.getModel());
+        elementService.addElement(newModel);
+        model.addAttribute("model", newModel);
+        LOG.info("After createModelPost method***");
+        return "model_create";
+    }
+
+    @RequestMapping(value = "/element_create/Hdd", method = RequestMethod.GET)
+    public String createHddGet(Model model) {
+        LOG.info("***In createHddGet method");
+        Element element_type = new Hdd();
+        model.addAttribute("hdd", element_type);
+        LOG.info("After createHddGet method***");
+        return "hdd_create";
+    }
+
+    @RequestMapping(value = "/element_create/Hdd", method = RequestMethod.POST)
+    public String createHddPost(@ModelAttribute(value = "hdd") Hdd hdd,
+                                Model model) {
+        LOG.info("***In createHddPost method");
+        Hdd newHdd = new Hdd(hdd.getMemoryInGb());
+        elementService.addElement(newHdd);
+        model.addAttribute("hdd", newHdd);
+        LOG.info("After createHddPost method***");
+        return "hdd_create";
+    }
+
+    @RequestMapping(value = "/element_create/Processor", method = RequestMethod.GET)
+    public String createProcessorGet(Model model) {
+        LOG.info("***In createProcessorGet method");
+        Element element_type = new Processor();
+        model.addAttribute("processor", element_type);
+        LOG.info("After createProcessorGet method***");
+        return "processor_create";
+    }
+
+    @RequestMapping(value = "/element_create/Processor", method = RequestMethod.POST)
+    public String createProcessorPost(@ModelAttribute(value = "processor") Processor processor,
+                                      Model model) {
+        LOG.info("***In createProcessorPost method");
+        Processor newProcessor = new Processor(processor.getModel(), processor.getFrequency());
+        elementService.addElement(newProcessor);
+        model.addAttribute("processor", newProcessor);
+        LOG.info("After createProcessorPost method***");
+        return "processor_create";
+    }
+
+    @RequestMapping(value = "/element_create/Ram", method = RequestMethod.GET)
+    public String createRamGet(Model model) {
+        LOG.info("***In createRamGet method");
+        Element element_type = new Ram();
+        model.addAttribute("ram", element_type);
+        LOG.info("After createRamGet method***");
+        return "ram_create";
+    }
+
+    @RequestMapping(value = "/element_create/Ram", method = RequestMethod.POST)
+    public String createRamPost(@ModelAttribute(value = "ram") Ram ram,
+                                Model model) {
+        LOG.info("***In createRamPost method");
+        Ram newRam = new Ram(ram.getMemoryInGb());
+        elementService.addElement(newRam);
+        model.addAttribute("ram", ram);
+        LOG.info("After createRamPost method***");
+        return "ram_create";
+    }
+
+    @RequestMapping(value = "/element_create/Video", method = RequestMethod.GET)
+    public String createVideoGet(Model model) {
+        LOG.info("***In createVideoGet method");
+        Element element_type = new VideoMemory();
+        model.addAttribute("video", element_type);
+        LOG.info("After createVideoGet method***");
+        return "video_create";
+    }
+
+    @RequestMapping(value = "/element_create/Video", method = RequestMethod.POST)
+    public String createVideoPost(@ModelAttribute(value = "video") VideoMemory video,
+                                  Model model) {
+        LOG.info("***In createVideoPost method");
+        VideoMemory newVideo = new VideoMemory(video.getMemoryInGb(), video.getManufacturer());
+        elementService.addElement(newVideo);
+        model.addAttribute("video", newVideo);
+        LOG.info("After createVideoPost method***");
+        return "video_create";
     }
 }

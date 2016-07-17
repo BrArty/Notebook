@@ -24,6 +24,10 @@
         <td>${notebook.model}</td>
     </tr>
     <tr>
+        <td>Hdd</td>
+        <td>${notebook.hdd}</td>
+    </tr>
+    <tr>
         <td>Processor</td>
         <td>${notebook.processor}</td>
     </tr>
