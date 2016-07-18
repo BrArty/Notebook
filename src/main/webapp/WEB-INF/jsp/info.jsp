@@ -9,40 +9,41 @@
     <title>Info</title>
 </head>
 <body bgcolor="#f0f8ff">
-
 <table align="center">
-    <tr>
-        <td>Notebook's id</td>
-        <td>${notebook.id}</td>
-    </tr>
-    <tr>
-        <td>Notebook's name</td>
-        <td>${notebook.notebook_name}</td>
-    </tr>
-    <tr>
-        <td>Model</td>
-        <td>${notebook.model}</td>
-    </tr>
-    <tr>
-        <td>Hdd</td>
-        <td>${notebook.hdd}</td>
-    </tr>
-    <tr>
-        <td>Processor</td>
-        <td>${notebook.processor}</td>
-    </tr>
-    <tr>
-        <td>Screen</td>
-        <td>${notebook.screen}</td>
-    </tr>
-    <tr>
-        <td>Ram</td>
-        <td>${notebook.ram}</td>
-    </tr>
-    <tr>
-        <td>Video memory</td>
-        <td>${notebook.video}</td>
-    </tr>
+    <form:form method="get" modelAttribute="notebook" action="/info?id=${notebook.id}">
+        <tr>
+            <td>Notebook's id</td>
+            <td>${notebook.id}</td>
+        </tr>
+        <tr>
+            <td>Notebook's name</td>
+            <td>${notebook.notebook_name}</td>
+        </tr>
+        <tr>
+            <td>Model</td>
+            <td>${notebook.model}</td>
+        </tr>
+        <tr>
+            <td>Hdd</td>
+            <td>${notebook.hdd}</td>
+        </tr>
+        <tr>
+            <td>Processor</td>
+            <td>${notebook.processor}</td>
+        </tr>
+        <tr>
+            <td>Screen</td>
+            <td>${notebook.screen}</td>
+        </tr>
+        <tr>
+            <td>Ram</td>
+            <td>${notebook.ram}</td>
+        </tr>
+        <tr>
+            <td>Video memory</td>
+            <td>${notebook.video}</td>
+        </tr>
+    </form:form>
     <form:form>
         <tr>
             <td><input type="button" value="Edit" onclick='location.href="/edit?id=${notebook.id}"'/></td>

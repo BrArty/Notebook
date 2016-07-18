@@ -25,7 +25,8 @@
                 </c:forEach>
             </form:select></td>
             <form:form>
-                <td><input type="button" value="New screen" onclick='location.href="/element_create/Screen"'/>
+                <td><input type="button" style="width:100px"
+                           value="New screen" onclick='location.href="/element_create/Screen"'/>
                 </td>
             </form:form>
         </tr>
@@ -38,7 +39,8 @@
                 </c:forEach>
             </form:select></td>
             <form:form>
-                <td><input type="button" value="New hdd" onclick='location.href="/element_create/Hdd"'/></td>
+                <td><input type="button" style="width:100px"
+                           value="New hdd" onclick='location.href="/element_create/Hdd"'/></td>
             </form:form>
         </tr>
         <tr>
@@ -50,7 +52,8 @@
                 </c:forEach>
             </form:select></td>
             <form:form>
-                <td><input type="button" value="New model" onclick='location.href="/element_create/Model"'/>
+                <td><input type="button" style="width:100px"
+                           value="New model" onclick='location.href="/element_create/Model"'/>
                 </td>
             </form:form>
         </tr>
@@ -63,7 +66,7 @@
                 </c:forEach>
             </form:select></td>
             <form:form>
-                <td><input type="button" value="New processor"
+                <td><input type="button" style="width:100px" value="New processor"
                            onclick='location.href="/element_create/Processor"'/></td>
             </form:form>
         </tr>
@@ -76,7 +79,8 @@
                 </c:forEach>
             </form:select></td>
             <form:form>
-                <td><input type="button" value="New ram" onclick='location.href="/element_create/Ram"'/></td>
+                <td><input type="button" style="width:100px"
+                           value="New ram" onclick='location.href="/element_create/Ram"'/></td>
             </form:form>
         </tr>
         <tr>
@@ -88,19 +92,21 @@
                 </c:forEach>
             </form:select></td>
             <form:form>
-                <td><input type="button" value="New video" onclick='location.href="/element_create/Video"'/>
+                <td><input type="button" style="width:100px"
+                           value="New video" onclick='location.href="/element_create/Video"'/>
                 </td>
             </form:form>
         </tr>
         <tr>
             <td>
-                <input type="submit" value="Create"/>
+                <input type="submit" style="width:100px" value="Create"/>
             </td>
         </tr>
         <tr>
             <td>
                 <form:form>
-                    <input type="button" value="Back" onclick='location.href="/"'/>
+                    <input type="button" style="width:100px"
+                           value="Back" onclick='location.href="/"'/>
                 </form:form>
             </td>
         </tr>

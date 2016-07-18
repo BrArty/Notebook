@@ -12,18 +12,20 @@
 <form:form method="post" action="/element_create/Processor" modelAttribute="processor">
     <table align="center">
         <tr>
-            <td><label for="type1">Model: </label>
-                <input id="type1" name="model"/></td>
+            <td><label for="type1">Model: </label></td>
+            <td><input id="type1" name="model"/></td>
         </tr>
         <tr>
-            <td><label for="type2">Frequency: </label>
-                <input id="type2" name="frequency"/></td>
-            <td><input type="submit" value="Test"/></td>
+            <td><label for="type2">Frequency: </label></td>
+            <td><input id="type2" name="frequency"/></td>
+        </tr>
+        <tr>
+            <td><input type="submit" style="width:100px" value="Confirm"/></td>
         </tr>
         <tr>
             <td>
                 <form:form>
-                    <input type="button" value="Back" onclick='location.href="/"'/>
+                    <input type="button" style="width:100px" value="Back" onclick='location.href="/create_notebook"'/>
                 </form:form>
             </td>
         </tr>

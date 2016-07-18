@@ -1,6 +1,5 @@
 package ua.notebook_shop.dao;
 
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 import ua.notebook_shop.exceptions.AlreadyExistsException;
@@ -12,7 +11,6 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-@Scope("prototype")
 @Component
 @Transactional
 public class ElementDao {
@@ -30,7 +28,7 @@ public class ElementDao {
 
     public List getAll(Class clazz) {
         String className = clazz.toString();
-        Pattern p = Pattern.compile("[^\\d]\\.[\\s]*([A-Z][A-z]*)");    //delete "ua.notebook_shop.model" part of string
+        Pattern p = Pattern.compile("[^\\d]\\.[\\s]*([A-Z][A-z]*)");  //delete "ua.notebook_shop.model" part of string
         Matcher m = p.matcher(className);
         if (m.find()) {
             return manager.createQuery("SELECT e FROM " + m.group(1) + " e").getResultList();

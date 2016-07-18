@@ -9,18 +9,19 @@
     <title>Element creation</title>
 </head>
 <body bgcolor="#f0f8ff">
-${screen}
 <form:form method="post" action="/element_create/Hdd" modelAttribute="hdd">
     <table align="center">
         <tr>
-            <td><label for="type">Memory in Gb: </label>
-                <input id="type" name="memoryInGb"/></td>
-            <td><input type="submit" value="Confirm"/></td>
+            <td><label for="type">Memory in Gb: </label></td>
+            <td><input id="type" name="memoryInGb"/></td>
+        </tr>
+        <tr>
+            <td><input type="submit" style="width:100px" value="Confirm"/></td>
         </tr>
         <tr>
             <td>
                 <form:form>
-                    <input type="button" value="Back" onclick='location.href="/"'/>
+                    <input type="button" style="width:100px" value="Back" onclick='location.href="/create_notebook"'/>
                 </form:form>
             </td>
         </tr>

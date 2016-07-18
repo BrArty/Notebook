@@ -9,14 +9,27 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Notebook</title>
 </head>
+<style>
+    span.error {
+        color: red;
+    }
+</style>
 <body bgcolor="#f0f8ff">
-
 <form:form method="post" modelAttribute="notebook" action="/">
     <table align="center">
+        ${success}
         <tr>
             <td>
-                <label for="input">Notebook's id: </label>
-                <input type="text" id="input" name="id"/>
+                <label id="note">Notebook's id: </label>
+            </td>
+            <td><form:select id="note" path="id">
+                <form:option value="0" label="Select"/>
+                <c:forEach items="${allNotes}" var="notebook">
+                    <form:option value="${notebook.id}" label="${notebook.notebook_name}, ${notebook.model}"/>
+                </c:forEach>
+            </form:select></td>
+            <td>
+                <span class="error"><form:errors path="id"/></span>
             </td>
         </tr>
         <tr>

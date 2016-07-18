@@ -5,13 +5,16 @@ import org.springframework.stereotype.Service;
 import ua.notebook_shop.dao.NotebookDao;
 import ua.notebook_shop.model.*;
 
+import java.util.List;
+
 @Service
 public class NotebookService {
 
-    @Autowired
-    NotebookDao notebookDao;
+    private NotebookDao notebookDao;
 
-    public NotebookService() {
+    @Autowired
+    public NotebookService(NotebookDao notebookDao) {
+        this.notebookDao = notebookDao;
     }
 
     public Notebook getNotebook(int idNotebook) {
@@ -25,6 +28,10 @@ public class NotebookService {
         } else {
             notebookDao.updateNotebook(notebook);
         }
+    }
+
+    public List getAllNotebooks() {
+        return notebookDao.getAll();
     }
 
     public void deleteNotebook(Notebook notebook) {

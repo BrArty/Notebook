@@ -12,14 +12,16 @@
 <form:form method="post" action="/element_create/Screen" modelAttribute="screen">
     <table align="center">
         <tr>
-            <td><label for="type">Type here: </label>
-                <input id="type" name="size"/></td>
-            <td><input type="submit" value="Confirm"/></td>
+            <td><label for="type">Type here: </label></td>
+            <td><input id="type" name="size"/></td>
+        </tr>
+        <tr>
+            <td><input type="submit" style="width:100px" value="Confirm"/></td>
         </tr>
         <tr>
             <td>
                 <form:form>
-                    <input type="button" value="Back" onclick='location.href="/"'/>
+                    <input type="button" style="width:100px" value="Back" onclick='location.href="/create_notebook"'/>
                 </form:form>
             </td>
         </tr>

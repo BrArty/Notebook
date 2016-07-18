@@ -11,10 +11,11 @@ import java.util.List;
 @Service
 public class ElementService {
 
-    @Autowired
-    ElementDao elementDao;
+    private ElementDao elementDao;
 
-    public ElementService() {
+    @Autowired
+    public ElementService(ElementDao elementDao) {
+        this.elementDao = elementDao;
     }
 
     public void addElement(Element element) {
