@@ -1,4 +1,4 @@
-# Notebook web-app
+# Notebook web-app(it's not a final version)
 <strong>Requirements to start this web-app:</strong><br>
 1. java 1.8<br>
 2. maven 4.0.0<br>
