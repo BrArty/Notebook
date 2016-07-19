@@ -9,15 +9,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Notebook</title>
 </head>
-<style>
-    span.error {
-        color: red;
-    }
-</style>
 <body bgcolor="#f0f8ff">
 <form:form method="post" modelAttribute="notebook" action="/">
     <table align="center">
-        ${success}
         <tr>
             <td>
                 <label id="note">Notebook's id: </label>
@@ -28,9 +22,6 @@
                     <form:option value="${notebook.id}" label="${notebook.notebook_name}, ${notebook.model}"/>
                 </c:forEach>
             </form:select></td>
-            <td>
-                <span class="error"><form:errors path="id"/></span>
-            </td>
         </tr>
         <tr>
             <td><input type="submit" value="Info"/></td>
