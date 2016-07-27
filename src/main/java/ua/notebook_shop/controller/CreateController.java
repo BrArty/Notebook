@@ -7,6 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import ua.notebook_shop.exceptions.CreateException;
 import ua.notebook_shop.model.*;
 import ua.notebook_shop.service.ElementService;
 import ua.notebook_shop.service.NotebookService;
@@ -30,24 +31,34 @@ public class CreateController {
         LOG.info("***In createGet method");
         model.addAttribute("newNotebook", new Notebook());
         model.addAttribute("models", elementService.getAllElements(ua.notebook_shop.model.Model.class));
-        model.addAttribute("hdds", elementService.getAllElements(ua.notebook_shop.model.Hdd.class));
-        model.addAttribute("proces", elementService.getAllElements(ua.notebook_shop.model.Processor.class));
-        model.addAttribute("rams", elementService.getAllElements(ua.notebook_shop.model.Ram.class));
-        model.addAttribute("screens", elementService.getAllElements(ua.notebook_shop.model.Screen.class));
-        model.addAttribute("videos", elementService.getAllElements(ua.notebook_shop.model.VideoMemory.class));
+        model.addAttribute("hdds", elementService.getAllElements(Hdd.class));
+        model.addAttribute("proces", elementService.getAllElements(Processor.class));
+        model.addAttribute("rams", elementService.getAllElements(Ram.class));
+        model.addAttribute("screens", elementService.getAllElements(Screen.class));
+        model.addAttribute("videos", elementService.getAllElements(VideoMemory.class));
         LOG.info("After createGet method***");
         return "create";
     }
 
     @RequestMapping(value = "/create_notebook", method = RequestMethod.POST)
-    public String createPost(@ModelAttribute(value = "newNotebook") Notebook notebook) {
+    public String createPost(@ModelAttribute(value = "newNotebook") Notebook notebook, Model model) {
         LOG.info("***In createPost method");
-        Notebook newNote = new Notebook(notebook.getNotebook_name(), notebook.getModel(),
-                notebook.getHdd(), notebook.getProcessor(),
-                notebook.getScreen(), notebook.getVideo(), notebook.getRam());
-        notebookService.addNotebook(newNote);
+        model.addAttribute("models", elementService.getAllElements(ua.notebook_shop.model.Model.class));
+        model.addAttribute("hdds", elementService.getAllElements(Hdd.class));
+        model.addAttribute("proces", elementService.getAllElements(Processor.class));
+        model.addAttribute("rams", elementService.getAllElements(Ram.class));
+        model.addAttribute("screens", elementService.getAllElements(Screen.class));
+        model.addAttribute("videos", elementService.getAllElements(VideoMemory.class));
+        try {
+            Notebook newNote = new Notebook(notebook.getNotebook_name(), notebook.getModel(), notebook.getHdd(),
+                    notebook.getProcessor(), notebook.getScreen(), notebook.getVideo(), notebook.getRam());
+            notebookService.addNotebook(newNote);
+        } catch (CreateException e) {
+            model.addAttribute("error", e.getMessage());
+            return "create";
+        }
         LOG.info("After createPost method***");
-        return "redirect:/";
+        return "redirect:/create_notebook";
     }
 
     @RequestMapping(value = "/element_create/Screen", method = RequestMethod.GET)

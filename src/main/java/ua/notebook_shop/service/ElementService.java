@@ -30,4 +30,8 @@ public class ElementService {
         return elementDao.getAll(clazz);
     }
 
+    public Element getElement(Class clazz, int elementId) {
+        return elementDao.getElement(clazz, elementId);
+    }
+
 }

@@ -7,7 +7,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 @SpringBootApplication
 @EnableWebMvc
-@ImportResource({"/WEB-INF/spring-servlet.xml"})
+@ImportResource({"/spring-servlet.xml"})
 public class Run {
 
     public static void main(String[] args) {

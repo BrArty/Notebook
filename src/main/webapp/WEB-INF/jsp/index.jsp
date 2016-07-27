@@ -14,28 +14,36 @@
     <table align="center">
         <tr>
             <td>
-                <label id="note">Notebook's id: </label>
+                <label for="note">Select notebook: </label>
             </td>
-            <td><form:select id="note" path="id">
-                <form:option value="0" label="Select"/>
-                <c:forEach items="${allNotes}" var="notebook">
-                    <form:option value="${notebook.id}" label="${notebook.notebook_name}, ${notebook.model}"/>
-                </c:forEach>
-            </form:select></td>
+            <td>
+                <form:select path="id" id="note">
+                    <form:option value="0" label="--- Select ---"/>
+                    <form:options items="${notebooks}" itemValue="id" itemLabel="notebook_name"/>
+                </form:select>
+            </td>
+            <%--<td>
+                <form>
+                    <select name="id" id="note">
+                        <option disabled selected>Select</option>
+                        <c:forEach items="${notebooks}" var="notebook">
+                            <option value="${notebook.id}">${notebook.notebook_name}, ${notebook.model}</option>
+                        </c:forEach>
+                    </select>
+                </form>
+            </td>--%>
         </tr>
         <tr>
             <td><input type="submit" value="Info"/></td>
         </tr>
         <tr>
             <td>
-                <form:form>
+                <form>
                     <input type="button" value="Create new notebook" onclick='location.href="/create_notebook"'/>
-                </form:form>
+                </form>
             </td>
         </tr>
     </table>
 </form:form>
-
-
 </body>
 </html>

@@ -7,105 +7,120 @@
 <html>
 <head>
     <title>Creation</title>
+    <style>
+        .button {
+            width: 100px;
+        }
+
+        select {
+            width: 200px;
+        }
+
+        h5 {
+            color: red;
+            text-align: center;
+            padding-bottom: 0;
+        }
+    </style>
 </head>
 <body bgcolor="#f0f8ff">
-
 <form:form modelAttribute="newNotebook" action="/create_notebook" method="post">
+    <h5>${error}</h5>
     <table align="center">
         <tr>
-            <td><form:label path="notebook_name">Notebook name:</form:label></td>
-            <td><form:input path="notebook_name"/></td>
+            <td>Notebook name:</td>
+            <td><input placeholder="Write here" name="notebook_name" style="width: 200px"/></td>
         </tr>
         <tr>
-            <td><form:label path="screen.id">Screen:</form:label></td>
-            <td><form:select path="screen.id">
-                <form:option value="0" label="Select"/>
-                <c:forEach items="${screens}" var="screen">
-                    <form:option value="${screen.id}" label="${screen}"/>
-                </c:forEach>
-            </form:select></td>
+            <td><label for="screen">Set screen size: </label></td>
+            <td>
+                <form:select path="screen.id" id="screen">
+                    <form:option value="0" label="--- Select ---"/>
+                    <form:options items="${screens}" itemValue="id" itemLabel="size"/>
+                </form:select>
+            </td>
             <form:form>
-                <td><input type="button" style="width:100px"
+                <td><input type="button" class="button"
                            value="New screen" onclick='location.href="/element_create/Screen"'/>
                 </td>
             </form:form>
         </tr>
         <tr>
-            <td><form:label path="hdd.id">Hdd:</form:label></td>
-            <td><form:select path="hdd.id">
-                <form:option value="0" label="Select"/>
-                <c:forEach items="${hdds}" var="hdd">
-                    <form:option value="${hdd.id}" label="${hdd}"/>
-                </c:forEach>
-            </form:select></td>
+            <td><label for="hdd">Set hdd: </label></td>
+            <td>
+                <form:select path="hdd.id" id="hdd">
+                    <form:option value="0" label="--- Select ---"/>
+                    <form:options items="${hdds}" itemValue="id" itemLabel="memoryInGb"/>
+                </form:select>
+            </td>
             <form:form>
-                <td><input type="button" style="width:100px"
+                <td><input type="button" class="button"
                            value="New hdd" onclick='location.href="/element_create/Hdd"'/></td>
             </form:form>
         </tr>
         <tr>
-            <td><form:label path="model.id">Model:</form:label></td>
-            <td><form:select path="model.id">
-                <form:option value="0" label="Select"/>
-                <c:forEach items="${models}" var="model">
-                    <form:option value="${model.id}" label="${model}"/>
-                </c:forEach>
-            </form:select></td>
+            <td><label for="model">Set model: </label></td>
+            <td>
+                <form:select path="model.id" id="model">
+                    <form:option value="0" label="--- Select ---"/>
+                    <form:options items="${models}" itemValue="id" itemLabel="model"/>
+                </form:select>
+            </td>
             <form:form>
-                <td><input type="button" style="width:100px"
+                <td><input type="button" class="button"
                            value="New model" onclick='location.href="/element_create/Model"'/>
                 </td>
             </form:form>
         </tr>
         <tr>
-            <td><form:label path="processor.id">Processor:</form:label></td>
-            <td><form:select path="processor.id">
-                <form:option value="0" label="Select"/>
-                <c:forEach items="${proces}" var="processor">
-                    <form:option value="${processor.id}" label="${processor}"/>
-                </c:forEach>
-            </form:select></td>
+            <td><label for="proc">Set processor: </label></td>
+            <td>
+                <form:select path="processor.id" id="proc">
+                    <form:option value="0" label="--- Select ---"/>
+                    <form:options items="${proces}" itemValue="id"/>
+                </form:select>
+            </td>
             <form:form>
-                <td><input type="button" style="width:100px" value="New processor"
+                <td><input type="button" class="button" value="New processor"
                            onclick='location.href="/element_create/Processor"'/></td>
             </form:form>
         </tr>
         <tr>
-            <td><form:label path="ram.id">Ram:</form:label></td>
-            <td><form:select path="ram.id">
-                <form:option value="0" label="Select"/>
-                <c:forEach items="${rams}" var="ram">
-                    <form:option value="${ram.id}" label="${ram}"/>
-                </c:forEach>
-            </form:select></td>
+            <td><label for="ram">Set ram: </label></td>
+            <td>
+                <form:select path="ram.id" id="ram">
+                    <form:option value="0" label="--- Select ---"/>
+                    <form:options items="${rams}" itemValue="id" itemLabel="memoryInGb"/>
+                </form:select>
+            </td>
             <form:form>
-                <td><input type="button" style="width:100px"
+                <td><input type="button" class="button"
                            value="New ram" onclick='location.href="/element_create/Ram"'/></td>
             </form:form>
         </tr>
         <tr>
-            <td><form:label path="video.id">Video:</form:label></td>
-            <td><form:select path="video.id">
-                <form:option value="0" label="Select"/>
-                <c:forEach items="${videos}" var="video">
-                    <form:option value="${video.id}" label="${video}"/>
-                </c:forEach>
-            </form:select></td>
+            <td><label for="video">Set video memory: </label></td>
+            <td>
+                <form:select path="video.id" id="video">
+                    <form:option value="0" label="--- Select ---"/>
+                    <form:options items="${videos}" itemValue="id"/>
+                </form:select>
+            </td>
             <form:form>
-                <td><input type="button" style="width:100px"
+                <td><input type="button" class="button"
                            value="New video" onclick='location.href="/element_create/Video"'/>
                 </td>
             </form:form>
         </tr>
         <tr>
             <td>
-                <input type="submit" style="width:100px" value="Create"/>
+                <input type="submit" class="button" value="Create"/>
             </td>
         </tr>
         <tr>
             <td>
                 <form:form>
-                    <input type="button" style="width:100px"
+                    <input type="button" class="button"
                            value="Back" onclick='location.href="/"'/>
                 </form:form>
             </td>

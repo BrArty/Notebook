@@ -1,6 +1,7 @@
 package ua.notebook_shop.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,9 +11,11 @@ public class VideoMemory extends Element{
 
     @OneToMany(mappedBy = "video", cascade = {CascadeType.PERSIST}, fetch = FetchType.LAZY)
     private List<Notebook> notebook = new ArrayList<>();
-    @Column(nullable = false)
+    @Column
+    @NotNull
     private String manufacturer;
-    @Column(nullable = false)
+    @Column
+    @NotNull
     private String memoryInGb;
 
     public VideoMemory() {
@@ -45,6 +48,27 @@ public class VideoMemory extends Element{
 
     public List<Notebook> getNotebook() {
         return notebook;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+
+        VideoMemory that = (VideoMemory) o;
+
+        if (manufacturer != null ? !manufacturer.equals(that.manufacturer) : that.manufacturer != null) return false;
+        return memoryInGb != null ? memoryInGb.equals(that.memoryInGb) : that.memoryInGb == null;
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = super.hashCode();
+        result = 31 * result + (manufacturer != null ? manufacturer.hashCode() : 0);
+        result = 31 * result + (memoryInGb != null ? memoryInGb.hashCode() : 0);
+        return result;
     }
 
     @Override

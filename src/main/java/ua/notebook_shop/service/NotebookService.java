@@ -3,6 +3,7 @@ package ua.notebook_shop.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ua.notebook_shop.dao.NotebookDao;
+import ua.notebook_shop.exceptions.CreateException;
 import ua.notebook_shop.model.*;
 
 import java.util.List;
@@ -21,12 +22,11 @@ public class NotebookService {
         return notebookDao.findNotebook(idNotebook);
     }
 
-    public void addNotebook(Notebook notebook) {
-        Notebook notebookFromDB = notebookDao.findNotebook(notebook.getId());
-        if (notebookFromDB == null) {
+    public void addNotebook(Notebook notebook) throws CreateException {
+        try {
             notebookDao.saveNotebook(notebook);
-        } else {
-            notebookDao.updateNotebook(notebook);
+        } catch (Exception e) {
+            throw new CreateException("You didn't choose all elements");
         }
     }
 

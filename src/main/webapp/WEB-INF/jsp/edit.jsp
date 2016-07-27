@@ -6,75 +6,68 @@
 <html>
 <head>
     <title>Edit page</title>
+    <style>
+        select {
+            width: 200px;
+        }
+    </style>
 </head>
 <body bgcolor="#f0f8ff">
 <form:form modelAttribute="notebook" action="/edit?id=${notebook.id}" method="post">
     <table align="center">
         <tr>
+            <td><label for="screen">Set screen size: </label></td>
             <td>
-                Set screen size:
+                <form:select path="screen.id" id="screen">
+                    <form:option value="0" label="--- Select ---"/>
+                    <form:options items="${screens}" itemValue="id" itemLabel="size"/>
+                </form:select>
             </td>
-            <td><form:select path="screen.id">
-                <form:option value="0" label="Select"/>
-                <c:forEach items="${screens}" var="screen">
-                    <form:option value="${screen.id}" label="${screen}"/>
-                </c:forEach>
-            </form:select></td>
         </tr>
         <tr>
+            <td><label for="hdd">Set hdd: </label></td>
             <td>
-                Set hdd:
+                <form:select path="hdd.id" id="hdd">
+                    <form:option value="0" label="--- Select ---"/>
+                    <form:options items="${hdds}" itemValue="id" itemLabel="memoryInGb"/>
+                </form:select>
             </td>
-            <td><form:select path="hdd.id">
-                <form:option value="0" label="Select"/>
-                <c:forEach items="${hdds}" var="hdd">
-                    <form:option value="${hdd.id}" label="${hdd}"/>
-                </c:forEach>
-            </form:select></td>
         </tr>
         <tr>
+            <td><label for="model">Set model: </label></td>
             <td>
-                Set model:
+                <form:select path="model.id" id="model">
+                    <form:option value="0" label="--- Select ---"/>
+                    <form:options items="${models}" itemValue="id" itemLabel="model"/>
+                </form:select>
             </td>
-            <td><form:select path="model.id">
-                <form:option value="0" label="Select"/>
-                <c:forEach items="${models}" var="model">
-                    <form:option value="${model.id}" label="${model}"/>
-                </c:forEach>
-            </form:select></td>
         </tr>
         <tr>
+            <td><label for="proc">Set processor: </label></td>
             <td>
-                Set processor:
+                <form:select path="processor.id" id="proc">
+                    <form:option value="0" label="--- Select ---"/>
+                    <form:options items="${proces}" itemValue="id"/>
+                </form:select>
             </td>
-            <td><form:select path="processor.id">
-                <form:option value="0" label="Select"/>
-                <c:forEach items="${proces}" var="processor">
-                    <form:option value="${processor.id}" label="${processor}"/>
-                </c:forEach>
-            </form:select></td>
         </tr>
         <tr>
+            <td><label for="ram">Set ram: </label></td>
             <td>
-                Set ram:
+                <form:select path="ram.id" id="ram">
+                    <form:option value="0" label="--- Select ---"/>
+                    <form:options items="${rams}" itemValue="id" itemLabel="memoryInGb"/>
+                </form:select>
             </td>
-            <td><form:select path="ram.id">
-                <form:option value="0" label="Select"/>
-                <c:forEach items="${rams}" var="ram">
-                    <form:option value="${ram.id}" label="${ram}"/>
-                </c:forEach>
-            </form:select></td>
         </tr>
         <tr>
+            <td><label for="video">Set video memory: </label></td>
             <td>
-                Set video memory:
+                <form:select path="video.id" id="video">
+                    <form:option value="0" label="--- Select ---"/>
+                    <form:options items="${videos}" itemValue="id"/>
+                </form:select>
             </td>
-            <td><form:select path="video.id">
-                <form:option value="0" label="Select"/>
-                <c:forEach items="${videos}" var="video">
-                    <form:option value="${video.id}" label="${video}"/>
-                </c:forEach>
-            </form:select></td>
         </tr>
         <tr>
             <td>
