@@ -11,7 +11,6 @@ import javax.persistence.PersistenceContext;
 import java.util.List;
 
 @Component
-@Transactional
 public class NotebookDaoImpl implements NotebookDao {
 
     @PersistenceContext
@@ -23,11 +22,13 @@ public class NotebookDaoImpl implements NotebookDao {
     }
 
     @Override
+    @Transactional
     public void saveNotebook(Notebook notebook) {
         manager.persist(notebook);
     }
 
     @Override
+    @Transactional
     public List findNotebook(String notebookName) {
         List list = manager.createQuery("Select n FROM Notebook n WHERE notebook_name = :name")
                 .setParameter("name", notebookName).getResultList();
@@ -35,18 +36,21 @@ public class NotebookDaoImpl implements NotebookDao {
     }
 
     @Override
+    @Transactional
     public Notebook findNotebook(int idNotebook) {
 //        return (Notebook) manager.createQuery("SELECT n FROM Notebook n WHERE id = :id").setParameter("id", idNotebook);
         return manager.find(Notebook.class, idNotebook);
     }
 
     @Override
+    @Transactional
     public void deleteNotebook(int idNotebook) {
         Notebook notebook = manager.find(Notebook.class, idNotebook);
         manager.createQuery("DELETE FROM Notebook WHERE id = :id").setParameter("id", notebook.getId()).executeUpdate();
     }
 
     @Override
+    @Transactional
     public void setModel(Model model) {
         Model modelFromDb = manager.find(Model.class, model.getId());
         if (modelFromDb == null) return;
@@ -56,6 +60,7 @@ public class NotebookDaoImpl implements NotebookDao {
     }
 
     @Override
+    @Transactional
     public void setProcessor(Processor processor) {
         Processor processorFromDb = manager.find(Processor.class, processor.getId());
         if (processorFromDb == null) return;
@@ -65,6 +70,7 @@ public class NotebookDaoImpl implements NotebookDao {
     }
 
     @Override
+    @Transactional
     public void setRam(Ram ram) {
         Ram ramFromDb = manager.find(Ram.class, ram.getId());
         if (ramFromDb == null) return;
@@ -74,6 +80,7 @@ public class NotebookDaoImpl implements NotebookDao {
     }
 
     @Override
+    @Transactional
     public Screen setScreen(Screen screen) {
         Screen screenFromDb = manager.find(Screen.class, screen.getId());
         if (screenFromDb == null) return null;
@@ -84,6 +91,7 @@ public class NotebookDaoImpl implements NotebookDao {
     }
 
     @Override
+    @Transactional
     public Screen setScreen(int screenId) {
         Screen screenFromDb = manager.find(Screen.class, screenId);
         if (screenFromDb == null) return null;
@@ -92,6 +100,7 @@ public class NotebookDaoImpl implements NotebookDao {
     }
 
     @Override
+    @Transactional
     public void setVideo(VideoMemory video) {
         VideoMemory videoFromDb = manager.find(VideoMemory.class, video.getId());
         if (videoFromDb == null) return;
@@ -101,6 +110,7 @@ public class NotebookDaoImpl implements NotebookDao {
     }
 
     @Override
+    @Transactional
     public void setHdd(Hdd hdd) {
         Hdd hddFromDb = manager.find(Hdd.class, hdd.getId());
         if (hddFromDb == null) return;
@@ -110,6 +120,7 @@ public class NotebookDaoImpl implements NotebookDao {
     }
 
     @Override
+    @Transactional
     public Hdd getHdd(int notebookId) {
         Notebook notebook = manager.find(Notebook.class, notebookId);
         Hdd hdd = notebook.getHdd();
@@ -117,6 +128,7 @@ public class NotebookDaoImpl implements NotebookDao {
     }
 
     @Override
+    @Transactional
     public Model getModel(int notebookId) {
         Notebook notebook = manager.find(Notebook.class, notebookId);
         Model model = notebook.getModel();
@@ -124,6 +136,7 @@ public class NotebookDaoImpl implements NotebookDao {
     }
 
     @Override
+    @Transactional
     public Processor getProcessor(int notebookId) {
         Notebook notebook = manager.find(Notebook.class, notebookId);
         Processor processor = notebook.getProcessor();
@@ -131,6 +144,7 @@ public class NotebookDaoImpl implements NotebookDao {
     }
 
     @Override
+    @Transactional
     public Ram getRam(int notebookId) {
         Notebook notebook = manager.find(Notebook.class, notebookId);
         Ram ram = notebook.getRam();
@@ -138,6 +152,7 @@ public class NotebookDaoImpl implements NotebookDao {
     }
 
     @Override
+    @Transactional
     public VideoMemory getVideo(int notebookId) {
         Notebook notebook = manager.find(Notebook.class, notebookId);
         VideoMemory videoMemory = notebook.getVideo();
@@ -145,6 +160,7 @@ public class NotebookDaoImpl implements NotebookDao {
     }
 
     @Override
+    @Transactional
     public Screen getScreen(int notebookId) {
         Notebook notebook = manager.find(Notebook.class, notebookId);
         Screen screen = notebook.getScreen();
@@ -152,6 +168,7 @@ public class NotebookDaoImpl implements NotebookDao {
     }
 
     @Override
+    @Transactional
     public Notebook removeNotebook(int idNotebook) {
         Notebook notebook = manager.find(Notebook.class, idNotebook);
         manager.remove(notebook);
@@ -159,11 +176,13 @@ public class NotebookDaoImpl implements NotebookDao {
     }
 
     @Override
+    @Transactional
     public List getAll() {
         return manager.createQuery("SELECT m FROM Notebook m").getResultList();
     }
 
     @Override
+    @Transactional
     public Notebook updateNotebook(Notebook notebook) {
 
         Notebook notebookFromDB = manager.find(Notebook.class, notebook.getId());

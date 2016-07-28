@@ -41,6 +41,11 @@ public class MainController {
     @RequestMapping(value = "/", method = RequestMethod.POST)
     public String firstPost(@ModelAttribute(value = "notebook") Notebook notebook, Model model) {
         LOG.info("***In firstPost method");
+        model.addAttribute("notebooks", notebookService.getAllNotebooks());
+        if (notebook.getId() == 0) {
+            model.addAttribute("error", "Choose notebook first!");
+            return "index";
+        }
         Notebook note = notebookService.getNotebook(notebook.getId());
         model.addAttribute("notebook", note);
         LOG.info("After firstPost method***");

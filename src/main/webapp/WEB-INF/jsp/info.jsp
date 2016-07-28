@@ -1,58 +1,37 @@
-<%@ page isELIgnored="false" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8" %>
+<%@ include file="include.jsp" %>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link type="text/css" rel="stylesheet" href="<c:url value="/css/styles.css"/>">
     <title>Info</title>
 </head>
-<body bgcolor="#f0f8ff">
-<table align="center">
-    <form:form method="get" modelAttribute="notebook" action="/info?id=${notebook.id}">
-        <tr>
-            <td>Notebook's id</td>
-            <td>${notebook.id}</td>
-        </tr>
-        <tr>
-            <td>Notebook's name</td>
-            <td>${notebook.notebook_name}</td>
-        </tr>
-        <tr>
-            <td>Model</td>
-            <td>${notebook.model}</td>
-        </tr>
-        <tr>
-            <td>Hdd</td>
-            <td>${notebook.hdd}</td>
-        </tr>
-        <tr>
-            <td>Processor</td>
-            <td>${notebook.processor}</td>
-        </tr>
-        <tr>
-            <td>Screen</td>
-            <td>${notebook.screen}</td>
-        </tr>
-        <tr>
-            <td>Ram</td>
-            <td>${notebook.ram}</td>
-        </tr>
-        <tr>
-            <td>Video memory</td>
-            <td>${notebook.video}</td>
-        </tr>
-    </form:form>
-    <form:form>
-        <tr>
-            <td><input type="button" value="Edit" onclick='location.href="/edit?id=${notebook.id}"'/></td>
-        </tr>
-        <tr>
-            <td><input type="button" value="Back" onclick='location.href="/"'/></td>
-        </tr>
-    </form:form>
-</table>
+<body>
+<form:form method="get" modelAttribute="notebook" action="/info?id=${notebook.id}">
+    <div class="container">
+        <div class="column1 block">
+            <p>Notebook's id</p>
+            <p>Notebook's name</p>
+            <p>Model</p>
+            <p>Hdd</p>
+            <p>Processor</p>
+            <p>Screen</p>
+            <p>Ram</p>
+            <p>Video memory</p>
+            <p><input type="button" value="Edit" onclick='location.href="/edit?id=${notebook.id}"'/></p>
+            <p><input type="button" value="Back" onclick='location.href="/"'/></p>
+        </div>
+        <div class="column2 block">
+            <p>${notebook.id}</p>
+            <p>${notebook.notebook_name}</p>
+            <p>${notebook.model}</p>
+            <p>${notebook.hdd}</p>
+            <p>${notebook.processor}</p>
+            <p>${notebook.screen}</p>
+            <p>${notebook.ram}</p>
+            <p>${notebook.video}</p>
+        </div>
+    </div>
+</form:form>
 
 
 </body>

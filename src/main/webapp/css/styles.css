@@ -1,0 +1,46 @@
+body {
+    font-family: "PT Sans", sans-serif;
+    background-color: #f0f8ff;
+}
+.container {
+    width: 700px;
+    margin: 10px auto;
+}
+.block {
+    margin-bottom: 10px;
+    padding: 10px;
+    color: #cc0000;
+    background: rgba(255, 234, 171, 0.5);
+    border: 2px dashed #cccccc;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.column1 {
+    float: left;
+    margin-right: 9px;
+}
+.column2 {
+    float: left;
+    margin-right: 15px;
+}
+.column3 {
+    float:left;
+}
+select {
+    width: 200px;
+}
+p {
+    margin: 4px;
+    padding: 0;
+}
+.zero_space1 {
+    margin: 0;
+    padding: 4px;
+}
+.zero_space2 {
+    margin: 2px;
+    padding: 0;
+}
+.for_input {
+    width: 200px;
+    border-radius: 5px;
+}

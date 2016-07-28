@@ -1,49 +1,26 @@
-<%@ page isELIgnored="false" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
-<%@ taglib prefix="input" uri="http://www.springframework.org/tags/form" %>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8" %>
+<%@ include file="include.jsp" %>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link type="text/css" rel="stylesheet" href="<c:url value="/css/styles.css"/>">
     <title>Notebook</title>
 </head>
-<body bgcolor="#f0f8ff">
+<body>
 <form:form method="post" modelAttribute="notebook" action="/">
-    <table align="center">
-        <tr>
-            <td>
-                <label for="note">Select notebook: </label>
-            </td>
-            <td>
-                <form:select path="id" id="note">
-                    <form:option value="0" label="--- Select ---"/>
-                    <form:options items="${notebooks}" itemValue="id" itemLabel="notebook_name"/>
-                </form:select>
-            </td>
-            <%--<td>
-                <form>
-                    <select name="id" id="note">
-                        <option disabled selected>Select</option>
-                        <c:forEach items="${notebooks}" var="notebook">
-                            <option value="${notebook.id}">${notebook.notebook_name}, ${notebook.model}</option>
-                        </c:forEach>
-                    </select>
-                </form>
-            </td>--%>
-        </tr>
-        <tr>
-            <td><input type="submit" value="Info"/></td>
-        </tr>
-        <tr>
-            <td>
-                <form>
-                    <input type="button" value="Create new notebook" onclick='location.href="/create_notebook"'/>
-                </form>
-            </td>
-        </tr>
-    </table>
+    <p style="text-align: center; color: red">${error}</p>
+    <div class="container">
+        <div class="column1 block">
+            <p><label for="note">Select notebook: </label></p>
+            <input type="button" value="Create new notebook" onclick='location.href="/create_notebook"'/>
+            <input type="submit" value="Info"/>
+        </div>
+        <div class="column2 block">
+            <form:select path="id" id="note">
+                <form:option value="0" label="--- Select ---"/>
+                <form:options items="${notebooks}" itemValue="id" itemLabel="model"/>
+            </form:select>
+        </div>
+    </div>
 </form:form>
 </body>
 </html>

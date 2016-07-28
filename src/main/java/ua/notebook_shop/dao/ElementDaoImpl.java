@@ -12,24 +12,28 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 @Component
-@Transactional
-public class ElementDaoImpl implements ElementDao{
+public class ElementDaoImpl implements ElementDao {
 
     @PersistenceContext
     private EntityManager manager;
 
-    public ElementDaoImpl(){}
-
-    public void saveElement(Element element) throws AlreadyExistsException {
-        /*if (manager.find(element.getClass(), element.getId()) == null) {
-            manager.persist(element);
-        } else throw new AlreadyExistsException("This element is already exists");*/
+    public ElementDaoImpl() {
     }
 
-    public Element getElement(Class clazz,int elementId) {
+    @Override
+    @Transactional
+    public void saveElement(Element element) {
+        manager.persist(element);
+    }
+
+    @Override
+    @Transactional
+    public Element getElement(Class clazz, int elementId) {
         return (Element) manager.find(clazz, elementId);
     }
 
+    @Override
+    @Transactional
     public List getAll(Class clazz) {
         String className = clazz.toString();
         Pattern p = Pattern.compile("[^\\d]\\.[\\s]*([A-Z][A-z]*)");  //delete "ua.notebook_shop.model" part of string
