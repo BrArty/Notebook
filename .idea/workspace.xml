@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ca86847c-8dbd-45a3-8c1e-1b54c1d6ea50" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-servlet.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring-servlet.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logging.log" afterPath="$PROJECT_DIR$/logging.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/notebook_shop/model/Notebook.java" afterPath="$PROJECT_DIR$/src/main/java/ua/notebook_shop/model/Notebook.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/create.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/create.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/edit.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/edit.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-    </list>
+    <list default="true" id="ca86847c-8dbd-45a3-8c1e-1b54c1d6ea50" name="Default" comment="" />
     <ignored path="Notebook.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -1272,7 +1262,7 @@
       <workItem from="1469790406403" duration="4425000" />
       <workItem from="1470049076940" duration="29000" />
       <workItem from="1470049139066" duration="1976000" />
-      <workItem from="1470068176089" duration="243000" />
+      <workItem from="1470068176089" duration="344000" />
     </task>
     <servers />
   </component>
@@ -1309,7 +1299,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="729858000" />
+    <option name="totallyTimeSpent" value="729959000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
