@@ -23,30 +23,30 @@
         <div class="column2 block">
             <input placeholder="Write here" name="notebook_name" id="note" class="for_input"/><br>
             <form:select path="screen.id" id="screen" cssClass="zero_space2">
-                <form:option disabled="true" value="0" label="Select____"/>
+                <form:option disabled="true" value="0" label=""/>
                 <form:options items="${screens}" itemValue="id" itemLabel="size"/>
             </form:select><br>
             <form:select path="hdd.id" id="hdd" cssClass="zero_space2">
-                <form:option disabled="true" value="0" label="Select____"/>
+                <form:option disabled="true" value="0" label=""/>
                 <form:options items="${hdds}" itemValue="id" itemLabel="memoryInGb"/>
             </form:select><br>
             <form:select path="model.id" id="model" cssClass="zero_space2">
-                <form:option disabled="true" value="0" label="Select____"/>
+                <form:option disabled="true" value="0" label=""/>
                 <form:options items="${models}" itemValue="id" itemLabel="model"/>
             </form:select><br>
             <form:select path="processor.id" id="proc" cssClass="zero_space2">
-                <form:option disabled="true" value="0" label="Select____"/>
+                <form:option disabled="true" value="0" label=""/>
                 <form:options items="${proces}" itemValue="id"/>
             </form:select><br>
             <form:select path="ram.id" id="ram" cssClass="zero_space2">
-                <form:option disabled="true" value="0" label="Select____"/>
+                <form:option disabled="true" value="0" label=""/>
                 <form:options items="${rams}" itemValue="id" itemLabel="memoryInGb"/>
             </form:select><br>
             <form:select path="video.id" id="video" cssClass="zero_space2">
-                <form:option disabled="true" value="0" label="Select____"/>
+                <form:option disabled="true" value="0" label=""/>
                 <form:options items="${videos}" itemValue="id"/>
             </form:select><br>
-            <span style="color: #b24a00; font-style: italic;">${error}</span>
+            <span style="color: red; font-style: italic;">${error}</span>
         </div>
         <div class="column3 block">
             <p>Create new element:</p>

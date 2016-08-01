@@ -34,8 +34,9 @@ public class Notebook extends IdGenerate implements Serializable {
     @NotNull
     private Ram ram;
     @Column
-    @NotEmpty(message = "Please put notebook name")
+    @NotNull
     private String notebook_name;
+
 
     public Notebook() {
     }

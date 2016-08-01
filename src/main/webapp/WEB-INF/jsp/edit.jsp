@@ -45,8 +45,10 @@
         </div>
     </div>
 </form:form>
-<form:form method="post" action="/delete?id=${notebook.id}">
-    <input type="submit" value="Delete"/>
-</form:form>
+<div class="column3 block">
+    <form:form method="post" action="/delete?id=${notebook.id}">
+        <input type="submit" value="Delete"/>
+    </form:form>
+</div>
 </body>
 </html>

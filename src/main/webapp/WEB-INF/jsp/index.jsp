@@ -7,7 +7,6 @@
 </head>
 <body>
 <form:form method="post" modelAttribute="notebook" action="/">
-    <p style="text-align: center; color: red">${error}</p>
     <div class="container">
         <div class="column1 block">
             <p><label for="note">Select notebook: </label></p>
@@ -16,9 +15,10 @@
         </div>
         <div class="column2 block">
             <form:select path="id" id="note">
-                <form:option value="0" label="--- Select ---"/>
-                <form:options items="${notebooks}" itemValue="id" itemLabel="model"/>
-            </form:select>
+                <form:option disabled="true" value="0" label=""/>
+                <form:options items="${notebooks}" itemValue="id" itemLabel="notebook_name"/>
+            </form:select><br>
+            <p style="text-align: center; color: red; font-style: italic">${error}</p>
         </div>
     </div>
 </form:form>
