@@ -19,15 +19,17 @@ public class MainController {
 
     private final Logger LOG = Logger.getLogger(MainController.class);
 
+    @Autowired
     private NotebookService notebookService;
+    @Autowired
     private ElementService elementService;
 
-    @Autowired
+    /*@Autowired
     public MainController(NotebookService notebookService,
                           ElementService elementService) {
         this.notebookService = notebookService;
         this.elementService = elementService;
-    }
+    }*/
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String firstGet(Model model) {

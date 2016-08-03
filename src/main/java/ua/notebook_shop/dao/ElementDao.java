@@ -1,7 +1,6 @@
 package ua.notebook_shop.dao;
 
 
-import ua.notebook_shop.exceptions.AlreadyExistsException;
 import ua.notebook_shop.model.Element;
 
 import java.util.List;

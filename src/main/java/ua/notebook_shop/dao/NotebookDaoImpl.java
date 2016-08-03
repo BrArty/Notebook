@@ -3,7 +3,6 @@ package ua.notebook_shop.dao;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
-import ua.notebook_shop.exceptions.CreateException;
 import ua.notebook_shop.model.*;
 
 import javax.persistence.EntityManager;

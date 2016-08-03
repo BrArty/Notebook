@@ -2,7 +2,6 @@ package ua.notebook_shop.dao;
 
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
-import ua.notebook_shop.exceptions.AlreadyExistsException;
 import ua.notebook_shop.model.Element;
 
 import javax.persistence.EntityManager;
@@ -28,6 +27,7 @@ public class ElementDaoImpl implements ElementDao {
 
     @Override
     @Transactional
+    @SuppressWarnings("unchecked")
     public Element getElement(Class clazz, int elementId) {
         return (Element) manager.find(clazz, elementId);
     }

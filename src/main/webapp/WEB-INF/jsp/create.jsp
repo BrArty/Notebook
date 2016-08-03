@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Creation</title>
-    <link type="text/css" rel="stylesheet" href="<c:url value="/css/styles.css"/>"/>
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/styles.css"/>
 </head>
 <body>
 <form:form modelAttribute="newNotebook" action="/create_notebook" method="post">

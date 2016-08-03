@@ -1,7 +1,7 @@
 <%@ include file="include.jsp" %>
 <html>
 <head>
-    <link type="text/css" rel="stylesheet" href="<c:url value="/css/styles.css"/>"/>
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/styles.css"/>
     <title>Element creation</title>
 </head>
 <body>
