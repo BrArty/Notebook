@@ -7,4 +7,4 @@
 <strong>To start this app:</strong><br>
 1. create database called myunit<br>
 2. mvn clean && package<br>
-3. java -jar target/notebook.war<br>
+3. java -jar target/notebook.war or using Tomcat<br>
