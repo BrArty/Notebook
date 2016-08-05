@@ -9,30 +9,23 @@ import ua.notebook_shop.model.*;
 import java.util.List;
 
 @Service
-public class NotebookServiceImpl implements NotebookService{
+public class NotebookServiceImpl implements NotebookService {
 
-    @Autowired
     private NotebookDao notebookDao;
 
-    public NotebookServiceImpl(){
-
-    }
-
-    /*@Autowired
+    @Autowired
     public NotebookServiceImpl(NotebookDao notebookDao) {
         this.notebookDao = notebookDao;
-    }*/
+    }
 
     public Notebook getNotebook(int idNotebook) {
         return notebookDao.findNotebook(idNotebook);
     }
 
     public void addNotebook(Notebook notebook) throws CreateException {
-        try {
+        if (!isNullElements(notebook)) {
             notebookDao.saveNotebook(notebook);
-        } catch (Exception e) {
-            throw new CreateException("You didn't choose all elements");
-        }
+        } else throw new CreateException("Choose all elements!");
     }
 
     public List getAllNotebooks() {
@@ -107,5 +100,11 @@ public class NotebookServiceImpl implements NotebookService{
         Notebook notebook = notebookDao.findNotebook(notebookId);
         notebook.setVideo(videoMemory);
         notebookDao.updateNotebook(notebook);
+    }
+
+    public boolean isNullElements(Notebook notebook) {
+        return notebook.getScreen() == null || notebook.getVideo() == null ||
+                notebook.getRam() == null || notebook.getProcessor() == null ||
+                notebook.getModel() == null || notebook.getNotebook_name().trim().equals("");
     }
 }

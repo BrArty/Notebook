@@ -10,10 +10,11 @@ import java.util.List;
 @Service
 public class ElementServiceImpl implements ElementService{
 
-    @Autowired
     private ElementDao elementDao;
 
-    public ElementServiceImpl() {
+    @Autowired
+    public ElementServiceImpl(ElementDao elementDao) {
+        this.elementDao = elementDao;
     }
 
     public void addElement(Element element) {

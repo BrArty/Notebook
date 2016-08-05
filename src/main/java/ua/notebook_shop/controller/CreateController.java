@@ -16,26 +16,19 @@ import java.util.HashMap;
 import java.util.List;
 
 @Controller
-public class CreateController {
+public class CreateController extends BasicController{
 
     private final Logger LOG = Logger.getLogger(MainController.class);
 
-    @Autowired
-    private NotebookService notebookService;
-    @Autowired
-    private ElementService elementService;
-
-    /*@Autowired
     public CreateController(NotebookService notebookService, ElementService elementService) {
-        this.notebookService = notebookService;
-        this.elementService = elementService;
-    }*/
+        super(notebookService, elementService);
+    }
 
     @RequestMapping(value = "/create_notebook", method = RequestMethod.GET)
     public String createGet(Model model) {
         LOG.info("***In createGet method");
         model.addAttribute("newNotebook", new Notebook());
-        model.addAllAttributes(getMapOfElements());
+        model.addAllAttributes(super.getMapOfElements());
         LOG.info("After createGet method***");
         return "create";
     }
@@ -47,8 +40,9 @@ public class CreateController {
         try {
             Notebook newNote = new Notebook(notebook.getNotebook_name(), notebook.getModel(), notebook.getHdd(),
                     notebook.getProcessor(), notebook.getScreen(), notebook.getVideo(), notebook.getRam());
-            notebookService.addNotebook(newNote);
+            super.notebookService.addNotebook(newNote);
         } catch (CreateException e) {
+            LOG.info("Error adding");
             model.addAttribute("error", e.getMessage());
             return "create";
         }
@@ -61,7 +55,7 @@ public class CreateController {
         LOG.info("***In createScreenPost method");
         double size = screen.getSize();
         if (size != 0.0) {
-            elementService.addElement(new Screen(size));
+            super.elementService.addElement(new Screen(size));
         }
         LOG.info("After createScreenPost method***");
         return "screen_create";
@@ -122,16 +116,5 @@ public class CreateController {
         }
         LOG.info("After createVideoPost method***");
         return "video_create";
-    }
-
-    private java.util.Map<String, List> getMapOfElements() {
-        java.util.Map<String, List> elements = new HashMap<>();
-        elements.put("models", elementService.getAllElements(ua.notebook_shop.model.Model.class));
-        elements.put("hdds", elementService.getAllElements(Hdd.class));
-        elements.put("proces", elementService.getAllElements(Processor.class));
-        elements.put("rams", elementService.getAllElements(Ram.class));
-        elements.put("screens", elementService.getAllElements(Screen.class));
-        elements.put("videos", elementService.getAllElements(VideoMemory.class));
-        return elements;
     }
 }

@@ -1,40 +1,29 @@
 package ua.notebook_shop.model;
 
-import org.hibernate.validator.constraints.NotEmpty;
-
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
-import java.io.Serializable;
 
 @Entity
 @Table
-public class Notebook extends IdGenerate implements Serializable {
+public class Notebook extends IdGenerate {
     @ManyToOne
     @JoinColumn(referencedColumnName = "id")
-    @NotNull
     private Model model;
     @ManyToOne
     @JoinColumn(referencedColumnName = "id")
-    @NotNull
     private Hdd hdd;
     @ManyToOne
     @JoinColumn(referencedColumnName = "id")
-    @NotNull
     private Processor processor;
     @ManyToOne
     @JoinColumn(referencedColumnName = "id")
-    @NotNull
     private Screen screen;
     @ManyToOne
     @JoinColumn(referencedColumnName = "id")
-    @NotNull
     private VideoMemory video;
     @ManyToOne
     @JoinColumn(referencedColumnName = "id")
-    @NotNull
     private Ram ram;
     @Column
-    @NotNull
     private String notebook_name;
 
 

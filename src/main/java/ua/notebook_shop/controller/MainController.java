@@ -1,35 +1,26 @@
 package ua.notebook_shop.controller;
 
 import org.apache.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import ua.notebook_shop.model.*;
+import ua.notebook_shop.model.Notebook;
 import ua.notebook_shop.service.ElementService;
 import ua.notebook_shop.service.NotebookService;
 
 
 @Controller
 //@SessionAttributes(value = "notebook")
-public class MainController {
+public class MainController extends BasicController{
 
     private final Logger LOG = Logger.getLogger(MainController.class);
 
-    @Autowired
-    private NotebookService notebookService;
-    @Autowired
-    private ElementService elementService;
-
-    /*@Autowired
-    public MainController(NotebookService notebookService,
-                          ElementService elementService) {
-        this.notebookService = notebookService;
-        this.elementService = elementService;
-    }*/
+    public MainController(NotebookService notebookService, ElementService elementService) {
+        super(notebookService, elementService);
+    }
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String firstGet(Model model) {
@@ -67,12 +58,7 @@ public class MainController {
     public String editGet(@RequestParam int id, Model model) {
         LOG.info("***In editGet method");
         model.addAttribute("notebook", notebookService.getNotebook(id));
-        model.addAttribute("models", elementService.getAllElements(ua.notebook_shop.model.Model.class));
-        model.addAttribute("hdds", elementService.getAllElements(Hdd.class));
-        model.addAttribute("proces", elementService.getAllElements(Processor.class));
-        model.addAttribute("rams", elementService.getAllElements(Ram.class));
-        model.addAttribute("screens", elementService.getAllElements(Screen.class));
-        model.addAttribute("videos", elementService.getAllElements(VideoMemory.class));
+        model.addAllAttributes(super.getMapOfElements());
         LOG.info("After editGet method***");
         return "edit";
     }
