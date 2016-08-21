@@ -2,6 +2,7 @@ package ua.notebook_shop.dao;
 
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.Transactional;
 import ua.notebook_shop.model.*;
 
@@ -10,6 +11,7 @@ import javax.persistence.PersistenceContext;
 import java.util.List;
 
 @Component
+@EnableTransactionManagement
 public class NotebookDaoImpl implements NotebookDao {
 
     @PersistenceContext
@@ -29,9 +31,8 @@ public class NotebookDaoImpl implements NotebookDao {
     @Override
     @Transactional
     public List findNotebook(String notebookName) {
-        List list = manager.createQuery("Select n FROM Notebook n WHERE notebook_name = :name")
+        return manager.createQuery("Select n FROM Notebook n WHERE n.notebook_name = :name")
                 .setParameter("name", notebookName).getResultList();
-        return list;
     }
 
     @Override
@@ -177,7 +178,7 @@ public class NotebookDaoImpl implements NotebookDao {
     @Override
     @Transactional
     public List getAll() {
-        return manager.createQuery("SELECT m FROM Notebook m").getResultList();
+        return manager.createQuery("SELECT n FROM Notebook n").getResultList();
     }
 
     @Override

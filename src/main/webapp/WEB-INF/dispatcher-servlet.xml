@@ -10,7 +10,7 @@
     <!--FOR ASPECT ANNOTATIONS-->
     <aop:aspectj-autoproxy />
 
-    <!--<mvc:resources mapping="/resources/**" location="/resources/"/>-->
+    <mvc:resources mapping="/resources/**" location="/resources/"/>
 
     <context:annotation-config/>
 

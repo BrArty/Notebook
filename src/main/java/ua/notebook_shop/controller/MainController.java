@@ -14,7 +14,7 @@ import ua.notebook_shop.service.NotebookService;
 
 @Controller
 //@SessionAttributes(value = "notebook")
-public class MainController extends BasicController{
+public class MainController extends BasicController {
 
     private final Logger LOG = Logger.getLogger(MainController.class);
 

@@ -1,6 +1,7 @@
 package ua.notebook_shop.dao;
 
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.Transactional;
 import ua.notebook_shop.model.Element;
 
@@ -11,6 +12,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 @Component
+@EnableTransactionManagement
 public class ElementDaoImpl implements ElementDao {
 
     @PersistenceContext
@@ -26,8 +28,8 @@ public class ElementDaoImpl implements ElementDao {
     }
 
     @Override
-    @Transactional
     @SuppressWarnings("unchecked")
+    @Transactional
     public Element getElement(Class clazz, int elementId) {
         return (Element) manager.find(clazz, elementId);
     }

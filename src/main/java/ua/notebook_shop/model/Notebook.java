@@ -1,6 +1,7 @@
 package ua.notebook_shop.model;
 
 import javax.persistence.*;
+import java.util.Objects;
 
 @Entity
 @Table
@@ -23,6 +24,11 @@ public class Notebook extends IdGenerate {
     @ManyToOne
     @JoinColumn(referencedColumnName = "id")
     private Ram ram;
+    @OneToOne(mappedBy = "notebook")
+    @Transient
+    private WarehouseItem item;
+    @Transient
+    private String info;
     @Column
     private String notebook_name;
 
@@ -97,6 +103,10 @@ public class Notebook extends IdGenerate {
         return video;
     }
 
+    public String getInfo() {
+        return info = notebook_name + " " + model.getModel();
+    }
+
 
     @Override
     public int hashCode() {
@@ -115,7 +125,7 @@ public class Notebook extends IdGenerate {
         if (getClass() != o.getClass())
             return false;
         Notebook other = (Notebook) o;
-        if (notebook_name != other.notebook_name && model != other.model && processor != other.processor &&
+        if (!Objects.equals(notebook_name, other.notebook_name) && model != other.model && processor != other.processor &&
                 ram != other.ram && hdd != other.hdd && screen != other.screen && video != other.video)
             return false;
         return true;

@@ -7,7 +7,7 @@ import java.util.List;
 
 @Entity
 @Table
-public class Screen extends Element{
+public class Screen extends Element {
 
     @OneToMany(mappedBy = "screen", cascade = {CascadeType.PERSIST}, fetch = FetchType.LAZY)
     private List<Notebook> notebook = new ArrayList<>();

@@ -1,7 +1,5 @@
 package ua.notebook_shop.model;
 
-import org.apache.tomcat.jni.Proc;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
@@ -9,7 +7,7 @@ import java.util.List;
 
 @Entity
 @Table
-public class Processor extends Element{
+public class Processor extends Element {
 
     @OneToMany(mappedBy = "processor", cascade = {CascadeType.PERSIST}, fetch = FetchType.LAZY)
     private List<Notebook> notebook = new ArrayList<>();

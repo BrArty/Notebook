@@ -1,7 +1,6 @@
 package ua.notebook_shop.controller;
 
 import org.apache.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -12,11 +11,8 @@ import ua.notebook_shop.model.*;
 import ua.notebook_shop.service.ElementService;
 import ua.notebook_shop.service.NotebookService;
 
-import java.util.HashMap;
-import java.util.List;
-
 @Controller
-public class CreateController extends BasicController{
+public class CreateController extends BasicController {
 
     private final Logger LOG = Logger.getLogger(MainController.class);
 

@@ -10,6 +10,8 @@
 
     <context:property-placeholder location="classpath:application.properties"/>
 
+    <context:component-scan base-package="ua.notebook_shop.dao"/>
+
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="${spring.datasource.driverClassName}"/>
         <property name="url" value="${spring.datasource.url}"/>

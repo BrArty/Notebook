@@ -7,7 +7,7 @@ import java.util.List;
 
 @Entity
 @Table
-public class VideoMemory extends Element{
+public class VideoMemory extends Element {
 
     @OneToMany(mappedBy = "video", cascade = {CascadeType.PERSIST}, fetch = FetchType.LAZY)
     private List<Notebook> notebook = new ArrayList<>();

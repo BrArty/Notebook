@@ -2,6 +2,7 @@
 <html>
 <head>
     <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/styles.css"/>
+    <link rel="shortcut icon" href=<c:url value="${pageContext.request.contextPath}/resources/images/favicon.ico" /> />
     <title>Element creation</title>
 </head>
 <body>

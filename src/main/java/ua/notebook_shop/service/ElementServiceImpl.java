@@ -8,7 +8,7 @@ import ua.notebook_shop.model.Element;
 import java.util.List;
 
 @Service
-public class ElementServiceImpl implements ElementService{
+public class ElementServiceImpl implements ElementService {
 
     private ElementDao elementDao;
 
