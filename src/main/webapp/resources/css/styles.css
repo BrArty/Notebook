@@ -3,7 +3,7 @@ body {
     background-color: #f0f8ff;
 }
 .container {
-    width: 700px;
+    width: 900px;
     margin: 10px auto;
 }
 .block {
@@ -11,7 +11,7 @@ body {
     padding: 10px;
     color: #cc0000;
     background: rgba(255, 234, 171, 0.5);
-    border: 2px dashed #cccccc;
+    border: 2px solid #cccccc;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 .column1 {

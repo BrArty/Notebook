@@ -17,6 +17,16 @@
             <p><input id="type" name="size"/></p>
         </div>
     </div>
+    <div class="column3 block">
+        <table>
+            <th>Size, inch</th>
+            <c:forEach items="${screens}" var="element">
+                <tr>
+                    <td>${element.size}</td>
+                </tr>
+            </c:forEach>
+        </table>
+    </div>
 </form:form>
 </body>
 </html>

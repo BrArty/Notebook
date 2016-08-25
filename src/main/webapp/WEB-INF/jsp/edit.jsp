@@ -16,7 +16,7 @@
             <p><label for="ram">Set ram: </label></p>
             <p><label for="video">Set video memory: </label></p>
             <p><input type="submit" value="Save changes"/></p>
-            <p><input type="button" value="Info" onclick='location.href="/info?id=${notebook.id}"'/></p>
+            <p><input type="button" value="Back" onclick='location.href="/"'/></p>
         </div>
         <div class="column2 block">
             <form:select path="screen.id" id="screen" cssClass="zero_space2">

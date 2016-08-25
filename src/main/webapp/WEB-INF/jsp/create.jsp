@@ -1,9 +1,12 @@
-<%@ include file="include.jsp"%>
+<%@ include file="include.jsp" %>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>Creation</title>
     <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/styles.css"/>
-    <link rel="shortcut icon" href=<c:url value="${pageContext.request.contextPath}/resources/images/favicon.ico" /> />
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/accordion.css"/>
+    <link rel="shortcut icon" href=
+            <c:url value="${pageContext.request.contextPath}/resources/images/favicon.ico"/>/>
 </head>
 <body>
 <form:form modelAttribute="newNotebook" action="/create_notebook" method="post">
@@ -49,26 +52,77 @@
             </form:select><br>
             <span style="color: red; font-style: italic;">${error}</span>
         </div>
-        <div class="column3 block">
-            <p>Create new element:</p>
-            <form:form method="post" action="/element_create/Screen" cssClass="zero_space1">
-                <input type="submit" value="New screen"/>
-            </form:form>
-            <form:form method="post" action="/element_create/Hdd" cssClass="zero_space1">
-                <input type="submit" value="New hdd"/>
-            </form:form>
-            <form:form method="post" action="/element_create/Model" cssClass="zero_space1">
-                <input type="submit" value="New model"/>
-            </form:form>
-            <form:form method="post" action="/element_create/Processor" cssClass="zero_space1">
-                <input type="submit" value="New processor"/>
-            </form:form>
-            <form:form method="post" action="/element_create/Ram" cssClass="zero_space1">
-                <input type="submit" value="New ram"/>
-            </form:form>
-            <form:form method="post" action="/element_create/Video" cssClass="zero_space1">
-                <input type="submit" value="New video"/>
-            </form:form>
+        <div class="ac-container column3 block">
+            <div>
+                <input id="ac-1" name="accordion-1" type="radio"/>
+                <label for="ac-1">New screen</label>
+                <article class="ac-small">
+                    <form:form method="post" action="/element_create/Screen" modelAttribute="screen">
+                        <p><label class="exception" for="type1">Type here: </label>
+                            <input class="exception" type="text" id="type1" name="size"/>
+                            <input class="exception" type="submit" style="width:100px" value="Save"/></p>
+                    </form:form>
+                </article>
+            </div>
+            <div>
+                <input id="ac-2" name="accordion-1" type="radio"/>
+                <label for="ac-2">New hdd</label>
+                <article class="ac-small">
+                    <form:form method="post" action="/element_create/Hdd" modelAttribute="hdd">
+                        <p><label class="exception" for="type2">Memory in Gb: </label>
+                            <input class="exception" id="type2" name="memoryInGb"/>
+                            <input class="exception" type="submit" style="width:100px" value="Save"/></p>
+                    </form:form>
+                </article>
+            </div>
+            <div>
+                <input id="ac-3" name="accordion-1" type="radio"/>
+                <label for="ac-3">New model</label>
+                <article class="ac-small">
+                    <form:form method="post" action="/element_create/Model" modelAttribute="model">
+                        <p><label class="exception" for="type">Model: </label>
+                            <input class="exception" id="type" name="model"/>
+                            <input class="exception" type="submit" style="width:100px" value="Save"/></p>
+                    </form:form>
+                </article>
+            </div>
+            <div>
+                <input id="ac-4" name="accordion-1" type="radio"/>
+                <label for="ac-4">New processor</label>
+                <article class="ac-medium">
+                    <form:form method="post" action="/element_create/Processor" modelAttribute="processor">
+                        <p><label class="exception" for="mod">Model: </label>
+                            <input class="exception" id="mod" name="model"/>
+                            <label class="exception" for="frq">Frequency: </label>
+                            <input class="exception" id="frq" name="frequency"/>
+                            <input class="exception" type="submit" style="width:100px" value="Save"/></p>
+                    </form:form>
+                </article>
+            </div>
+            <div>
+                <input id="ac-5" name="accordion-1" type="radio"/>
+                <label for="ac-5">New ram</label>
+                <article class="ac-small">
+                    <form:form method="post" action="/element_create/Ram" modelAttribute="ram">
+                        <p><label class="exception" for="type3">Memory in Gb: </label>
+                            <input class="exception" id="type3" name="memoryInGb"/>
+                            <input class="exception" type="submit" style="width:100px" value="Save"/></p>
+                    </form:form>
+                </article>
+            </div>
+            <div>
+                <input id="ac-6" name="accordion-1" type="radio"/>
+                <label for="ac-6">New video</label>
+                <article class="ac-medium">
+                    <form:form method="post" action="/element_create/Video" modelAttribute="video">
+                        <p><label class="exception" for="manuf">Manufacturer: </label>
+                            <input class="exception" id="manuf" name="manufacturer"/>
+                            <label class="exception" for="mem">Memory in Gb: </label>
+                            <input class="exception" id="mem" name="memoryInGb"/>
+                            <input class="exception" type="submit" style="width:100px" value="Save"/></p>
+                    </form:form>
+                </article>
+            </div>
         </div>
     </div>
 </form:form>
