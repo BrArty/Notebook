@@ -1,5 +1,6 @@
 package ua.notebook_shop.service;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ua.notebook_shop.dao.NotebookDao;
@@ -10,6 +11,8 @@ import java.util.List;
 
 @Service
 public class NotebookServiceImpl implements NotebookService {
+
+    private static final Logger LOG = Logger.getLogger(NotebookServiceImpl.class);
 
     private NotebookDao notebookDao;
 

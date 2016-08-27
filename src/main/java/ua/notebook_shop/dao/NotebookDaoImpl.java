@@ -4,9 +4,11 @@ import org.apache.log4j.Logger;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.Transactional;
+import ua.notebook_shop.exceptions.CreateException;
 import ua.notebook_shop.model.*;
 
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 import java.util.List;
 
@@ -24,8 +26,24 @@ public class NotebookDaoImpl implements NotebookDao {
 
     @Override
     @Transactional
-    public void saveNotebook(Notebook notebook) {
-        manager.persist(notebook);
+    public void saveNotebook(Notebook notebook) throws CreateException {
+        try {
+            String query = "SELECT n FROM Notebook n WHERE n.notebook_name = :name AND n.hdd.id = :hdd AND " +
+                    "n.model.id = :model AND n.processor.id = :proc AND n.ram.id = :ram AND n.screen.id = :screen AND " +
+                    "n.video.id = :video";
+            Notebook noteToCheck = (Notebook) manager.createQuery(query).setParameter("name", notebook.getNotebook_name())
+                    .setParameter("hdd", notebook.getHdd().getId()).setParameter("model", notebook.getModel().getId())
+                    .setParameter("proc", notebook.getProcessor().getId()).setParameter("ram", notebook.getRam().getId())
+                    .setParameter("screen", notebook.getScreen().getId()).setParameter("video", notebook.getVideo().getId())
+                    .getSingleResult();
+            if (noteToCheck.equals(notebook)) {
+                throw new CreateException("This notebook is already persisted!");
+            }
+        } catch (NoResultException nre) {
+            LOG.info("Notebook not found");
+            manager.persist(notebook);
+            LOG.info("Successfully persisted");
+        }
     }
 
     @Override
@@ -40,6 +58,17 @@ public class NotebookDaoImpl implements NotebookDao {
     public Notebook findNotebook(int idNotebook) {
 //        return (Notebook) manager.createQuery("SELECT n FROM Notebook n WHERE id = :id").setParameter("id", idNotebook);
         return manager.find(Notebook.class, idNotebook);
+    }
+
+    public boolean checkForDuplicate(String notebook_name, int model, int hdd,
+                                     int processor, int screen, int video, int ram, Notebook noteToCheck) {
+        String query = "SELECT Notebook FROM Notebook WHERE notebook_name = :name AND model.id = :model " +
+                "AND hdd.id = :hdd AND processor.id = :processor AND screen.id = :screen AND video.id = :video " +
+                "AND ram.id = :ram";
+        Notebook notebook = (Notebook) manager.createQuery(query).setParameter("name", notebook_name)
+                .setParameter("model", model).setParameter("hdd", hdd).setParameter("processor", processor)
+                .setParameter("screen", screen).setParameter("video", video).setParameter("ram", ram).getSingleResult();
+        return true;
     }
 
     @Override

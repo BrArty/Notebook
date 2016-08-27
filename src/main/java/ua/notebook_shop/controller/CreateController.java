@@ -3,15 +3,14 @@ package ua.notebook_shop.controller;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 import ua.notebook_shop.exceptions.CreateException;
 import ua.notebook_shop.model.*;
 import ua.notebook_shop.service.ElementService;
 import ua.notebook_shop.service.NotebookService;
 
 @Controller
+@SessionAttributes(types = {Notebook.class, ua.notebook_shop.model.Model.class, Processor.class})
 public class CreateController extends BasicController {
 
     private final Logger LOG = Logger.getLogger(MainController.class);
@@ -34,9 +33,7 @@ public class CreateController extends BasicController {
         LOG.info("***In createPost method");
         model.addAllAttributes(getMapOfElements());
         try {
-            Notebook newNote = new Notebook(notebook.getNotebook_name(), notebook.getModel(), notebook.getHdd(),
-                    notebook.getProcessor(), notebook.getScreen(), notebook.getVideo(), notebook.getRam());
-            super.notebookService.addNotebook(newNote);
+            super.notebookService.addNotebook(notebook);
         } catch (CreateException e) {
             LOG.info("Error adding");
             model.addAttribute("error", e.getMessage());
@@ -64,7 +61,7 @@ public class CreateController extends BasicController {
         LOG.info("***In createModelPost method");
         view.addAttribute("models", super.elementService.getAllElements(Model.class));
         String model_name = model.getModel();
-        if (model_name != null) {
+        if (!model_name.equals("")) {
             elementService.addElement(new ua.notebook_shop.model.Model(model_name));
         }
         LOG.info("After createModelPost method***");
@@ -76,7 +73,7 @@ public class CreateController extends BasicController {
         LOG.info("***In createHddPost method");
         model.addAttribute("hdds", super.elementService.getAllElements(Hdd.class));
         String memory = hdd.getMemoryInGb();
-        if (memory != null) {
+        if (!memory.equals("")) {
             elementService.addElement(new Hdd(memory));
         }
         LOG.info("After createHddPost method***");
@@ -89,9 +86,9 @@ public class CreateController extends BasicController {
         view.addAttribute("proces", super.elementService.getAllElements(Processor.class));
         String model = processor.getModel();
         String frequency = processor.getFrequency();
-        if (model != null && frequency != null) {
+        if (!model.equals("") && !frequency.equals("")) {
             elementService.addElement(new Processor(model, frequency));
-        }
+        } else LOG.info("Empty data while processor create");
         LOG.info("After createProcessorPost method***");
         return "redirect:/create_notebook";
     }
@@ -101,7 +98,7 @@ public class CreateController extends BasicController {
         LOG.info("***In createRamPost method");
         model.addAttribute("rams", super.elementService.getAllElements(Ram.class));
         String memory = ram.getMemoryInGb();
-        if (memory != null) {
+        if (!memory.equals("")) {
             elementService.addElement(new Ram(memory));
         }
         LOG.info("After createRamPost method***");
@@ -114,7 +111,7 @@ public class CreateController extends BasicController {
         model.addAttribute("videos", super.elementService.getAllElements(VideoMemory.class));
         String manufacturer = video.getManufacturer();
         String memory = video.getMemoryInGb();
-        if (manufacturer != null && memory != null) {
+        if (!manufacturer.equals("") && !memory.equals("")) {
             elementService.addElement(new VideoMemory(manufacturer, memory));
         }
         LOG.info("After createVideoPost method***");

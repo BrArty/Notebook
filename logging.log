@@ -11146,3 +11146,128 @@ TEST<<<<<<<<<<<<<<<<<<<
 2016-08-21 22:33:54 INFO  MainController:30 - After firstGet method***
 2016-08-21 22:33:57 INFO  StockController:30 - ***In mainPage method
 2016-08-21 22:33:57 INFO  StockController:35 - After mainPage method***
+2016-08-27 19:54:51 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-08-27 19:54:52 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-08-27 19:54:52 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-08-27 19:54:52 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-08-27 19:54:52 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-08-27 19:54:53 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-08-27 19:54:53 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-08-27 19:54:56 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-08-27 19:56:33 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-08-27 19:56:34 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-08-27 19:56:34 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-08-27 19:56:34 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-08-27 19:56:34 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-08-27 19:56:35 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-08-27 19:56:35 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-08-27 19:56:37 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-08-27 20:00:29 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-08-27 20:00:29 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-08-27 20:00:29 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-08-27 20:00:29 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-08-27 20:00:29 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-08-27 20:00:30 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-08-27 20:00:30 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-08-27 20:00:32 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-08-27 20:00:33 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-08-27 20:04:48 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-08-27 20:04:48 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-08-27 20:04:48 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-08-27 20:04:48 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-08-27 20:04:49 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-08-27 20:04:49 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-08-27 20:04:49 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-08-27 20:04:51 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-08-27 20:04:52 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-08-27 20:06:15 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-08-27 20:06:15 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-08-27 20:06:15 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-08-27 20:06:15 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-08-27 20:06:15 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-08-27 20:06:16 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-08-27 20:06:16 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-08-27 20:06:17 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-08-27 20:06:18 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-08-27 20:07:23 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-08-27 20:07:23 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-08-27 20:07:23 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-08-27 20:07:23 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-08-27 20:07:23 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-08-27 20:07:24 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-08-27 20:07:24 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-08-27 20:07:25 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-08-27 20:07:26 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-08-27 20:07:26 INFO  NotebookDaoImpl:34 - This notebook is already persisted!!!
+2016-08-27 20:08:17 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-08-27 20:08:17 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-08-27 20:08:17 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-08-27 20:08:17 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-08-27 20:08:18 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-08-27 20:08:19 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-08-27 20:08:19 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-08-27 20:08:20 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-08-27 20:08:22 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-08-27 20:08:22 INFO  NotebookDaoImpl:34 - This notebook is already persisted!!!
+2016-08-27 20:12:57 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-08-27 20:12:57 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-08-27 20:12:57 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-08-27 20:12:57 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-08-27 20:12:57 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-08-27 20:12:58 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-08-27 20:12:58 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-08-27 20:12:59 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-08-27 20:13:00 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-08-27 20:18:30 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-08-27 20:18:30 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-08-27 20:18:30 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-08-27 20:18:30 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-08-27 20:18:31 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-08-27 20:18:32 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-08-27 20:18:32 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-08-27 20:18:33 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-08-27 20:18:34 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-08-27 20:18:34 INFO  NotebookDaoImpl:36 - Notebook not found
+2016-08-27 20:18:34 INFO  NotebookDaoImpl:38 - Successfully added
+2016-08-27 20:19:34 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-08-27 20:19:35 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-08-27 20:19:35 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-08-27 20:19:35 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-08-27 20:19:35 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-08-27 20:19:36 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-08-27 20:19:36 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-08-27 20:19:38 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
+2016-08-27 20:19:39 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-08-27 20:19:39 INFO  NotebookDaoImpl:36 - Notebook not found
+2016-08-27 20:19:39 INFO  NotebookDaoImpl:38 - Successfully added
+2016-08-27 20:19:39 INFO  NotebookDaoImpl:33 - This notebook is already persisted!!!
+2016-08-27 21:11:07 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-08-27 21:11:07 INFO  Version:37 - HHH000412: Hibernate Core {5.0.3.Final}
+2016-08-27 21:11:07 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-08-27 21:11:07 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2016-08-27 21:11:07 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2016-08-27 21:11:08 INFO  Dialect:154 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-08-27 21:11:08 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2016-08-27 21:11:09 INFO  SchemaUpdate:101 - HHH000228: Running hbm2ddl schema update
