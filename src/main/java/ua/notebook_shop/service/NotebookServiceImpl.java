@@ -105,9 +105,9 @@ public class NotebookServiceImpl implements NotebookService {
         notebookDao.updateNotebook(notebook);
     }
 
-    public boolean isNullElements(Notebook notebook) {
-        return notebook.getScreen() == null || notebook.getVideo() == null ||
-                notebook.getRam() == null || notebook.getProcessor() == null ||
-                notebook.getModel() == null || notebook.getNotebook_name().trim().equals("");
+    private boolean isNullElements(Notebook notebook) {
+        return notebook.getScreen().getId() == 0 || notebook.getVideo().getId() == 0 ||
+                notebook.getRam().getId() == 0 || notebook.getProcessor().getId() == 0 ||
+                notebook.getModel().getId() == 0 || notebook.getNotebook_name().trim().equals("");
     }
 }
